@@ -1,32 +1,29 @@
 ---
-Task ID: 1
+Task ID: 2
 Agent: Super Z (Main Agent)
-Task: Build complete Maia Store e-commerce website with Next.js 16, GSAP, Framer Motion
+Task: Restructure Maia Store into multi-page SPA with real slugs and sub-pages
 
 Work Log:
-- Installed GSAP 3.15.0 for scroll-driven animations
-- Generated 8 AI product images (6 jewelry products + hero craft + collection)
-- Generated favicon and logo for Maia Store branding
-- Configured custom turquoise (#00A6C4) + white theme in globals.css with oklch colors
-- Updated layout.tsx with SEO-optimized metadata for Maia Store (Spanish, Peru)
-- Built Navigation component: sticky header, glass morphism on scroll, mobile hamburger menu
-- Built HeroSection: full-bleed with GSAP text reveal, floating decorative elements, spinning rings, CTAs
-- Built AboutSection: brand story with GSAP parallax image, scroll reveal features grid, artisan narrative
-- Built ProductGallery: filterable product grid (4 categories), hover effects, WhatsApp CTA per product
-- Built PaymentSection: 4 payment methods (WhatsApp, Card, Yape/Plin, Bank), guarantees section
-- Built ContactSection: testimonials with star ratings, CTA banner with collection image background
-- Built Footer: brand info, social links (Instagram, TikTok, WhatsApp), nav links, copyright
-- Assembled all components in page.tsx with global GSAP scroll-based section reveals
-- All lint checks passed (0 errors)
-- Dev server running successfully at port 3000
+- Created shared data layer (/src/lib/store-data.ts) with Product interface, 6 products with full details (slug, longDescription, features, rating, reviews), categories, testimonials, payment methods with steps, helper functions (getProductBySlug, getRelatedProducts, formatPrice, generateWhatsAppLink)
+- Built hash-based router system (/src/lib/router.tsx) with RouterProvider context, useRouter hook, RouterLink component, route parsing (supports slugs and category params), navigate/back functions
+- Created 6 page components:
+  - HomePage: Hero with GSAP animations, featured products grid (clickable to detail), testimonials preview
+  - NosotrosPage: Full story page with parallax image, features grid, GSAP scroll animations
+  - ColeccionPage: Full catalog with category filters (synced to URL), breadcrumb, product cards with hover overlays
+  - ProductDetailPage: Full product view with slug routing, long description, features list, WhatsApp CTA, related products grid, trust badges, breadcrumbs
+  - ComprarPage: Payment methods with step-by-step process, guarantees, FAQ accordion section
+  - ContactoPage: Contact cards (WhatsApp, Instagram, Location), testimonials, CTA banner
+- Rewrote Navigation: Hash-based routing with active page underline (layoutId animation), mobile menu with route-aware closing
+- Rewrote Footer: All links use router navigate(), category links with proper slugs
+- Rewrote page.tsx: RouterProvider wrapper, AnimatePresence page transitions, dynamic page routing based on hash
+- Fixed lint errors: Removed setState-in-effect, derived state from route params
+- All lint checks pass (0 errors)
 
 Stage Summary:
-- Complete Maia Store website built with premium UI/UX
-- Color scheme: Turquoise (#00A6C4) + White, professional jewelry brand aesthetic
-- All sections: Hero, About, Products, Payment, Contact/Testimonials, Footer
-- WhatsApp integration: +51 977 333 858 with pre-formatted messages per product
-- GSAP animations: text reveal, parallax, floating elements, scroll triggers
-- Framer Motion: hover effects, page transitions, micro-interactions
-- Fully responsive (mobile-first design)
-- SEO optimized with Spanish metadata for Peru market
-- Files: 7 new components in /src/components/maia/, updated globals.css, layout.tsx, page.tsx
+- Multi-page SPA architecture with hash routing (#/home, #/coleccion, #/coleccion/slug, #/comprar, #/nosotros, #/contacto)
+- 6 products with unique slugs (pulsera-turquesa-elite, collar-bohemio-real, aretes-danza-del-viento, anillo-primavera, tobillera-ondas-del-mar, pulsera-encanto-andino)
+- Category filtering via URL: #/coleccion/categoria/pulseras
+- Product detail: #/coleccion/pulsera-turquesa-elite
+- Breadcrumbs on all sub-pages
+- Page transitions with Framer Motion AnimatePresence
+- Active navigation indicator with layoutId spring animation

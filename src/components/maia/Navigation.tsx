@@ -1,36 +1,35 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingBag } from 'lucide-react';
+import { useRouter } from '@/lib/router';
 
 const navLinks = [
-  { href: '#inicio', label: 'Inicio' },
-  { href: '#nosotros', label: 'Nosotros' },
-  { href: '#coleccion', label: 'Colección' },
-  { href: '#pagos', label: 'Comprar' },
-  { href: '#contacto', label: 'Contacto' },
+  { page: 'home', href: '#/', label: 'Inicio' },
+  { page: 'nosotros', href: '#/nosotros', label: 'Nosotros' },
+  { page: 'coleccion', href: '#/coleccion', label: 'Colección' },
+  { page: 'comprar', href: '#/comprar', label: 'Comprar' },
+  { page: 'contacto', href: '#/contacto', label: 'Contacto' },
 ];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { navigate, route } = useRouter();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = useCallback((href: string) => {
     setIsMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+    navigate(href);
+  }, [navigate]);
+
+  const isActive = (page: string) => route.page === page;
 
   return (
     <>
@@ -39,61 +38,44 @@ export default function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? 'glass shadow-lg shadow-turquoise-500/5'
-            : 'bg-transparent'
+          isScrolled ? 'glass shadow-lg shadow-turquoise-500/5' : 'bg-transparent'
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <motion.a
-              href="#inicio"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('#inicio');
-              }}
+            <motion.button
+              onClick={() => handleNavClick('#/')}
               className="flex items-center gap-2 group"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="relative">
-                <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary">
-                  MAIA
-                </span>
-                <span className="text-2xl sm:text-3xl font-extralight tracking-widest text-foreground ml-1">
-                  STORE
-                </span>
-                <motion.div
-                  className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-turquoise-500 to-turquoise-300"
-                  initial={{ width: 0 }}
-                  whileHover={{ width: '100%' }}
-                  transition={{ duration: 0.3 }}
-                />
+                <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary">MAIA</span>
+                <span className="text-2xl sm:text-3xl font-extralight tracking-widest text-foreground ml-1">STORE</span>
+                <motion.div className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-turquoise-500 to-turquoise-300" initial={{ width: 0 }} whileHover={{ width: '100%' }} transition={{ duration: 0.3 }} />
               </div>
-            </motion.a>
+            </motion.button>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
-                  className="relative px-4 py-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-300"
+                <motion.button
+                  key={link.page}
+                  onClick={() => handleNavClick(link.href)}
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
+                    isActive(link.page)
+                      ? 'text-primary'
+                      : 'text-foreground/70 hover:text-primary'
+                  }`}
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
                 >
                   {link.label}
-                  <motion.span
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary rounded-full"
-                    whileHover={{ width: '60%' }}
-                    transition={{ duration: 0.2 }}
-                  />
-                </motion.a>
+                  {isActive(link.page) && (
+                    <motion.div layoutId="nav-underline" className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-primary rounded-full" transition={{ type: 'spring', stiffness: 500, damping: 30 }} />
+                  )}
+                </motion.button>
               ))}
             </div>
 
@@ -118,23 +100,11 @@ export default function Navigation() {
               >
                 <AnimatePresence mode="wait">
                   {isMobileOpen ? (
-                    <motion.div
-                      key="close"
-                      initial={{ rotate: -90, opacity: 0 }}
-                      animate={{ rotate: 0, opacity: 1 }}
-                      exit={{ rotate: 90, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
+                    <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
                       <X className="w-5 h-5 text-primary" />
                     </motion.div>
                   ) : (
-                    <motion.div
-                      key="menu"
-                      initial={{ rotate: 90, opacity: 0 }}
-                      animate={{ rotate: 0, opacity: 1 }}
-                      exit={{ rotate: -90, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
+                    <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
                       <Menu className="w-5 h-5 text-primary" />
                     </motion.div>
                   )}
@@ -157,20 +127,18 @@ export default function Navigation() {
           >
             <div className="flex flex-col items-center justify-center gap-6 py-12">
               {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
+                <motion.button
+                  key={link.page}
+                  onClick={() => handleNavClick(link.href)}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1, duration: 0.4 }}
-                  className="text-2xl font-semibold text-foreground hover:text-primary transition-colors"
+                  className={`text-2xl font-semibold transition-colors ${
+                    isActive(link.page) ? 'text-primary' : 'text-foreground hover:text-primary'
+                  }`}
                 >
                   {link.label}
-                </motion.a>
+                </motion.button>
               ))}
               <motion.a
                 href="https://wa.me/51977333858?text=Hola%20Maia%20Store!%20Me%20interesa%20ver%20la%20colección"

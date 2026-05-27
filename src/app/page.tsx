@@ -1,54 +1,71 @@
 'use client';
 
 import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { AnimatePresence, motion } from 'framer-motion';
+import { RouterProvider, useRouter } from '@/lib/router';
 import Navigation from '@/components/maia/Navigation';
-import HeroSection from '@/components/maia/HeroSection';
-import AboutSection from '@/components/maia/AboutSection';
-import ProductGallery from '@/components/maia/ProductGallery';
-import PaymentSection from '@/components/maia/PaymentSection';
-import ContactSection from '@/components/maia/ContactSection';
 import Footer from '@/components/maia/Footer';
+import HomePage from '@/components/maia/pages/HomePage';
+import NosotrosPage from '@/components/maia/pages/NosotrosPage';
+import ColeccionPage from '@/components/maia/pages/ColeccionPage';
+import ProductDetailPage from '@/components/maia/pages/ProductDetailPage';
+import ComprarPage from '@/components/maia/pages/ComprarPage';
+import ContactoPage from '@/components/maia/pages/ContactoPage';
 
-gsap.registerPlugin(ScrollTrigger);
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  enter: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } },
+  exit: { opacity: 0, y: -10, transition: { duration: 0.25 } },
+};
 
-export default function Home() {
-  useEffect(() => {
-    // Global GSAP scroll-based animations
-    const ctx = gsap.context(() => {
-      // Smooth section reveals
-      gsap.utils.toArray<HTMLElement>('section').forEach((section) => {
-        gsap.fromTo(
-          section,
-          { opacity: 0.8 },
-          {
-            opacity: 1,
-            scrollTrigger: {
-              trigger: section,
-              start: 'top 90%',
-              end: 'top 40%',
-              scrub: 0.5,
-            },
-          }
-        );
-      });
-    });
+function PageRouter() {
+  const { route } = useRouter();
 
-    return () => ctx.revert();
-  }, []);
+  const getPage = () => {
+    // Product detail: #/coleccion/pulsera-turquesa-elite (no /categoria/ in path)
+    if (route.page === 'coleccion' && route.params?.slug) {
+      return <ProductDetailPage />;
+    }
+
+    switch (route.page) {
+      case 'nosotros':
+        return <NosotrosPage />;
+      case 'coleccion':
+        return <ColeccionPage />;
+      case 'comprar':
+        return <ComprarPage />;
+      case 'contacto':
+        return <ContactoPage />;
+      default:
+        return <HomePage />;
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1">
-        <HeroSection />
-        <AboutSection />
-        <ProductGallery />
-        <PaymentSection />
-        <ContactSection />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={route.hash}
+            variants={pageVariants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+          >
+            {getPage()}
+          </motion.div>
+        </AnimatePresence>
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <RouterProvider>
+      <PageRouter />
+    </RouterProvider>
   );
 }
