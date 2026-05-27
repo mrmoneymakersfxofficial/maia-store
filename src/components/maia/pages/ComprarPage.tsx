@@ -44,7 +44,7 @@ export default function ComprarPage() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Breadcrumb */}
         <motion.nav initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.3 }} className="flex items-center gap-1.5 text-xs text-foreground/40 mb-8">
           <button onClick={() => navigate('#/')} className="hover:text-primary transition-colors">Inicio</button>

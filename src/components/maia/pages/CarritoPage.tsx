@@ -2,18 +2,22 @@
 
 import { useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingBag, Trash2, ArrowLeft, MessageCircle } from 'lucide-react';
+import { ShoppingBag, Trash2, ArrowLeft, MessageCircle, CreditCard, Plus, Minus } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 import { useStore } from '@/lib/store-context';
 import { useToast } from '@/lib/toast-context';
-import { formatPrice, generateWhatsAppLink } from '@/lib/store-data';
+import { formatPrice } from '@/lib/store-data';
 
 export default function CarritoPage() {
   const { navigate } = useRouter();
-  const { cart, removeFromCart, clearCart, cartTotal, cartCount } = useStore();
+  const { cart, removeFromCart, updateQuantity, clearCart, cartTotal, cartCount } = useStore();
   const { showToast } = useToast();
 
   const handleCheckout = useCallback(() => {
+    navigate('#/checkout');
+  }, [navigate]);
+
+  const handleWhatsApp = useCallback(() => {
     const items = cart
       .map(
         (item) =>
@@ -64,9 +68,9 @@ export default function CarritoPage() {
             <div className="w-20 h-20 rounded-full bg-turquoise-50 flex items-center justify-center mb-4">
               <ShoppingBag className="w-10 h-10 text-turquoise-300" />
             </div>
-            <p className="text-foreground/40 text-lg mb-2">Tu carrito está vacío</p>
+            <p className="text-foreground/40 text-lg mb-2">Tu carrito esta vacio</p>
             <p className="text-foreground/30 text-sm mb-6">
-              Agrega las joyas que te gusten y haz tu pedido por WhatsApp
+              Agrega las joyas que te gusten y realiza tu pedido
             </p>
             <motion.button
               onClick={() => navigate('#/coleccion')}
@@ -74,7 +78,7 @@ export default function CarritoPage() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
             >
-              <ShoppingBag className="w-4 h-4" /> Ver Colección
+              <ShoppingBag className="w-4 h-4" /> Ver Coleccion
             </motion.button>
           </div>
         ) : (
@@ -105,9 +109,28 @@ export default function CarritoPage() {
                     >
                       {item.product.name}
                     </h3>
-                    <p className="text-xs text-foreground/40 mt-0.5">
-                      Cantidad: {item.quantity}
-                    </p>
+
+                    {/* Quantity controls */}
+                    <div className="flex items-center gap-2 mt-2">
+                      <div className="flex items-center gap-1 bg-zinc-100 rounded-lg">
+                        <motion.button
+                          onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
+                          className="w-7 h-7 flex items-center justify-center text-foreground/50 hover:text-foreground"
+                          whileTap={{ scale: 0.85 }}
+                        >
+                          <Minus className="w-3.5 h-3.5" />
+                        </motion.button>
+                        <span className="text-xs font-bold text-foreground w-6 text-center">{item.quantity}</span>
+                        <motion.button
+                          onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
+                          className="w-7 h-7 flex items-center justify-center text-foreground/50 hover:text-foreground"
+                          whileTap={{ scale: 0.85 }}
+                        >
+                          <Plus className="w-3.5 h-3.5" />
+                        </motion.button>
+                      </div>
+                    </div>
+
                     <div className="flex items-center justify-between mt-2">
                       <span className="text-base font-bold text-primary">
                         {formatPrice(item.product.price * item.quantity)}
@@ -128,21 +151,39 @@ export default function CarritoPage() {
               ))}
             </div>
 
-            {/* Total & CTA */}
+            {/* Total & CTAs */}
             <div className="sticky bottom-24 sm:bottom-6 bg-white/80 backdrop-blur-xl rounded-2xl border border-zinc-100/60 p-4 shadow-xl">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-sm text-foreground/60">Total</span>
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm text-foreground/60">Subtotal</span>
+                <span className="text-sm text-foreground/70">{formatPrice(cartTotal)}</span>
+              </div>
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm text-foreground/60">Envio</span>
+                <span className="text-sm text-green-600 font-semibold">Gratis</span>
+              </div>
+              <div className="flex items-center justify-between pt-2 mb-4 border-t border-zinc-100">
+                <span className="text-sm font-bold text-foreground">Total</span>
                 <span className="text-xl font-bold text-foreground">{formatPrice(cartTotal)}</span>
               </div>
-              <motion.button
-                onClick={handleCheckout}
-                className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3.5 rounded-xl font-semibold text-sm shadow-lg shadow-green-500/20 hover:bg-[#20BD5A] transition-colors"
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <MessageCircle className="w-4 h-4" />
-                Pedir por WhatsApp
-              </motion.button>
+              <div className="flex gap-2">
+                <motion.button
+                  onClick={handleCheckout}
+                  className="flex-1 flex items-center justify-center gap-2 bg-primary text-white py-3.5 rounded-xl font-semibold text-sm shadow-lg shadow-turquoise-500/20 hover:bg-turquoise-600 transition-colors"
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <CreditCard className="w-4 h-4" />
+                  Proceder al Pago
+                </motion.button>
+                <motion.button
+                  onClick={handleWhatsApp}
+                  className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-3.5 px-4 rounded-xl font-semibold text-sm shadow-lg shadow-green-500/20 hover:bg-[#20BD5A] transition-colors"
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <MessageCircle className="w-4 h-4" />
+                </motion.button>
+              </div>
             </div>
           </>
         )}

@@ -9,6 +9,7 @@ export interface Product {
   name: string;
   price: number;
   image: string;
+  imageSecondary?: string;
   category: string;
   categoryLabel: string;
   description: string;
@@ -17,6 +18,23 @@ export interface Product {
   rating: number;
   reviews: number;
   inStock: boolean;
+}
+
+export interface BankAccount {
+  bank: string;
+  accountType: string;
+  number: string;
+  holder: string;
+  logo: string;
+}
+
+export interface QRPayment {
+  id: string;
+  label: string;
+  color: string;
+  bgColor: string;
+  number: string;
+  holder: string;
 }
 
 export interface Category {
@@ -57,6 +75,7 @@ export const products: Product[] = [
     name: 'Pulsera Turquesa Élite',
     price: 85.0,
     image: '/images/product-1.webp',
+    imageSecondary: '/images/product-real-1.webp',
     category: 'pulseras',
     categoryLabel: 'Pulseras',
     description: 'Pulsera tejida a mano con hilo turquesa y acabado en oro.',
@@ -79,6 +98,7 @@ export const products: Product[] = [
     name: 'Collar Bohemio Real',
     price: 120.0,
     image: '/images/product-2.webp',
+    imageSecondary: '/images/product-real-2.webp',
     category: 'collares',
     categoryLabel: 'Collares',
     description: 'Collar artesanal con cuentas de cristal y diseño único.',
@@ -101,6 +121,7 @@ export const products: Product[] = [
     name: 'Aretes Danza del Viento',
     price: 65.0,
     image: '/images/product-3.webp',
+    imageSecondary: '/images/product-2.webp',
     category: 'aretes',
     categoryLabel: 'Aretes',
     description: 'Aretes delicados tejidos con técnica macramé peruana.',
@@ -123,6 +144,7 @@ export const products: Product[] = [
     name: 'Anillo Primavera',
     price: 45.0,
     image: '/images/product-4.webp',
+    imageSecondary: '/images/product-1.webp',
     category: 'anillos',
     categoryLabel: 'Anillos',
     description: 'Anillo tejido con detalle floral en hilo premium.',
@@ -145,6 +167,7 @@ export const products: Product[] = [
     name: 'Tobillera Ondas del Mar',
     price: 75.0,
     image: '/images/product-5.webp',
+    imageSecondary: '/images/product-6.webp',
     category: 'pulseras',
     categoryLabel: 'Pulseras',
     description: 'Tobillera inspirada en las olas del Pacífico peruano.',
@@ -167,6 +190,7 @@ export const products: Product[] = [
     name: 'Pulsera Encanto Andino',
     price: 95.0,
     image: '/images/product-6.webp',
+    imageSecondary: '/images/product-5.webp',
     category: 'pulseras',
     categoryLabel: 'Pulseras',
     description: 'Pulsera con charms artesanales y tejido especial.',
@@ -359,3 +383,50 @@ export function generateWhatsAppLink(product: Product): string {
 export function generateWhatsAppGeneral(): string {
   return 'https://wa.me/51977333858?text=Hola%20Maia%20Store!%20Quisiera%20hacer%20una%20consulta';
 }
+
+// ─── Bank Accounts ────────────────────────────────────────────
+
+export const bankAccounts: BankAccount[] = [
+  {
+    bank: 'BCP',
+    accountType: 'Cuenta Corriente en Soles',
+    number: '193-2845671-0-42',
+    holder: 'Maia Store E.I.R.L.',
+    logo: '🏦',
+  },
+  {
+    bank: 'Interbank',
+    accountType: 'Cuenta Ahorro en Soles',
+    number: '2001-0056-7890-12',
+    holder: 'Maia Store E.I.R.L.',
+    logo: '🏦',
+  },
+  {
+    bank: 'Banco de la Nación',
+    accountType: 'Cuenta Corriente Nacional',
+    number: '00-067-123456',
+    holder: 'Maia Store E.I.R.L.',
+    logo: '🏦',
+  },
+];
+
+// ─── QR Payments (Yape / Plin) ──────────────────────────────
+
+export const qrPayments: QRPayment[] = [
+  {
+    id: 'yape',
+    label: 'Yape',
+    color: '#742DB5',
+    bgColor: 'bg-purple-600',
+    number: '999 888 777',
+    holder: 'Maia Store E.I.R.L.',
+  },
+  {
+    id: 'plin',
+    label: 'Plin',
+    color: '#00C853',
+    bgColor: 'bg-green-500',
+    number: '999 888 777',
+    holder: 'Maia Store E.I.R.L.',
+  },
+];

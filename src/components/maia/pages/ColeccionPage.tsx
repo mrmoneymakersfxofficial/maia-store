@@ -6,6 +6,7 @@ import { MessageCircle, ShoppingBag, Heart, ArrowDown } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 import { useStore } from '@/lib/store-context';
 import { products, categories, getProductsByCategory, formatPrice, generateWhatsAppLink } from '@/lib/store-data';
+import GridToggle, { useGridView } from '@/components/maia/GridToggle';
 
 export default function ColeccionPage() {
   const { route, navigate } = useRouter();
@@ -14,7 +15,16 @@ export default function ColeccionPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-60px' });
 
+  const { viewMode, setViewMode, isReady } = useGridView('single');
+
   const filteredProducts = getProductsByCategory(activeCategory);
+
+  // Grid classes based on view mode
+  const gridClass = viewMode === 'single'
+    ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 px-4 sm:px-0'
+    : 'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-6 px-2 sm:px-0';
+
+  const aspectClass = viewMode === 'single' ? 'aspect-[3/4]' : 'aspect-[3/4] sm:aspect-square';
 
   useEffect(() => {
     let ctx: { revert: () => void } | undefined;
@@ -40,7 +50,7 @@ export default function ColeccionPage() {
 
   return (
     <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div className="text-center mb-8 pt-4">
           <motion.span
@@ -49,7 +59,7 @@ export default function ColeccionPage() {
             transition={{ duration: 0.5 }}
             className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block"
           >
-            Catálogo Completo
+            Catalogo Completo
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
@@ -57,7 +67,7 @@ export default function ColeccionPage() {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3"
           >
-            Nuestra <span className="text-gradient-turquoise">Colección</span>
+            Nuestra <span className="text-gradient-turquoise">Coleccion</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -65,7 +75,7 @@ export default function ColeccionPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-sm text-foreground/40 max-w-md mx-auto"
           >
-            Explora nuestras piezas artesanales. Cada joya es única, hecha a mano y está lista para ser tuya.
+            Explora nuestras piezas artesanales. Cada joya es unica, hecha a mano y lista para ser tuya.
           </motion.p>
         </div>
 
@@ -78,7 +88,7 @@ export default function ColeccionPage() {
         >
           <button onClick={() => navigate('#/')} className="hover:text-primary transition-colors">Inicio</button>
           <span>/</span>
-          <span className="text-foreground/60 font-medium">Colección</span>
+          <span className="text-foreground/60 font-medium">Coleccion</span>
           {activeCategory !== 'todos' && (
             <>
               <span>/</span>
@@ -87,31 +97,34 @@ export default function ColeccionPage() {
           )}
         </motion.nav>
 
-        {/* Category Filters */}
+        {/* Category Filters + Grid Toggle */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-2 mb-10"
         >
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => handleCategoryClick(cat.id)}
-              className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 tracking-wide ${
-                activeCategory === cat.id
-                  ? 'bg-primary text-white shadow-lg shadow-turquoise-500/20'
-                  : 'bg-zinc-100 text-foreground/50 hover:bg-zinc-200'
-              }`}
-            >
-              {cat.label}
-              <span className="ml-1 text-[10px] opacity-50">({cat.count})</span>
-            </button>
-          ))}
+          <div className="flex flex-wrap items-center justify-center gap-2 flex-1">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => handleCategoryClick(cat.id)}
+                className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 tracking-wide ${
+                  activeCategory === cat.id
+                    ? 'bg-primary text-white shadow-lg shadow-turquoise-500/20'
+                    : 'bg-zinc-100 text-foreground/50 hover:bg-zinc-200'
+                }`}
+              >
+                {cat.label}
+                <span className="ml-1 text-[10px] opacity-50">({cat.count})</span>
+              </button>
+            ))}
+          </div>
+          <GridToggle value={viewMode} onChange={setViewMode} />
         </motion.div>
 
-        {/* Product Grid — Editorial Style */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
+        {/* Product Grid */}
+        <div className={gridClass}>
           <AnimatePresence>
             {filteredProducts.map((product) => (
               <motion.div
@@ -124,14 +137,25 @@ export default function ColeccionPage() {
                 className="product-card group cursor-pointer"
                 onClick={() => navigate(`#/coleccion/${product.slug}`)}
               >
-                {/* Image */}
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-2.5 bg-zinc-100">
+                {/* Image with dual hover effect */}
+                <div className={`relative ${aspectClass} rounded-2xl overflow-hidden mb-2.5 bg-zinc-100`}>
+                  {/* Main image */}
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:opacity-0 group-hover:scale-105"
                     loading="lazy"
                   />
+                  {/* Secondary image (revealed on hover) */}
+                  {product.imageSecondary && (
+                    <img
+                      src={product.imageSecondary}
+                      alt={`${product.name} - vista alternativa`}
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-700 group-hover:opacity-100 group-hover:scale-100"
+                      loading="lazy"
+                    />
+                  )}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Category badge */}
@@ -194,7 +218,7 @@ export default function ColeccionPage() {
 
         {filteredProducts.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-foreground/30 text-base">No hay productos en esta categoría por el momento.</p>
+            <p className="text-foreground/30 text-base">No hay productos en esta categoria por el momento.</p>
           </div>
         )}
       </div>
