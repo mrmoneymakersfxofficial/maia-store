@@ -19,7 +19,7 @@ export default function NosotrosPage() {
 
   return (
     <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24 overflow-hidden">
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div className="text-center mb-12 pt-4">
           <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block">
@@ -60,7 +60,7 @@ export default function NosotrosPage() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {features.map((feature, index) => (
             <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }} className="group p-5 rounded-2xl bg-white/50 border border-zinc-100/60 backdrop-blur-sm hover:bg-white/80 transition-all duration-500">
               <div className="w-12 h-12 rounded-xl bg-turquoise-50 flex items-center justify-center mb-3 group-hover:bg-turquoise-100 transition-colors duration-300">

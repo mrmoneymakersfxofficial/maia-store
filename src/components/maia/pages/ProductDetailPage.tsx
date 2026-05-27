@@ -101,7 +101,7 @@ export default function ProductDetailPage() {
 
   return (
     <div ref={pageRef} className="relative pt-16 pb-32 sm:pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-xs text-foreground/40 mb-4 pt-2 detail-animate">
           <button onClick={() => navigate('#/')} className="hover:text-primary transition-colors">Inicio</button>
@@ -123,7 +123,7 @@ export default function ProductDetailPage() {
         </button>
 
         {/* Product Detail */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-20 lg:mb-28">
           {/* Image — Interactive Gallery */}
           <div className="detail-animate">
             <div
@@ -274,7 +274,7 @@ export default function ProductDetailPage() {
               </h2>
               <div className="section-divider mx-auto" />
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
               {related.map((rp) => (
                 <motion.div
                   key={rp.id}
@@ -286,7 +286,10 @@ export default function ProductDetailPage() {
                   onClick={() => navigate(`#/coleccion/${rp.slug}`)}
                 >
                   <div className="relative aspect-square rounded-2xl overflow-hidden mb-2 bg-zinc-100">
-                    <img src={rp.image} alt={rp.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                    <img src={rp.image} alt={rp.name} className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:opacity-0 group-hover:scale-105" loading="lazy" />
+                    {rp.imageSecondary && (
+                      <img src={rp.imageSecondary} alt={`${rp.name} - vista alternativa`} className="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-700 group-hover:opacity-100 group-hover:scale-100" loading="lazy" />
+                    )}
                   </div>
                   <h4 className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors truncate">{rp.name}</h4>
                   <p className="text-sm font-bold text-primary">{formatPrice(rp.price)}</p>

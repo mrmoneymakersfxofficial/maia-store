@@ -26,6 +26,7 @@ interface StoreContextValue {
   removeFromCart: (productId: number) => void;
   clearCart: () => void;
   isInCart: (productId: number) => boolean;
+  updateQuantity: (productId: number, quantity: number) => void;
 
   // Favorites
   favorites: number[];
@@ -99,6 +100,20 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setCart((prev) => prev.filter((item) => item.product.id !== productId));
   }, []);
 
+  const updateQuantity = useCallback((productId: number, quantity: number) => {
+    if (quantity <= 0) {
+      setCart((prev) => prev.filter((item) => item.product.id !== productId));
+      return;
+    }
+    setCart((prev) =>
+      prev.map((item) =>
+        item.product.id === productId
+          ? { ...item, quantity }
+          : item
+      )
+    );
+  }, []);
+
   const clearCart = useCallback(() => {
     setCart([]);
   }, []);
@@ -138,6 +153,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         removeFromCart,
         clearCart,
         isInCart,
+        updateQuantity,
         favorites,
         toggleFavorite,
         isFavorite,

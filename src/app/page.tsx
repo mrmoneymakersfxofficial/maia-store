@@ -13,6 +13,7 @@ import ComprarPage from '@/components/maia/pages/ComprarPage';
 import ContactoPage from '@/components/maia/pages/ContactoPage';
 import FavoritosPage from '@/components/maia/pages/FavoritosPage';
 import CarritoPage from '@/components/maia/pages/CarritoPage';
+import CheckoutPage from '@/components/maia/pages/CheckoutPage';
 
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
@@ -40,6 +41,8 @@ function PageRouter() {
         return <FavoritosPage />;
       case 'carrito':
         return <CarritoPage />;
+      case 'checkout':
+        return <CheckoutPage />;
       default:
         return <HomePage />;
     }
