@@ -1,6 +1,6 @@
 'use client';
 
-import { Instagram, Music, Phone, MapPin, Heart } from 'lucide-react';
+import { Instagram, Music, Phone, MapPin } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 
 export default function Footer() {
@@ -101,9 +101,17 @@ export default function Footer() {
             <p className="text-xs text-turquoise-200/50 text-center sm:text-left">
               &copy; {currentYear} Maia Store. Todos los derechos reservados.
             </p>
-            <p className="text-xs text-turquoise-200/50 flex items-center gap-1">
-              Hecho con <Heart className="w-3 h-3 text-pink-400 fill-pink-400" /> en Perú
-            </p>
+            <a
+              href="https://fastpagepro.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-turquoise-200/50 hover:text-turquoise-200 transition-colors duration-300 text-center sm:text-right"
+            >
+              Diseño y desarrollo por{' '}
+              <span className="font-semibold text-turquoise-300 hover:text-turquoise-100 transition-colors">
+                fastpagepro.com
+              </span>
+            </a>
           </div>
         </div>
       </div>
