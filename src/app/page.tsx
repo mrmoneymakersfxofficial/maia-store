@@ -64,9 +64,7 @@ function PageRouter() {
           </motion.div>
         </AnimatePresence>
       </main>
-      <div className="hidden sm:block">
-        <Footer />
-      </div>
+      <Footer />
       <BottomAppBar />
     </div>
   );
