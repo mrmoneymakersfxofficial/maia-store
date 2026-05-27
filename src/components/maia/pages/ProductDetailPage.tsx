@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import gsap from 'gsap';
 import {
   ArrowLeft,
   MessageCircle,
@@ -35,11 +34,19 @@ export default function ProductDetailPage() {
   }, [slug]);
 
   useEffect(() => {
-    if (!pageRef.current) return;
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.detail-animate', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out' });
-    }, pageRef);
-    return () => ctx.revert();
+    let ctx: { revert: () => void } | undefined;
+
+    (async () => {
+      const gsap = (await import('gsap')).default;
+
+      if (!pageRef.current) return;
+
+      ctx = gsap.context(() => {
+        gsap.fromTo('.detail-animate', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out' });
+      }, pageRef);
+    })();
+
+    return () => ctx?.revert();
   }, [slug]);
 
   if (!product) {

@@ -55,27 +55,43 @@ function parseHash(hash: string): RouteInfo {
   return { page, params, hash: `#/${clean}` };
 }
 
+// ─── Safe window access helper ──────────────────────────────
+
+function getHash(): string {
+  if (typeof window !== 'undefined') {
+    return window.location.hash || '#/';
+  }
+  return '#/';
+}
+
 // ─── Router Provider ─────────────────────────────────────────
 
 export function RouterProvider({ children }: { children: ReactNode }) {
-  const [route, setRoute] = useState<RouteInfo>(() => parseHash(window.location.hash || '#/'));
+  const [route, setRoute] = useState<RouteInfo>({
+    page: 'home',
+    params: {},
+    hash: '#/',
+  });
+  const [mounted, setMounted] = useState(false);
   const listenersRef = useRef<RouteChangeListener[]>([]);
-  const historyRef = useRef<string[]>([window.location.hash || '#/']);
+  const historyRef = useRef<string[]>(['#/']);
 
-  const notifyListeners = useCallback((newRoute: RouteInfo) => {
-    listenersRef.current.forEach((fn) => fn(newRoute));
-  }, []);
-
+  // Hydrate route from browser URL after mount
   useEffect(() => {
+    const initialRoute = parseHash(getHash());
+    setRoute(initialRoute);
+    historyRef.current = [initialRoute.hash];
+    setMounted(true);
+
     const handleHashChange = () => {
-      const newRoute = parseHash(window.location.hash || '#/');
+      const newRoute = parseHash(getHash());
       setRoute(newRoute);
-      notifyListeners(newRoute);
+      listenersRef.current.forEach((fn) => fn(newRoute));
     };
 
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
-  }, [notifyListeners]);
+  }, []);
 
   const navigate = useCallback(
     (hash: string) => {
@@ -100,6 +116,15 @@ export function RouterProvider({ children }: { children: ReactNode }) {
     },
     [route.page]
   );
+
+  // During SSR/pre-render, return a safe shell
+  if (!mounted) {
+    return (
+      <RouterContext.Provider value={{ route, navigate, back, isActive }}>
+        {children}
+      </RouterContext.Provider>
+    );
+  }
 
   return (
     <RouterContext.Provider value={{ route, navigate, back, isActive }}>

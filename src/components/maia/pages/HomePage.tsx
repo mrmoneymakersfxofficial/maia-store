@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import gsap from 'gsap';
 import { ArrowDown, Sparkles, ShoppingBag } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 import { RouterLink } from '@/lib/router';
@@ -17,39 +16,45 @@ export default function HomePage() {
   const { navigate } = useRouter();
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    let ctx: { revert: () => void } | undefined;
 
-      tl.fromTo(
-        titleRef.current,
-        { y: 80, opacity: 0, clipPath: 'inset(100% 0 0 0)' },
-        { y: 0, opacity: 1, clipPath: 'inset(0% 0 0 0)', duration: 1.2, delay: 0.3 }
-      )
-        .fromTo(
-          subtitleRef.current,
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8 },
-          '-=0.6'
+    (async () => {
+      const gsap = (await import('gsap')).default;
+
+      ctx = gsap.context(() => {
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+        tl.fromTo(
+          titleRef.current,
+          { y: 80, opacity: 0, clipPath: 'inset(100% 0 0 0)' },
+          { y: 0, opacity: 1, clipPath: 'inset(0% 0 0 0)', duration: 1.2, delay: 0.3 }
         )
-        .fromTo(
-          ctaRef.current,
-          { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8 },
-          '-=0.4'
-        )
-        .fromTo(
-          decorRef.current,
-          { scale: 0, opacity: 0, rotation: -180 },
-          { scale: 1, opacity: 1, rotation: 0, duration: 1.2, ease: 'elastic.out(1, 0.5)' },
-          '-=0.8'
-        );
+          .fromTo(
+            subtitleRef.current,
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8 },
+            '-=0.6'
+          )
+          .fromTo(
+            ctaRef.current,
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8 },
+            '-=0.4'
+          )
+          .fromTo(
+            decorRef.current,
+            { scale: 0, opacity: 0, rotation: -180 },
+            { scale: 1, opacity: 1, rotation: 0, duration: 1.2, ease: 'elastic.out(1, 0.5)' },
+            '-=0.8'
+          );
 
-      gsap.to('.hero-float-1', { y: -20, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-      gsap.to('.hero-float-2', { y: -15, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1 });
-      gsap.to('.hero-float-3', { y: -25, duration: 3.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5 });
-    }, heroRef);
+        gsap.to('.hero-float-1', { y: -20, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+        gsap.to('.hero-float-2', { y: -15, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1 });
+        gsap.to('.hero-float-3', { y: -25, duration: 3.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5 });
+      }, heroRef);
+    })();
 
-    return () => ctx.revert();
+    return () => ctx?.revert();
   }, []);
 
   const featured = products.slice(0, 3);

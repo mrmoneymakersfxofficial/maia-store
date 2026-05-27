@@ -2,12 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { Heart, Gem, HandHeart, Star } from 'lucide-react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   { icon: HandHeart, title: '100% Artesanal', description: 'Cada joya es tejida a mano por artesanas peruanas con técnicas ancestrales transmitidas de generación en generación, garantizando autenticidad y exclusividad en cada puntada. El proceso artesanal asegura que ninguna dos piezas sean exactamente iguales, dándote una joya verdaderamente única.' },
@@ -22,11 +18,21 @@ export default function NosotrosPage() {
   const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!imageRef.current) return;
-    const ctx = gsap.context(() => {
-      gsap.fromTo(imageRef.current, { scale: 1.1, y: 30 }, { scale: 1, y: 0, scrollTrigger: { trigger: imageRef.current, start: 'top 80%', end: 'bottom 60%', scrub: 1 } });
-    }, sectionRef);
-    return () => ctx.revert();
+    let ctx: { revert: () => void } | undefined;
+
+    (async () => {
+      const gsap = (await import('gsap')).default;
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+
+      if (!imageRef.current) return;
+
+      ctx = gsap.context(() => {
+        gsap.fromTo(imageRef.current, { scale: 1.1, y: 30 }, { scale: 1, y: 0, scrollTrigger: { trigger: imageRef.current, start: 'top 80%', end: 'bottom 60%', scrub: 1 } });
+      }, sectionRef);
+    })();
+
+    return () => ctx?.revert();
   }, []);
 
   return (

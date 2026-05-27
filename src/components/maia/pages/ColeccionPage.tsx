@@ -2,13 +2,9 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MessageCircle, ShoppingBag } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 import { products, categories, getProductsByCategory, formatPrice, generateWhatsAppLink } from '@/lib/store-data';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function ColeccionPage() {
   const { route, navigate } = useRouter();
@@ -20,15 +16,24 @@ export default function ColeccionPage() {
   const filteredProducts = getProductsByCategory(activeCategory);
 
   useEffect(() => {
-    if (!sectionRef.current) return;
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.product-card', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08 });
-    }, sectionRef);
-    return () => ctx.revert();
+    let ctx: { revert: () => void } | undefined;
+
+    (async () => {
+      const gsap = (await import('gsap')).default;
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+
+      if (!sectionRef.current) return;
+
+      ctx = gsap.context(() => {
+        gsap.fromTo('.product-card', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08 });
+      }, sectionRef);
+    })();
+
+    return () => ctx?.revert();
   }, [activeCategory]);
 
   const handleCategoryClick = (catId: string) => {
-    setActiveCategory(catId);
     if (catId === 'todos') {
       navigate('#/coleccion');
     } else {
