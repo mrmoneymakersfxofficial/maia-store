@@ -18,11 +18,19 @@ export default function Navigation() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const { navigate, route } = useRouter();
 
+  const isHomePage = route.page === 'home';
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 30);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // When route changes, reset scroll state
+  useEffect(() => {
+    setIsScrolled(false);
+    setIsMobileOpen(false);
+  }, [route.page]);
 
   const handleNavClick = useCallback((href: string) => {
     setIsMobileOpen(false);
@@ -31,17 +39,20 @@ export default function Navigation() {
 
   const isActive = (page: string) => route.page === page;
 
+  // On home page: transparent when top, blur when scrolled
+  // On sub-pages: always show background for contrast
+  const showBg = !isHomePage || isScrolled;
+  const headerClass = showBg
+    ? 'bg-white/85 backdrop-blur-xl border-b border-zinc-200/20 shadow-[0_1px_3px_rgba(0,0,0,0.04)]'
+    : 'bg-transparent';
+
   return (
     <>
       <motion.header
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/80 backdrop-blur-xl border-b border-zinc-200/30 shadow-sm'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerClass}`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 sm:h-16">
@@ -52,8 +63,12 @@ export default function Navigation() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-primary">MAIA</span>
-              <span className="text-xl sm:text-2xl font-extralight tracking-widest text-foreground ml-0.5">STORE</span>
+              <span className={`text-xl sm:text-2xl font-extrabold tracking-tight ${showBg ? 'text-primary' : 'text-white'}`}>
+                MAIA
+              </span>
+              <span className={`text-xl sm:text-2xl font-extralight tracking-widest ml-0.5 ${showBg ? 'text-foreground' : 'text-white/80'}`}>
+                STORE
+              </span>
             </motion.button>
 
             {/* Desktop Nav */}
@@ -65,7 +80,9 @@ export default function Navigation() {
                   className={`relative px-3 py-1.5 text-[13px] font-medium transition-colors duration-300 tracking-wide ${
                     isActive(link.page)
                       ? 'text-primary'
-                      : 'text-foreground/60 hover:text-foreground'
+                      : showBg
+                        ? 'text-foreground/60 hover:text-foreground'
+                        : 'text-white/70 hover:text-white'
                   }`}
                   whileHover={{ y: -1 }}
                   whileTap={{ y: 0 }}
@@ -85,17 +102,17 @@ export default function Navigation() {
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="md:hidden relative w-9 h-9 flex items-center justify-center rounded-xl hover:bg-turquoise-50 transition-colors"
+              className="md:hidden relative w-9 h-9 flex items-center justify-center rounded-xl hover:bg-turquoise-50/80 transition-colors"
               aria-label="Menú de navegación"
             >
               <AnimatePresence mode="wait">
                 {isMobileOpen ? (
                   <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                    <X className="w-5 h-5 text-primary" />
+                    <X className={`w-5 h-5 ${showBg ? 'text-primary' : 'text-white'}`} />
                   </motion.div>
                 ) : (
                   <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                    <Menu className="w-5 h-5 text-primary" />
+                    <Menu className={`w-5 h-5 ${showBg ? 'text-primary' : 'text-white'}`} />
                   </motion.div>
                 )}
               </AnimatePresence>

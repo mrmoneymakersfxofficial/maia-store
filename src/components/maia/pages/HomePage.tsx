@@ -59,10 +59,10 @@ export default function HomePage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/hero-craft.jpg')" }}
         />
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
-        {/* Turquoise gradient accent */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent" />
+        {/* Dark overlay for readability — stronger at bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/60" />
+        {/* Minimal fade to background at very bottom edge */}
+        <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-background/60 to-transparent" />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
@@ -160,7 +160,7 @@ export default function HomePage() {
                 onClick={() => navigate(`#/coleccion/${product.slug}`)}
               >
                 {/* Image — full bleed within card, minimal border radius */}
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-3">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-3 bg-zinc-100">
                   <img
                     src={product.image}
                     alt={product.name}

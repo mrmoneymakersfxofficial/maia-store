@@ -125,7 +125,7 @@ export default function ColeccionPage() {
                 onClick={() => navigate(`#/coleccion/${product.slug}`)}
               >
                 {/* Image */}
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-2.5">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-2.5 bg-zinc-100">
                   <img
                     src={product.image}
                     alt={product.name}

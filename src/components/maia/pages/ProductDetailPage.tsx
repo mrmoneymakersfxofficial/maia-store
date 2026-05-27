@@ -285,7 +285,7 @@ export default function ProductDetailPage() {
                   className="group cursor-pointer"
                   onClick={() => navigate(`#/coleccion/${rp.slug}`)}
                 >
-                  <div className="relative aspect-square rounded-2xl overflow-hidden mb-2">
+                  <div className="relative aspect-square rounded-2xl overflow-hidden mb-2 bg-zinc-100">
                     <img src={rp.image} alt={rp.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   </div>
                   <h4 className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors truncate">{rp.name}</h4>
