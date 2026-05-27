@@ -1,32 +1,32 @@
 'use client';
 
-import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { RouterProvider, useRouter } from '@/lib/router';
 import Navigation from '@/components/maia/Navigation';
 import Footer from '@/components/maia/Footer';
+import BottomAppBar from '@/components/maia/BottomAppBar';
 import HomePage from '@/components/maia/pages/HomePage';
 import NosotrosPage from '@/components/maia/pages/NosotrosPage';
 import ColeccionPage from '@/components/maia/pages/ColeccionPage';
 import ProductDetailPage from '@/components/maia/pages/ProductDetailPage';
 import ComprarPage from '@/components/maia/pages/ComprarPage';
 import ContactoPage from '@/components/maia/pages/ContactoPage';
+import FavoritosPage from '@/components/maia/pages/FavoritosPage';
+import CarritoPage from '@/components/maia/pages/CarritoPage';
 
 const pageVariants = {
-  initial: { opacity: 0, y: 20 },
-  enter: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const } },
-  exit: { opacity: 0, y: -10, transition: { duration: 0.25 } },
+  initial: { opacity: 0, y: 12 },
+  enter: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] as const } },
+  exit: { opacity: 0, y: -8, transition: { duration: 0.2 } },
 };
 
 function PageRouter() {
   const { route } = useRouter();
 
   const getPage = () => {
-    // Product detail: #/coleccion/pulsera-turquesa-elite (no /categoria/ in path)
     if (route.page === 'coleccion' && route.params?.slug) {
       return <ProductDetailPage />;
     }
-
     switch (route.page) {
       case 'nosotros':
         return <NosotrosPage />;
@@ -36,6 +36,10 @@ function PageRouter() {
         return <ComprarPage />;
       case 'contacto':
         return <ContactoPage />;
+      case 'favoritos':
+        return <FavoritosPage />;
+      case 'carrito':
+        return <CarritoPage />;
       default:
         return <HomePage />;
     }
@@ -57,7 +61,10 @@ function PageRouter() {
           </motion.div>
         </AnimatePresence>
       </main>
-      <Footer />
+      <div className="hidden sm:block">
+        <Footer />
+      </div>
+      <BottomAppBar />
     </div>
   );
 }
