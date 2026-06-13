@@ -89,7 +89,7 @@ export const products: Product[] = [
     sku: 'ABTNC06',
     name: 'Aretes Botón Crema',
     fullName: 'Aretes Botón Crema — Juego Botón',
-    price: 45.0,
+    price: 85.0,
     image: '/products/juego-boton/aretes-boton/crema/crema-1.webp',
     imageSecondary: '/products/juego-boton/aretes-boton/crema/crema-1-800.webp',
     images: [
@@ -128,7 +128,7 @@ export const products: Product[] = [
     sku: 'ABTNC03',
     name: 'Aretes Botón Rosado',
     fullName: 'Aretes Botón Rosado — Juego Botón',
-    price: 45.0,
+    price: 85.0,
     image: '/products/juego-boton/aretes-boton/rosado/rosado-1.webp',
     imageSecondary: '/products/juego-boton/aretes-boton/rosado/rosado-1.webp',
     images: [
@@ -167,7 +167,7 @@ export const products: Product[] = [
     sku: 'JBTNC03',
     name: 'Juego Botón Rosado',
     fullName: 'Juego Botón Rosado — Juego Botón',
-    price: 120.0,
+    price: 155.0,
     image: '/products/juego-boton/juego-boton/rosado/rosado-1.webp',
     imageSecondary: '/products/juego-boton/juego-boton/rosado/rosado-2.webp',
     images: [
@@ -217,7 +217,7 @@ export const products: Product[] = [
     sku: 'JBTNC15',
     name: 'Juego Botón Verde Botella',
     fullName: 'Juego Botón Verde Botella — Juego Botón',
-    price: 120.0,
+    price: 155.0,
     image: '/products/juego-boton/juego-boton/verde-botella/verde-botella-1.webp',
     imageSecondary: '/products/juego-boton/juego-boton/verde-botella/verde-botella-2.webp',
     images: [
@@ -262,7 +262,7 @@ export const products: Product[] = [
     sku: 'PBTNC03',
     name: 'Pulsera Botón Rosado',
     fullName: 'Pulsera Botón Rosado — Juego Botón',
-    price: 65.0,
+    price: 180.0,
     image: '/products/juego-boton/pulsera-boton/rosado/rosado-1.webp',
     imageSecondary: '/products/juego-boton/pulsera-boton/rosado/rosado-2.webp',
     images: [
@@ -311,7 +311,7 @@ export const products: Product[] = [
     sku: 'PBTNC15',
     name: 'Pulsera Botón Verde Botella',
     fullName: 'Pulsera Botón Verde Botella — Juego Botón',
-    price: 65.0,
+    price: 180.0,
     image: '/products/juego-boton/pulsera-boton/verde-botella/verde-botella-1.webp',
     imageSecondary: '/products/juego-boton/pulsera-boton/verde-botella/verde-botella-2.webp',
     images: [
@@ -363,7 +363,7 @@ export const products: Product[] = [
     sku: 'AMR4S0',
     name: 'Aretes María Swarovski Fucsia',
     fullName: 'Aretes María Swarovski Fucsia — Juego María Swarovski',
-    price: 75.0,
+    price: 165.0,
     image: '/products/juego-maria-swarovski/aretes-maria-swarovski/fucsia/fucsia-1.webp',
     imageSecondary: '/products/juego-maria-swarovski/aretes-maria-swarovski/fucsia/fucsia-1.webp',
     images: [
@@ -403,7 +403,7 @@ export const products: Product[] = [
     sku: 'AMR4S08',
     name: 'Aretes María Swarovski Turquesa',
     fullName: 'Aretes María Swarovski Turquesa — Juego María Swarovski',
-    price: 75.0,
+    price: 165.0,
     image: '/products/juego-maria-swarovski/aretes-maria-swarovski/turquesa/turquesa-1.webp',
     imageSecondary: '/products/juego-maria-swarovski/aretes-maria-swarovski/turquesa/turquesa-1.webp',
     images: [
@@ -443,7 +443,7 @@ export const products: Product[] = [
     sku: 'CMR4S04',
     name: 'Collar María Swarovski Fucsia',
     fullName: 'Collar María Swarovski Fucsia — Juego María Swarovski',
-    price: 85.0,
+    price: 130.0,
     image: '/products/juego-maria-swarovski/collar-maria-swarovski/fucsia/fucsia-1.webp',
     imageSecondary: '/products/juego-maria-swarovski/collar-maria-swarovski/fucsia/fucsia-1.webp',
     images: [
@@ -484,7 +484,7 @@ export const products: Product[] = [
     sku: 'CMR4S08',
     name: 'Collar María Swarovski Turquesa',
     fullName: 'Collar María Swarovski Turquesa — Juego María Swarovski',
-    price: 85.0,
+    price: 130.0,
     image: '/products/juego-maria-swarovski/collar-maria-swarovski/turquesa/turquesa-1.webp',
     imageSecondary: '/products/juego-maria-swarovski/collar-maria-swarovski/turquesa/turquesa-1.webp',
     images: [
@@ -525,7 +525,7 @@ export const products: Product[] = [
     sku: 'JMR4S05',
     name: 'Juegos María Swarovski Morado',
     fullName: 'Juegos María Swarovski Morado — Juego María Swarovski',
-    price: 160.0,
+    price: 240.0,
     image: '/products/juego-maria-swarovski/juegos-maria-swarovski/morado/morado-1.webp',
     imageSecondary: '/products/juego-maria-swarovski/juegos-maria-swarovski/morado/morado-1.webp',
     images: [
@@ -566,7 +566,7 @@ export const products: Product[] = [
     sku: 'JMR4S08',
     name: 'Juegos María Swarovski Turquesa',
     fullName: 'Juegos María Swarovski Turquesa — Juego María Swarovski',
-    price: 160.0,
+    price: 240.0,
     image: '/products/juego-maria-swarovski/juegos-maria-swarovski/turquesa/turquesa-1.webp',
     imageSecondary: '/products/juego-maria-swarovski/juegos-maria-swarovski/turquesa/turquesa-2.webp',
     images: [
@@ -615,7 +615,7 @@ export const products: Product[] = [
     sku: 'AROSCPT',
     name: 'Aretes Rosa Pastel',
     fullName: 'Aretes Rosa Pastel — Juego Rosa',
-    price: 48.0,
+    price: 95.0,
     image: '/products/juego-rosa/aretes/rosa-pastel/rosa-pastel-1.webp',
     imageSecondary: '/products/juego-rosa/aretes/rosa-pastel/rosa-pastel-2.webp',
     images: [
@@ -660,7 +660,7 @@ export const products: Product[] = [
     sku: 'CROSCPT',
     name: 'Collar Rosa Pastel',
     fullName: 'Collar Rosa Pastel — Juego Rosa',
-    price: 62.0,
+    price: 95.0,
     image: '/products/juego-rosa/collar/rosa-pastel/rosa-pastel-1.webp',
     imageSecondary: '/products/juego-rosa/collar/rosa-pastel/rosa-pastel-1.webp',
     images: [
@@ -701,7 +701,7 @@ export const products: Product[] = [
     sku: 'JROSCPT',
     name: 'Juego Rosa Pastel',
     fullName: 'Juego Rosa Pastel — Juego Rosa',
-    price: 138.0,
+    price: 180.0,
     image: '/products/juego-rosa/juego/rosa-pastel/rosa-pastel-1.webp',
     imageSecondary: '/products/juego-rosa/juego/rosa-pastel/rosa-pastel-2.webp',
     images: [
@@ -750,7 +750,7 @@ export const products: Product[] = [
     sku: 'ARSAC13',
     name: 'Aretes Verde Agua',
     fullName: 'Aretes Verde Agua — Juego Rosario',
-    price: 50.0,
+    price: 85.0,
     image: '/products/juego-rosario/aretes/verde-agua/verde-agua-1.webp',
     imageSecondary: '/products/juego-rosario/aretes/verde-agua/verde-agua-1.webp',
     images: [
@@ -790,7 +790,7 @@ export const products: Product[] = [
     sku: 'ARSAC15',
     name: 'Aretes Verde Botella',
     fullName: 'Aretes Verde Botella — Juego Rosario',
-    price: 50.0,
+    price: 85.0,
     image: '/products/juego-rosario/aretes/verde-botella/verde-botella-1.webp',
     imageSecondary: '/products/juego-rosario/aretes/verde-botella/verde-botella-1.webp',
     images: [
@@ -833,7 +833,7 @@ export const products: Product[] = [
     sku: 'PRB4S05',
     name: 'Pulsera Rombo Swarovski Morado',
     fullName: 'Pulsera Rombo Swarovski Morado — Pulsera Rombo Swarovski',
-    price: 90.0,
+    price: 185.0,
     image: '/products/pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado/morado-1.webp',
     imageSecondary: '/products/pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado/morado-2.webp',
     images: [
@@ -879,7 +879,7 @@ export const products: Product[] = [
     sku: 'PRB4S03',
     name: 'Pulsera Rombo Swarovski Rosado',
     fullName: 'Pulsera Rombo Swarovski Rosado — Pulsera Rombo Swarovski',
-    price: 90.0,
+    price: 185.0,
     image: '/products/pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado/rosado-1.webp',
     imageSecondary: '/products/pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado/rosado-2.webp',
     images: [
@@ -925,7 +925,7 @@ export const products: Product[] = [
     sku: 'PRB4S08',
     name: 'Pulsera Rombo Swarovski Turquesa',
     fullName: 'Pulsera Rombo Swarovski Turquesa — Pulsera Rombo Swarovski',
-    price: 90.0,
+    price: 185.0,
     image: '/products/pulsera-rombo-swarovski/pulsera-rombo-swarovski/turquesa/turquesa-1.webp',
     imageSecondary: '/products/pulsera-rombo-swarovski/pulsera-rombo-swarovski/turquesa/turquesa-1.webp',
     images: [
@@ -969,7 +969,7 @@ export const products: Product[] = [
     sku: 'PTBP1JI',
     name: 'Pulsera Tubular Jaspe Imperial',
     fullName: 'Pulsera Tubular Jaspe Imperial — Pulsera Tubular',
-    price: 65.0,
+    price: 120.0,
     image: '/products/pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-1.webp',
     imageSecondary: '/products/pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-2.webp',
     images: [
@@ -1020,7 +1020,7 @@ export const products: Product[] = [
     sku: 'PTBP1RC',
     name: 'Pulsera Tubular Rodocrosita',
     fullName: 'Pulsera Tubular Rodocrosita — Pulsera Tubular',
-    price: 70.0,
+    price: 120.0,
     image: '/products/pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-1.webp',
     imageSecondary: '/products/pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-2.webp',
     images: [
@@ -1086,7 +1086,7 @@ export const products: Product[] = [
     sku: 'PTBLSP',
     name: 'Pulsera Tubular Simple',
     fullName: 'Pulsera Tubular Simple — Pulsera Tubular',
-    price: 55.0,
+    price: 100.0,
     image: '/products/pulsera-tubular/pulsera-tubular/simple/simple-1.webp',
     imageSecondary: '/products/pulsera-tubular/pulsera-tubular/simple/simple-2.webp',
     images: [
@@ -1150,7 +1150,7 @@ export const products: Product[] = [
     sku: "JFPSSWROM",
     name: "Juego Flor de Plata Swarovski Rombo",
     fullName: "Juego Flor de Plata Swarovski Rombo — Juego Flor de Plata Swarovski",
-    price: 150,
+    price: 175.0,
     image: "/products/juego-flor-de-plata-swarovski/juego-flor-de-plata-swarovski-rombo/rombo/rombo-1.webp",
     imageSecondary: "/products/juego-flor-de-plata-swarovski/juego-flor-de-plata-swarovski-rombo/rombo/rombo-1-800.webp",
     images: [
@@ -1179,7 +1179,7 @@ export const products: Product[] = [
     sku: "AFPSCPYM01",
     name: "Aretes Flor de Plata Swarovski Modelo 1",
     fullName: "Aretes Flor de Plata Swarovski Modelo 1 — Juego Flor de Plata Swarovski",
-    price: 75,
+    price: 150.0,
     image: "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
     imageSecondary: "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp",
     images: [
@@ -1228,7 +1228,7 @@ export const products: Product[] = [
     sku: "AFPSCPYM20",
     name: "Aretes Flor de Plata Swarovski Modelo 2",
     fullName: "Aretes Flor de Plata Swarovski Modelo 2 — Juego Flor de Plata Swarovski",
-    price: 75,
+    price: 150.0,
     image: "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
     imageSecondary: "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp",
     images: [
@@ -1262,7 +1262,7 @@ export const products: Product[] = [
     sku: "CFPSCPYM01",
     name: "Collar Flor de Plata Swarovski Modelo 1",
     fullName: "Collar Flor de Plata Swarovski Modelo 1 — Juego Flor de Plata Swarovski",
-    price: 85,
+    price: 140.0,
     image: "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
     imageSecondary: "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp",
     images: [
@@ -1306,7 +1306,7 @@ export const products: Product[] = [
     sku: "CFPSCPYM20",
     name: "Collar Flor de Plata Swarovski Modelo 2",
     fullName: "Collar Flor de Plata Swarovski Modelo 2 — Juego Flor de Plata Swarovski",
-    price: 85,
+    price: 140.0,
     image: "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
     imageSecondary: "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp",
     images: [
@@ -1360,7 +1360,7 @@ export const products: Product[] = [
     sku: "JFPSCPYM01",
     name: "Juegos Flor de Plata Swarovski Modelo 1",
     fullName: "Juegos Flor de Plata Swarovski Modelo 1 — Juego Flor de Plata Swarovski",
-    price: 160,
+    price: 260.0,
     image: "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
     imageSecondary: "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp",
     images: [
@@ -1399,7 +1399,7 @@ export const products: Product[] = [
     sku: "JFPSCPYM20",
     name: "Juegos Flor de Plata Swarovski Modelo 2",
     fullName: "Juegos Flor de Plata Swarovski Modelo 2 — Juego Flor de Plata Swarovski",
-    price: 160,
+    price: 260.0,
     image: "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
     imageSecondary: "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp",
     images: [
@@ -1456,7 +1456,7 @@ export const products: Product[] = [
     sku: "JEAPRRC",
     name: "Juego Engaste Abierto Rodocrosita",
     fullName: "Juego Engaste Abierto Rodocrosita — Juego Engaste Abierto",
-    price: 145,
+    price: 175.0,
     image: "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-1.webp",
     imageSecondary: "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-2.webp",
     images: [
@@ -1515,7 +1515,7 @@ export const products: Product[] = [
     sku: "JCCRD03",
     name: "Juego Engaste Abierto Cuarzo Rosa",
     fullName: "Juego Engaste Abierto Cuarzo Rosa — Juego Engaste Abierto",
-    price: 145,
+    price: 175.0,
     image: "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-1.webp",
     imageSecondary: "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-2.webp",
     images: [
@@ -1557,7 +1557,7 @@ export const products: Product[] = [
     sku: "DEAPC2CR",
     name: "Dije Engaste Corazón Cuarzo Rosa",
     fullName: "Dije Engaste Corazón Cuarzo Rosa — Dije Engaste Abierto",
-    price: 55,
+    price: 125.0,
     image: "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-1.webp",
     imageSecondary: "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-2.webp",
     images: [
@@ -1599,7 +1599,7 @@ export const products: Product[] = [
     sku: "ACASCM01",
     name: "Aretes Corazón Abierto Swarovski Modelo 1",
     fullName: "Aretes Corazón Abierto Swarovski Modelo 1 — Aretes Corazón Abierto Swarovski",
-    price: 65,
+    price: 110.0,
     image: "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-1.webp",
     imageSecondary: "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-2.webp",
     images: [
@@ -1638,7 +1638,7 @@ export const products: Product[] = [
     sku: "ACASCM12",
     name: "Aretes Corazón Abierto Swarovski Modelo 2",
     fullName: "Aretes Corazón Abierto Swarovski Modelo 2 — Aretes Corazón Abierto Swarovski",
-    price: 65,
+    price: 110.0,
     image: "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-1.webp",
     imageSecondary: "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-2.webp",
     images: [
@@ -1675,7 +1675,7 @@ export const products: Product[] = [
     sku: "ACL2C08",
     name: "Aretes Circular 12 C08 y C12",
     fullName: "Aretes Circular 12 C08 y C12 — Aretes Circular",
-    price: 40,
+    price: 55.0,
     image: "/products/aretes-circular/aretes-circular-12/c08-y-c12/c08-y-c12-1.webp",
     imageSecondary: "/products/aretes-circular/aretes-circular-12/c08-y-c12/c08-y-c12-1-800.webp",
     images: [
@@ -1704,7 +1704,7 @@ export const products: Product[] = [
     sku: "ACL2C25",
     name: "Aretes Circular 12 C25 y C26",
     fullName: "Aretes Circular 12 C25 y C26 — Aretes Circular",
-    price: 40,
+    price: 55.0,
     image: "/products/aretes-circular/aretes-circular-12/c25-y-c26/c25-y-c26-1.webp",
     imageSecondary: "/products/aretes-circular/aretes-circular-12/c25-y-c26/c25-y-c26-1-800.webp",
     images: [
@@ -1736,7 +1736,7 @@ export const products: Product[] = [
     sku: "JAATCYR",
     name: "Juego Aro Atrapasueño Celeste y Rosado",
     fullName: "Juego Aro Atrapasueño Celeste y Rosado — Juego Aro Atrapasueño",
-    price: 120,
+    price: 180.0,
     image: "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1.webp",
     imageSecondary: "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-800.webp",
     images: [
@@ -1765,7 +1765,7 @@ export const products: Product[] = [
     sku: "AAATCYR",
     name: "Aretes Aro Atrapasueño Celeste y Rosado",
     fullName: "Aretes Aro Atrapasueño Celeste y Rosado — Juego Aro Atrapasueño",
-    price: 55,
+    price: 100.0,
     image: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1.webp",
     imageSecondary: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-800.webp",
     images: [
@@ -1794,7 +1794,7 @@ export const products: Product[] = [
     sku: "AAATNVD",
     name: "Aretes Aro Atrapasueño Navideño",
     fullName: "Aretes Aro Atrapasueño Navideño — Juego Aro Atrapasueño",
-    price: 55,
+    price: 100.0,
     image: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/navideno/navideno-1.webp",
     imageSecondary: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/navideno/navideno-1-800.webp",
     images: [
@@ -1819,11 +1819,11 @@ export const products: Product[] = [
   },
   {
     id: 40,
-    slug: "juego-aro-atrapasueno-aretes-aro-atrapasueno-negro-y-tornasol",
+    slug: "juego-aro-atrapasueno-juego-aro-atrapasueno-negro-y-tornasol",
     sku: "JAATNYT",
-    name: "Aretes Aro Atrapasueño Negro y Tornasol",
-    fullName: "Aretes Aro Atrapasueño Negro y Tornasol — Juego Aro Atrapasueño",
-    price: 55,
+    name: "Juego Aro Atrapasueño Negro y Tornasol",
+    fullName: "Juego Aro Atrapasueño Negro y Tornasol — Juego Aro Atrapasueño",
+    price: 180.0,
     image: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-1.webp",
     imageSecondary: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-2.webp",
     images: [
@@ -1838,15 +1838,15 @@ export const products: Product[] = [
         thumbnail: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-2-thumb.webp",
       }
     ],
-    category: "aretes",
-    categoryLabel: "Aretes",
+    category: "juegos",
+    categoryLabel: "Juegos Completos",
     collection: { id: "juego-aro-atrapasueno", name: "Juego Aro Atrapasueño" },
-    type: { id: "aretes-aro-atrapasueno", name: "Aretes Aro Atrapasueño" },
+    type: { id: "juego-aro-atrapasueno", name: "Juego Aro Atrapasueño" },
     color: { name: "Negro y Tornasol", code: null },
-    size: 100,
-    description: "Aretes Aro Atrapasueño artesanal, colección Juego Aro Atrapasueño.",
-    longDescription: "Elegante aretes aro atrapasueño artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
-    features: ["Elaboración artesanal 100% a mano", "Colección: Juego Aro Atrapasueño", "Color: Negro y Tornasol", "Tamaño: 100mm", "Materiales premium importados", "Acabado profesional de lujo", "Base hipoalergénica de plata 925", "Presentación en caja de regalo"],
+    size: 180,
+    description: "Juego Aro Atrapasueño Negro y Tornasol artesanal, colección Juego Aro Atrapasueño.",
+    longDescription: "Elegante juego aro atrapasueño negro y tornasol artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    features: ["Elaboración artesanal 100% a mano", "Colección: Juego Aro Atrapasueño", "Color: Negro y Tornasol", "Tamaño: 180mm", "Set completo: Aretes + Pulsera + Collar", "Materiales premium importados", "Acabado profesional de lujo", "Base hipoalergénica de plata 925", "Presentación en caja de regalo"],
     rating: 4.9,
     reviews: 53,
     inStock: true,
@@ -1857,7 +1857,7 @@ export const products: Product[] = [
     sku: "JAATRYT",
     name: "Juego Aro Atrapasueño Rojo y Tornasol",
     fullName: "Juego Aro Atrapasueño Rojo y Tornasol — Juego Aro Atrapasueño",
-    price: 120,
+    price: 180.0,
     image: "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/rojo-y-tornasol/rojo-y-tornasol-1.webp",
     imageSecondary: "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/rojo-y-tornasol/rojo-y-tornasol-1-800.webp",
     images: [
@@ -1886,7 +1886,7 @@ export const products: Product[] = [
     sku: "AAATVYM",
     name: "Aretes Aro Atrapasueño Verde y Menta",
     fullName: "Aretes Aro Atrapasueño Verde y Menta — Juego Aro Atrapasueño",
-    price: 55,
+    price: 100.0,
     image: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/verde-y-menta/verde-y-menta-1.webp",
     imageSecondary: "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/verde-y-menta/verde-y-menta-1-800.webp",
     images: [
@@ -1918,7 +1918,7 @@ export const products: Product[] = [
     sku: "AAVMSMG05",
     name: "Aretes Aro Vertical Mariposa Swarovski Naranja",
     fullName: "Aretes Aro Vertical Mariposa Swarovski Naranja — Juego Aro Vertical Mariposa Swarovski",
-    price: 75,
+    price: 120.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/naranja/naranja-1-800.webp",
     images: [
@@ -1947,7 +1947,7 @@ export const products: Product[] = [
     sku: "AAVMSMG06",
     name: "Aretes Aro Vertical Mariposa Swarovski Rojo",
     fullName: "Aretes Aro Vertical Mariposa Swarovski Rojo — Juego Aro Vertical Mariposa Swarovski",
-    price: 75,
+    price: 120.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-2.webp",
     images: [
@@ -1991,7 +1991,7 @@ export const products: Product[] = [
     sku: "AAVMSMG11",
     name: "Aretes Aro Vertical Mariposa Swarovski Celeste",
     fullName: "Aretes Aro Vertical Mariposa Swarovski Celeste — Juego Aro Vertical Mariposa Swarovski",
-    price: 75,
+    price: 120.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-2.webp",
     images: [
@@ -2030,7 +2030,7 @@ export const products: Product[] = [
     sku: "CAVMSMG05",
     name: "Collar Aro Vertical Mariposa Swarovski Naranja",
     fullName: "Collar Aro Vertical Mariposa Swarovski Naranja — Juego Aro Vertical Mariposa Swarovski",
-    price: 85,
+    price: 110.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/naranja/naranja-1-800.webp",
     images: [
@@ -2059,7 +2059,7 @@ export const products: Product[] = [
     sku: "CAVMSMG06",
     name: "Collar Aro Vertical Mariposa Swarovski Rojo",
     fullName: "Collar Aro Vertical Mariposa Swarovski Rojo — Juego Aro Vertical Mariposa Swarovski",
-    price: 85,
+    price: 110.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/rojo/rojo-1-800.webp",
     images: [
@@ -2088,7 +2088,7 @@ export const products: Product[] = [
     sku: "CAVMSMG11",
     name: "Collar Aro Vertical Mariposa Swarovski Celeste",
     fullName: "Collar Aro Vertical Mariposa Swarovski Celeste — Juego Aro Vertical Mariposa Swarovski",
-    price: 85,
+    price: 110.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/celeste/celeste-1-800.webp",
     images: [
@@ -2117,7 +2117,7 @@ export const products: Product[] = [
     sku: "JAVMSMG05",
     name: "Juego Aro Vertical Mariposa Swarovski Naranja",
     fullName: "Juego Aro Vertical Mariposa Swarovski Naranja — Juego Aro Vertical Mariposa Swarovski",
-    price: 160,
+    price: 210.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-2.webp",
     images: [
@@ -2151,7 +2151,7 @@ export const products: Product[] = [
     sku: "JAVMSMG06",
     name: "Juego Aro Vertical Mariposa Swarovski Rojo",
     fullName: "Juego Aro Vertical Mariposa Swarovski Rojo — Juego Aro Vertical Mariposa Swarovski",
-    price: 160,
+    price: 210.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-2.webp",
     images: [
@@ -2190,7 +2190,7 @@ export const products: Product[] = [
     sku: "JAVMSMG10",
     name: "Juego Aro Vertical Mariposa Swarovski Rosado",
     fullName: "Juego Aro Vertical Mariposa Swarovski Rosado — Juego Aro Vertical Mariposa Swarovski",
-    price: 160,
+    price: 210.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rosado/rosado-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rosado/rosado-1-800.webp",
     images: [
@@ -2219,7 +2219,7 @@ export const products: Product[] = [
     sku: "JAVMSMG11",
     name: "Juego Aro Vertical Mariposa Swarovski Celeste",
     fullName: "Juego Aro Vertical Mariposa Swarovski Celeste — Juego Aro Vertical Mariposa Swarovski",
-    price: 160,
+    price: 210.0,
     image: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
     imageSecondary: "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/celeste/celeste-1-800.webp",
     images: [
