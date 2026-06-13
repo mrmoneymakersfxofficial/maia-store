@@ -35,7 +35,7 @@ export default function NosotrosPage() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
+        <div id="nosotros-historia" className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
           <div ref={imageRef} className="relative">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image src="/images/hero-craft.jpg" alt="Artesana tejiendo joyas a mano en Perú" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority />
@@ -60,7 +60,7 @@ export default function NosotrosPage() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div id="nosotros-valores" className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 scroll-mt-16">
           {features.map((feature, index) => (
             <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }} className="group p-5 rounded-2xl bg-white/50 border border-zinc-100/60 backdrop-blur-sm hover:bg-white/80 transition-all duration-500">
               <div className="w-12 h-12 rounded-xl bg-turquoise-50 flex items-center justify-center mb-3 group-hover:bg-turquoise-100 transition-colors duration-300">

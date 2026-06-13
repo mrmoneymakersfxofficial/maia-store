@@ -16,6 +16,7 @@ export interface RouteInfo {
   page: string;
   params: Record<string, string>;
   hash: string;
+  section: string;
 }
 
 type RouteChangeListener = (route: RouteInfo) => void;
@@ -27,6 +28,7 @@ interface RouterContextValue {
   navigate: (hash: string) => void;
   back: () => void;
   isActive: (hash: string) => boolean;
+  setActiveSection: (sectionId: string) => void;
 }
 
 const RouterContext = createContext<RouterContextValue | null>(null);
@@ -36,10 +38,14 @@ const RouterContext = createContext<RouterContextValue | null>(null);
 function parseHash(hash: string): RouteInfo {
   const clean = hash.startsWith('#') ? hash.slice(1) : hash;
   if (!clean || clean === '/') {
-    return { page: 'home', params: {}, hash: '#/' };
+    return { page: 'home', params: {}, hash: '#/', section: '' };
   }
 
-  const segments = clean.split('/').filter(Boolean);
+  // Extract section deep-link from query string: #/nosotros?section=valores
+  const [pathPart, queryString] = clean.split('?');
+  const section = new URLSearchParams(queryString || '').get('section') || '';
+
+  const segments = pathPart.split('/').filter(Boolean);
   const page = segments[0] || 'home';
   const params: Record<string, string> = {};
 
@@ -52,7 +58,7 @@ function parseHash(hash: string): RouteInfo {
     params.category = segments[2];
   }
 
-  return { page, params, hash: `#/${clean}` };
+  return { page, params, hash: `#/${pathPart}`, section };
 }
 
 // ─── Safe window access helper ──────────────────────────────
@@ -71,6 +77,7 @@ export function RouterProvider({ children }: { children: ReactNode }) {
     page: 'home',
     params: {},
     hash: '#/',
+    section: '',
   });
   const [mounted, setMounted] = useState(false);
   const listenersRef = useRef<RouteChangeListener[]>([]);
@@ -96,8 +103,10 @@ export function RouterProvider({ children }: { children: ReactNode }) {
   const navigate = useCallback(
     (hash: string) => {
       const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
-      historyRef.current.push(cleanHash);
-      window.location.hash = cleanHash;
+      // Strip any lingering section query from the target hash
+      const clean = cleanHash.split('?')[0];
+      historyRef.current.push(clean);
+      window.location.hash = clean;
       window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
     },
     []
@@ -106,8 +115,12 @@ export function RouterProvider({ children }: { children: ReactNode }) {
   const back = useCallback(() => {
     historyRef.current.pop();
     const prev = historyRef.current[historyRef.current.length - 1] || '#/';
-    window.location.hash = prev;
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+    const cleanPrev = prev.split('?')[0];
+    window.location.hash = cleanPrev;
+    // Don't scroll to top if the target has a section — the scroll spy handles it
+    if (!prev.includes('?section=')) {
+      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+    }
   }, []);
 
   const isActive = useCallback(
@@ -117,17 +130,38 @@ export function RouterProvider({ children }: { children: ReactNode }) {
     [route.page]
   );
 
+  // ─── setActiveSection (replaceState — no history entry, no reload) ───
+  const setActiveSection = useCallback(
+    (sectionId: string) => {
+      const baseHash = route.hash; // already clean (no query string)
+      const basePathname = window.location.pathname;
+
+      if (!sectionId) {
+        history.replaceState(null, '', basePathname + baseHash);
+      } else {
+        history.replaceState(
+          null,
+          '',
+          basePathname + baseHash + '?section=' + encodeURIComponent(sectionId)
+        );
+      }
+
+      setRoute((prev) => ({ ...prev, section: sectionId }));
+    },
+    [route.hash]
+  );
+
   // During SSR/pre-render, return a safe shell
   if (!mounted) {
     return (
-      <RouterContext.Provider value={{ route, navigate, back, isActive }}>
+      <RouterContext.Provider value={{ route, navigate, back, isActive, setActiveSection }}>
         {children}
       </RouterContext.Provider>
     );
   }
 
   return (
-    <RouterContext.Provider value={{ route, navigate, back, isActive }}>
+    <RouterContext.Provider value={{ route, navigate, back, isActive, setActiveSection }}>
       {children}
     </RouterContext.Provider>
   );

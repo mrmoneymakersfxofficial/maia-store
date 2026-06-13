@@ -54,3 +54,4 @@ server.log
 # temporary
 test
 prompt
+*.zip

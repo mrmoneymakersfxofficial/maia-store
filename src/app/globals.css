@@ -53,6 +53,15 @@
   --color-turquoise-900: #003d4a;
   --color-gold-400: #d4a853;
   --color-gold-500: #c49a3c;
+  --color-warm-50: #faf8f5;
+  --color-warm-100: #f5f0e8;
+  --color-warm-200: #ebe3d4;
+  --color-warm-300: #ddd0b8;
+  --color-warm-400: #c9a86c;
+  --color-warm-500: #b8954f;
+  --color-warm-600: #9a7d3f;
+  --color-deep-800: #043f4a;
+  --color-deep-900: #032e36;
 }
 
 :root {
@@ -171,6 +180,22 @@ html {
 /* Text gradient */
 .text-gradient-turquoise {
   background: linear-gradient(135deg, oklch(0.70 0.12 200), oklch(0.60 0.14 200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold gradient */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #c9a86c, #d4a853, #e8c97a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Deep teal gradient */
+.text-gradient-deep {
+  background: linear-gradient(135deg, #043f4a, #006c83);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

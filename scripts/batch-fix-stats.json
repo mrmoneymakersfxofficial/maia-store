@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-06-04T15:54:39.585Z",
+  "newProducts": 29,
+  "totalProducts": 52,
+  "totalImages": 67,
+  "errors": [
+    "ZIP 2: Not found: Juego Flor de Plata Swarovski CPYM20 CFPSCPYM20 S-260",
+    "ZIP 5: No images for Amatista",
+    "ZIP 5: No images for Rodocrosita",
+    "ZIP 5: No images for Amazonita",
+    "Slug duplicate: juego-aro-atrapasueno-aretes-aro-atrapasueno-navideno (Aretes Aro Atrapasueño Navideño)"
+  ]
+}

@@ -30,7 +30,7 @@ export default function ComprarPage() {
   return (
     <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24">
       {/* Hero */}
-      <div className="bg-primary py-12 sm:py-16 px-4 mb-10">
+      <div id="comprar-metodos" className="bg-primary py-12 sm:py-16 px-4 mb-10 scroll-mt-16">
         <div className="max-w-4xl mx-auto text-center">
           <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-200 mb-3 block">
             Métodos de Pago
@@ -98,7 +98,7 @@ export default function ComprarPage() {
         </div>
 
         {/* Guarantees */}
-        <div className="grid sm:grid-cols-3 gap-4 mb-14">
+        <div id="comprar-garantias" className="grid sm:grid-cols-3 gap-4 mb-14 scroll-mt-16">
           {[
             { icon: ShieldCheck, title: 'Pago 100% Seguro', desc: 'Todas las transacciones están protegidas con encriptación SSL de 256 bits y verificación en tiempo real.' },
             { icon: Truck, title: 'Envío a Todo el Perú', desc: 'Realizamos envíos a través de Olva Courier y Shalom Express a todas las ciudades del país.' },
@@ -123,7 +123,7 @@ export default function ComprarPage() {
         </div>
 
         {/* FAQ */}
-        <div className="text-center mb-8">
+        <div id="comprar-faq" className="text-center mb-8 scroll-mt-16">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3">Preguntas Frecuentes</h2>
           <div className="section-divider mx-auto" />
         </div>

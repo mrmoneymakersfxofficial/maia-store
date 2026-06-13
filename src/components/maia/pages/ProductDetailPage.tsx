@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
   MessageCircle,
@@ -20,13 +20,29 @@ import { useStore } from '@/lib/store-context';
 import { useToast } from '@/lib/toast-context';
 import {
   getProductBySlug,
+  getProductVariants,
   getRelatedProducts,
   formatPrice,
   generateWhatsAppLink,
-  products,
+  type Product,
 } from '@/lib/store-data';
 import { shareProduct } from '@/lib/share';
 import Lightbox from '@/components/maia/Lightbox';
+
+// ─── Color swatch map ─────────────────────────────────────────
+const COLOR_SWATCHES: Record<string, string> = {
+  'Crema':          '#F5F0E1',
+  'Rosado':         '#F4B8C1',
+  'Verde Botella':  '#2E5E3D',
+  'Fucsia':         '#C2185B',
+  'Morado':         '#7B1FA2',
+  'Turquesa':       '#00ACC1',
+  'Rosa Pastel':    '#F8BBD0',
+  'Verde Agua':     '#80CBC4',
+  'Jaspe Imperial': '#8D6E63',
+  'Rodocrosita':    '#E57373',
+  'Simple':         '#BDBDBD',
+};
 
 export default function ProductDetailPage() {
   const { route, navigate, back } = useRouter();
@@ -34,12 +50,50 @@ export default function ProductDetailPage() {
   const { showToast } = useToast();
   const slug = route.params?.slug || '';
   const product = getProductBySlug(slug);
-  const related = product ? getRelatedProducts(product.id) : [];
   const pageRef = useRef<HTMLDivElement>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
   const [isZooming, setIsZooming] = useState(false);
   const imageRef = useRef<HTMLDivElement>(null);
+
+  // ─── Active variant (starts with current product) ─────────
+  const [activeVariant, setActiveVariant] = useState<Product | null>(product || null);
+
+  // ─── Selected image index within variant gallery ──────────
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  // All color variants for this product type
+  const variants = useMemo(() => (product ? getProductVariants(product) : []), [product]);
+
+  // Sync when slug changes (e.g., user navigates to another product)
+  useEffect(() => {
+    if (product) {
+      setActiveVariant(product);
+      setSelectedImageIndex(0);
+    }
+  }, [slug, product]);
+
+  // ─── Current display images (only from active variant) ─────
+  const variantImages = useMemo(() => {
+    if (!activeVariant) return [];
+    return activeVariant.images.map((img) => ({
+      src: img.original,
+      alt: `${activeVariant.name} — imagen`,
+      thumb: img.thumbnail,
+    }));
+  }, [activeVariant]);
+
+  const currentMainImage = variantImages[selectedImageIndex]?.src || activeVariant?.image || '';
+
+  // ─── Lightbox images from active variant ────────────────────
+  const lightboxImages = useMemo(() => {
+    if (!activeVariant) return [];
+    return activeVariant.images.map((img) => ({
+      src: img.original,
+      alt: `${activeVariant.name}`,
+    }));
+  }, [activeVariant]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
@@ -60,21 +114,36 @@ export default function ProductDetailPage() {
   }, [slug]);
 
   const handleShare = async () => {
-    if (!product) return;
-    const ok = await shareProduct(product.name, product.slug, formatPrice(product.price));
+    if (!activeVariant) return;
+    const ok = await shareProduct(activeVariant.name, activeVariant.slug, formatPrice(activeVariant.price));
     if (ok) {
       const canShare = typeof window !== 'undefined' && !!navigator.share;
       showToast(canShare ? '¡Compartido!' : 'Enlace copiado al portapapeles');
     }
   };
 
-  // Build images array for lightbox (use main + related as gallery)
-  const lightboxImages = product
-    ? [
-        { src: product.image, alt: product.name },
-        ...related.slice(0, 3).map((r) => ({ src: r.image, alt: r.name })),
-      ]
-    : [];
+  // ─── Switch variant (color) ───────────────────────────────
+  const switchVariant = useCallback(
+    (variant: Product) => {
+      setActiveVariant(variant);
+      setSelectedImageIndex(0);
+      // Update URL without full navigation
+      navigate(`#/coleccion/${variant.slug}`);
+    },
+    [navigate],
+  );
+
+  // ─── Click main image → open lightbox ─────────────────────
+  const handleMainImageClick = useCallback(() => {
+    if (!activeVariant) return;
+    setLightboxIndex(selectedImageIndex);
+    setIsLightboxOpen(true);
+  }, [activeVariant, selectedImageIndex]);
+
+  // ─── Click thumbnail → change main image ───────────────────
+  const handleThumbnailClick = useCallback((index: number) => {
+    setSelectedImageIndex(index);
+  }, []);
 
   // Hover zoom handler
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -84,6 +153,12 @@ export default function ProductDetailPage() {
     const y = ((e.clientY - rect.top) / rect.height) * 100;
     setZoomPos({ x, y });
   };
+
+  // ─── Related products (exclude current variant group) ───────
+  const variantIds = new Set(variants.map((v) => v.id));
+  const related = activeVariant
+    ? getRelatedProducts(activeVariant.id, 6).filter((r) => !variantIds.has(r.id)).slice(0, 4)
+    : [];
 
   if (!product) {
     return (
@@ -99,6 +174,8 @@ export default function ProductDetailPage() {
     );
   }
 
+  const displayProduct = activeVariant || product;
+
   return (
     <div ref={pageRef} className="relative pt-16 pb-32 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
@@ -108,9 +185,9 @@ export default function ProductDetailPage() {
           <ChevronRight className="w-3 h-3" />
           <button onClick={() => navigate('#/coleccion')} className="hover:text-primary transition-colors">Colección</button>
           <ChevronRight className="w-3 h-3" />
-          <button onClick={() => navigate(`#/coleccion/categoria/${product.category}`)} className="hover:text-primary transition-colors capitalize">{product.categoryLabel}</button>
+          <button onClick={() => navigate(`#/coleccion/categoria/${displayProduct.category}`)} className="hover:text-primary transition-colors capitalize">{displayProduct.categoryLabel}</button>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-foreground/60 font-medium truncate max-w-[140px]">{product.name}</span>
+          <span className="text-foreground/60 font-medium truncate max-w-[140px]">{displayProduct.name}</span>
         </nav>
 
         {/* Back button */}
@@ -123,67 +200,77 @@ export default function ProductDetailPage() {
         </button>
 
         {/* Product Detail */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-20 lg:mb-28">
-          {/* Image — Interactive Gallery */}
+        <div id="producto-detalle" className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-20 lg:mb-28 scroll-mt-16">
+          {/* ─── Image Gallery ─────────────────────────────── */}
           <div className="detail-animate">
+            {/* Main Image — click opens lightbox */}
             <div
               ref={imageRef}
               className="relative aspect-square rounded-2xl overflow-hidden bg-zinc-100 cursor-zoom-in"
-              onClick={() => setIsLightboxOpen(true)}
+              onClick={handleMainImageClick}
               onMouseEnter={() => setIsZooming(true)}
               onMouseLeave={() => setIsZooming(false)}
               onMouseMove={handleMouseMove}
             >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover transition-transform duration-300"
-                style={
-                  isZooming
-                    ? {
-                        transform: 'scale(1.8)',
-                        transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,
-                      }
-                    : { transform: 'scale(1)' }
-                }
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentMainImage}
+                  src={currentMainImage}
+                  alt={displayProduct.name}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full h-full object-cover transition-transform duration-300"
+                  style={
+                    isZooming
+                      ? {
+                          transform: 'scale(1.8)',
+                          transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,
+                        }
+                      : { transform: 'scale(1)' }
+                  }
+                />
+              </AnimatePresence>
               {/* Zoom icon */}
-              <div className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg">
                 <ZoomIn className="w-5 h-5 text-foreground/60" />
               </div>
             </div>
 
-            {/* Thumbnails */}
-            {lightboxImages.length > 1 && (
-              <div className="flex items-center gap-2 mt-3">
-                {lightboxImages.map((img, i) => (
+            {/* Thumbnails — click changes main image, NOT lightbox */}
+            {variantImages.length > 1 && (
+              <div className="flex items-center gap-2 mt-3 overflow-x-auto pb-1">
+                {variantImages.map((img, i) => (
                   <button
                     key={i}
-                    onClick={() => setIsLightboxOpen(true)}
-                    className={`w-16 h-16 rounded-xl overflow-hidden border-2 transition-all duration-200 ${
-                      i === 0 ? 'border-primary' : 'border-zinc-200 opacity-60 hover:opacity-100'
+                    onClick={() => handleThumbnailClick(i)}
+                    className={`flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden border-2 transition-all duration-200 ${
+                      i === selectedImageIndex
+                        ? 'border-primary ring-1 ring-primary/30'
+                        : 'border-zinc-200 opacity-50 hover:opacity-90'
                     }`}
                   >
-                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                    <img src={img.thumb || img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
                   </button>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Info */}
+          {/* ─── Product Info ──────────────────────────────── */}
           <div className="space-y-5">
             <div className="detail-animate">
               {/* Top actions row */}
               <div className="flex items-center gap-2 mb-3">
                 <motion.button
-                  onClick={() => toggleFavorite(product.id)}
+                  onClick={() => toggleFavorite(displayProduct.id)}
                   className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center"
                   whileTap={{ scale: 0.85 }}
                 >
                   <Heart
-                    className={`w-5 h-5 transition-colors ${isFavorite(product.id) ? 'text-red-500 fill-red-500' : 'text-foreground/30'}`}
-                    fill={isFavorite(product.id) ? 'currentColor' : 'none'}
+                    className={`w-5 h-5 transition-colors ${isFavorite(displayProduct.id) ? 'text-red-500 fill-red-500' : 'text-foreground/30'}`}
+                    fill={isFavorite(displayProduct.id) ? 'currentColor' : 'none'}
                   />
                 </motion.button>
                 <motion.button
@@ -198,22 +285,64 @@ export default function ProductDetailPage() {
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'text-amber-400 fill-amber-400' : 'text-zinc-200 fill-zinc-200'}`} />
+                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(displayProduct.rating) ? 'text-amber-400 fill-amber-400' : 'text-zinc-200 fill-zinc-200'}`} />
                   ))}
                 </div>
-                <span className="text-xs text-foreground/40">{product.rating} ({product.reviews} reseñas)</span>
+                <span className="text-xs text-foreground/40">{displayProduct.rating} ({displayProduct.reviews} reseñas)</span>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">{product.name}</h1>
-              <p className="text-2xl font-bold text-primary mb-4">{formatPrice(product.price)}</p>
-              <p className="text-sm text-foreground/60 leading-relaxed">{product.longDescription}</p>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">{displayProduct.name}</h1>
+              <p className="text-2xl font-bold text-primary mb-4">{formatPrice(displayProduct.price)}</p>
+              <p className="text-sm text-foreground/60 leading-relaxed">{displayProduct.longDescription}</p>
             </div>
+
+            {/* ─── Color Selector ────────────────────────────── */}
+            {variants.length > 1 && (
+              <div className="detail-animate">
+                <h3 className="text-sm font-bold text-foreground mb-3">
+                  Color: <span className="font-normal text-foreground/60">{displayProduct.color.name}</span>
+                </h3>
+                <div className="flex items-center gap-2 flex-wrap">
+                  {variants.map((variant) => {
+                    const isActive = variant.id === displayProduct.id;
+                    const swatchColor = COLOR_SWATCHES[variant.color.name] || '#ccc';
+                    return (
+                      <motion.button
+                        key={variant.id}
+                        onClick={() => switchVariant(variant)}
+                        className={`relative w-10 h-10 rounded-full border-2 transition-all duration-200 flex items-center justify-center ${
+                          isActive
+                            ? 'border-primary ring-2 ring-primary/20 scale-110'
+                            : 'border-zinc-200 hover:border-primary/50 hover:scale-105'
+                        }`}
+                        whileTap={{ scale: 0.92 }}
+                        title={variant.color.name}
+                      >
+                        <span
+                          className="w-7 h-7 rounded-full block"
+                          style={{ backgroundColor: swatchColor }}
+                        />
+                        {isActive && (
+                          <motion.span
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            className="absolute inset-0 flex items-center justify-center"
+                          >
+                            <Check className="w-4 h-4 text-primary" strokeWidth={3} />
+                          </motion.span>
+                        )}
+                      </motion.button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Features */}
             <div className="detail-animate">
               <h3 className="text-sm font-bold text-foreground mb-2.5">Características</h3>
               <ul className="space-y-2">
-                {product.features.map((feat) => (
+                {displayProduct.features.map((feat) => (
                   <li key={feat} className="flex items-start gap-2.5 text-xs text-foreground/60">
                     <Check className="w-4 h-4 text-turquoise-500 flex-shrink-0 mt-0.5" />
                     {feat}
@@ -222,10 +351,19 @@ export default function ProductDetailPage() {
               </ul>
             </div>
 
+            {/* SKU badge */}
+            {displayProduct.sku && (
+              <div className="detail-animate">
+                <span className="inline-block px-3 py-1 rounded-full bg-zinc-100 text-[10px] font-mono font-medium text-foreground/40">
+                  SKU: {displayProduct.sku}
+                </span>
+              </div>
+            )}
+
             {/* CTAs */}
             <div className="detail-animate flex flex-col sm:flex-row gap-2.5 pt-3">
               <motion.a
-                href={generateWhatsAppLink(product)}
+                href={generateWhatsAppLink(displayProduct)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-5 py-3.5 rounded-xl font-semibold text-sm transition-colors shadow-lg shadow-green-500/15"
@@ -237,7 +375,7 @@ export default function ProductDetailPage() {
               </motion.a>
               <motion.button
                 onClick={() => {
-                  addToCart(product);
+                  addToCart(displayProduct);
                   showToast('Agregado al carrito');
                 }}
                 className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-turquoise-600 text-white px-5 py-3.5 rounded-xl font-semibold text-sm transition-colors shadow-lg shadow-turquoise-500/15"
@@ -267,7 +405,7 @@ export default function ProductDetailPage() {
 
         {/* Related Products — Editorial */}
         {related.length > 0 && (
-          <div>
+          <div id="producto-relacionados" className="scroll-mt-16">
             <div className="text-center mb-8">
               <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                 También te puede interesar
@@ -300,16 +438,19 @@ export default function ProductDetailPage() {
         )}
       </div>
 
-      {/* Lightbox */}
-      <Lightbox
-        images={lightboxImages}
-        isOpen={isLightboxOpen}
-        onClose={() => setIsLightboxOpen(false)}
-        productName={product.name}
-        slug={product.slug}
-        price={formatPrice(product.price)}
-        onShare={handleShare}
-      />
+      {/* Lightbox — only images from active variant */}
+      {activeVariant && (
+        <Lightbox
+          images={lightboxImages}
+          isOpen={isLightboxOpen}
+          initialIndex={lightboxIndex}
+          onClose={() => setIsLightboxOpen(false)}
+          productName={activeVariant.name}
+          slug={activeVariant.slug}
+          price={formatPrice(activeVariant.price)}
+          onShare={handleShare}
+        />
+      )}
     </div>
   );
 }

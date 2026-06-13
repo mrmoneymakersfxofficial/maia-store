@@ -54,7 +54,7 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO — FULL BLEED ═══ */}
-      <section ref={heroRef} className="relative w-full h-screen overflow-hidden">
+      <section id="hero" ref={heroRef} className="relative w-full h-screen overflow-hidden scroll-mt-16">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/hero-craft.jpg')" }}
@@ -129,7 +129,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ FEATURED — EDITORIAL STYLE ═══ */}
-      <section id="featured-products" className="py-20 sm:py-28 lg:py-36">
+      <section id="featured-products" className="py-20 sm:py-28 lg:py-36 scroll-mt-16">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block">
@@ -235,7 +235,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ TESTIMONIALS — INFINITE MARQUEE ═══ */}
-      <section className="py-20 sm:py-28 lg:py-36">
+      <section id="testimonios" className="py-20 sm:py-28 lg:py-36 scroll-mt-16">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
           <div className="text-center mb-10 sm:mb-14">
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block">

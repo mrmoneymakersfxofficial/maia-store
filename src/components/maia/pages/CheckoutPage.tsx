@@ -188,7 +188,7 @@ export default function CheckoutPage() {
 
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Left: Main Content */}
-          <div className="lg:col-span-3">
+          <div id="checkout-formulario" className="lg:col-span-3 scroll-mt-16">
             <AnimatePresence mode="wait">
               {/* Step: Select Method */}
               {step === 'method' && (
@@ -513,7 +513,7 @@ export default function CheckoutPage() {
           </div>
 
           {/* Right: Order Summary */}
-          <div className="lg:col-span-2">
+          <div id="checkout-resumen" className="lg:col-span-2 scroll-mt-16">
             <div className="sticky top-20 p-5 rounded-2xl bg-white border border-zinc-100 shadow-sm">
               <h3 className="text-sm font-bold text-foreground mb-4">Resumen del Pedido</h3>
               <div className="space-y-3 mb-5">

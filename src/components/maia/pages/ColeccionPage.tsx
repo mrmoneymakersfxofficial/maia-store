@@ -52,7 +52,7 @@ export default function ColeccionPage() {
     <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
-        <div className="text-center mb-8 pt-4">
+        <div id="coleccion-header" className="text-center mb-8 pt-4 scroll-mt-16">
           <motion.span
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -124,7 +124,7 @@ export default function ColeccionPage() {
         </motion.div>
 
         {/* Product Grid */}
-        <div className={gridClass}>
+        <div id="coleccion-productos" className={gridClass}>
           <AnimatePresence>
             {filteredProducts.map((product) => (
               <motion.div

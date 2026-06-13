@@ -14,6 +14,23 @@ import ContactoPage from '@/components/maia/pages/ContactoPage';
 import FavoritosPage from '@/components/maia/pages/FavoritosPage';
 import CarritoPage from '@/components/maia/pages/CarritoPage';
 import CheckoutPage from '@/components/maia/pages/CheckoutPage';
+import { useScrollSpy } from '@/hooks/use-scroll-spy';
+
+// ─── Section Deep-Linking Map ────────────────────────────────
+// First ID in each array is the "default" section (no ?section= in URL).
+// Add / remove IDs here to scale deep-linking for future sections.
+
+const SECTIONS_BY_PAGE: Record<string, string[]> = {
+  home:                ['hero', 'featured-products', 'testimonios'],
+  nosotros:            ['nosotros-historia', 'nosotros-valores'],
+  coleccion:           ['coleccion-header', 'coleccion-productos'],
+  'coleccion:detail':  ['producto-detalle', 'producto-relacionados'],
+  comprar:             ['comprar-metodos', 'comprar-garantias', 'comprar-faq'],
+  contacto:            ['contacto-info', 'contacto-testimonios', 'contacto-cta'],
+  favoritos:           ['favoritos-contenido'],
+  carrito:             ['carrito-contenido'],
+  checkout:            ['checkout-formulario', 'checkout-resumen'],
+};
 
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
@@ -23,6 +40,14 @@ const pageVariants = {
 
 function PageRouter() {
   const { route } = useRouter();
+
+  // Determine section IDs for the current page / sub-page
+  const sectionKey =
+    route.page === 'coleccion' && route.params?.slug
+      ? 'coleccion:detail'
+      : route.page;
+  const sectionIds = SECTIONS_BY_PAGE[sectionKey] || [];
+  useScrollSpy(sectionIds);
 
   const getPage = () => {
     if (route.page === 'coleccion' && route.params?.slug) {

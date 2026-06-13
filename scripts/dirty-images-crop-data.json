@@ -1,0 +1,38 @@
+{
+  "Juego Botón Rosado #1": {
+    "uiStart": 1183,
+    "leftBarEnd": 0,
+    "rightBarStart": 863,
+    "cropW": 863,
+    "cropH": 1183,
+    "cropLeft": 0,
+    "cropTop": 0
+  },
+  "Juego Botón Verde Botella #1": {
+    "uiStart": 1343,
+    "leftBarEnd": 0,
+    "rightBarStart": 767,
+    "cropW": 767,
+    "cropH": 1343,
+    "cropLeft": 0,
+    "cropTop": 0
+  },
+  "Pulsera Botón Rosado #3": {
+    "uiStart": 863,
+    "leftBarEnd": 0,
+    "rightBarStart": 1183,
+    "cropW": 1183,
+    "cropH": 863,
+    "cropLeft": 0,
+    "cropTop": 0
+  },
+  "Pulsera Botón Verde Botella #1": {
+    "uiStart": 767,
+    "leftBarEnd": 0,
+    "rightBarStart": 1312,
+    "cropW": 1312,
+    "cropH": 767,
+    "cropLeft": 0,
+    "cropTop": 0
+  }
+}

@@ -38,7 +38,7 @@ export default function ContactoPage() {
         </motion.nav>
 
         {/* Contact Cards */}
-        <div className="grid sm:grid-cols-3 gap-4 lg:gap-6 mb-16 sm:mb-20">
+        <div id="contacto-info" className="grid sm:grid-cols-3 gap-4 lg:gap-6 mb-16 sm:mb-20 scroll-mt-16">
           {[
             { icon: Phone, title: 'WhatsApp', detail: '+51 977 333 858', desc: 'Respuesta inmediata. Lunes a Sabado de 9am a 8pm.', href: 'https://wa.me/51977333858?text=Hola%20Maia%20Store!', color: 'bg-green-50 border-green-100' },
             { icon: Instagram, title: 'Instagram', detail: '@maia_store81', desc: 'Siguenos para nuevas colecciones y ofertas exclusivas.', href: 'https://instagram.com/maia_store81', color: 'bg-pink-50 border-pink-100' },
@@ -66,7 +66,7 @@ export default function ContactoPage() {
         </div>
 
         {/* Testimonials — Infinite Marquee */}
-        <div className="mb-16 sm:mb-20">
+        <div id="contacto-testimonios" className="mb-16 sm:mb-20 scroll-mt-16">
           <div className="text-center mb-10">
             <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
               Lo que Dicen <span className="text-gradient-turquoise">Nuestras Clientas</span>
@@ -100,7 +100,7 @@ export default function ContactoPage() {
         </div>
 
         {/* CTA Banner */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="relative rounded-2xl overflow-hidden">
+        <motion.div id="contacto-cta" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="relative rounded-2xl overflow-hidden scroll-mt-16">
           <div className="absolute inset-0">
             <Image src="/images/collection.jpg" alt="Coleccion de joyas artesanales" fill className="object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-gradient-to-r from-turquoise-900/90 to-turquoise-700/80" />

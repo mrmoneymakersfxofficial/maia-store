@@ -1,0 +1,38 @@
+[
+  {
+    "id": "todos",
+    "label": "Todos",
+    "slug": "coleccion",
+    "count": 47
+  },
+  {
+    "id": "aretes",
+    "label": "Aretes",
+    "slug": "coleccion/categoria/aretes",
+    "count": 17
+  },
+  {
+    "id": "juegos",
+    "label": "Juegos Completos",
+    "slug": "coleccion/categoria/juegos",
+    "count": 13
+  },
+  {
+    "id": "pulseras",
+    "label": "Pulseras",
+    "slug": "coleccion/categoria/pulseras",
+    "count": 8
+  },
+  {
+    "id": "collares",
+    "label": "Collares",
+    "slug": "coleccion/categoria/collares",
+    "count": 8
+  },
+  {
+    "id": "dije-engaste-abierto-piedra-corazon-cuarzo-rosa-deapc2cr-s-125",
+    "label": "Dije Engaste Abierto Piedra Corazón Cuarzo Rosa DEAPC2CR S-125",
+    "slug": "coleccion/categoria/dije-engaste-abierto-piedra-corazon-cuarzo-rosa-deapc2cr-s-125",
+    "count": 1
+  }
+]

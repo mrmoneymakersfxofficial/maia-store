@@ -1,0 +1,38 @@
+{
+  "Juego Botón Rosado #1 (864x1184)": {
+    "hasRealUI": true,
+    "topBlackBar": 0,
+    "bottomBlackBar": 0,
+    "leftBlackBar": 0,
+    "rightBlackBar": 0,
+    "w": 864,
+    "h": 1184
+  },
+  "Juego Botón Verde Botella #1 (768x1344)": {
+    "hasRealUI": false,
+    "topBlackBar": 0,
+    "bottomBlackBar": 0,
+    "leftBlackBar": 0,
+    "rightBlackBar": 0,
+    "w": 768,
+    "h": 1344
+  },
+  "Pulsera Botón Rosado #3 (1184x864)": {
+    "hasRealUI": false,
+    "topBlackBar": 0,
+    "bottomBlackBar": 0,
+    "leftBlackBar": 0,
+    "rightBlackBar": 0,
+    "w": 1184,
+    "h": 864
+  },
+  "Pulsera Verde Botella #1 (1344x768)": {
+    "hasRealUI": true,
+    "topBlackBar": 139,
+    "bottomBlackBar": 0,
+    "leftBlackBar": 106,
+    "rightBlackBar": 31,
+    "w": 1344,
+    "h": 768
+  }
+}

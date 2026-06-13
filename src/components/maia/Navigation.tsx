@@ -49,6 +49,7 @@ export default function Navigation() {
   return (
     <>
       <motion.header
+        id="navigation"
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

@@ -13,7 +13,7 @@ export default function FavoritosPage() {
   const favoriteProducts = products.filter((p) => favorites.includes(p.id));
 
   return (
-    <div className="relative pt-20 pb-32 sm:pb-24 px-4 min-h-screen">
+    <div id="favoritos-contenido" className="relative pt-20 pb-32 sm:pb-24 px-4 min-h-screen scroll-mt-16">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="mb-8">

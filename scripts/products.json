@@ -1,0 +1,3069 @@
+[
+  {
+    "id": 1,
+    "slug": "juego-boton-aretes-boton-crema",
+    "sku": "ABTNC06",
+    "name": "Aretes Botón Crema",
+    "fullName": "Aretes Botón Crema — Juego Botón",
+    "price": null,
+    "collection": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "type": {
+      "id": "aretes-boton",
+      "name": "Aretes Botón"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Crema",
+      "code": "C06"
+    },
+    "size": 85,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Aretes Botón/Aretes Botón Crema C06 ABTNC06 S-85",
+        "sourceFile": "1766155913798.jpg",
+        "original": "juego-boton/aretes-boton/crema/1766155913798.jpg",
+        "optimized": "juego-boton/aretes-boton/crema/crema-1.webp",
+        "thumbnail": "juego-boton/aretes-boton/crema/crema-1-thumb.webp",
+        "file": "1766155913798.jpg",
+        "size": 1475100
+      }
+    ],
+    "description": "Aretes Botón artesanal en tono Crema, colección Juego Botón.",
+    "longDescription": "Elegante aretes botón artesanal en tono crema. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Tejido artesanal 100% a mano",
+      "Colección: Juego Botón",
+      "Color: Crema",
+      "Tamaño: 85mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.88,
+    "reviews": 40,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "slug": "juego-boton-aretes-boton-rosado",
+    "sku": "ABTNC03",
+    "name": "Aretes Botón Rosado",
+    "fullName": "Aretes Botón Rosado — Juego Botón",
+    "price": null,
+    "collection": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "type": {
+      "id": "aretes-boton",
+      "name": "Aretes Botón"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Rosado",
+      "code": "C03"
+    },
+    "size": 85,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Aretes Botón/Aretes Botón Rosado C03 ABTNC03 S-85",
+        "sourceFile": "1766240888731.jpg",
+        "original": "juego-boton/aretes-boton/rosado/1766240888731.jpg",
+        "optimized": "juego-boton/aretes-boton/rosado/rosado-1.webp",
+        "thumbnail": "juego-boton/aretes-boton/rosado/rosado-1-thumb.webp",
+        "file": "1766240888731.jpg",
+        "size": 1212940
+      }
+    ],
+    "description": "Aretes Botón artesanal en tono Rosado, colección Juego Botón.",
+    "longDescription": "Elegante aretes botón artesanal en tono rosado. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Tejido artesanal 100% a mano",
+      "Colección: Juego Botón",
+      "Color: Rosado",
+      "Tamaño: 85mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.84,
+    "reviews": 50,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "slug": "juego-boton-juego-boton-rosado",
+    "sku": "JBTNC03",
+    "name": "Juego Botón Rosado",
+    "fullName": "Juego Botón Rosado — Juego Botón",
+    "price": null,
+    "collection": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "type": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Rosado",
+      "code": "C03"
+    },
+    "size": 155,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Rosado C03 JBTNC03 S-155",
+        "sourceFile": "1768176313972.jpg",
+        "original": "juego-boton/juego-boton/rosado/1768176313972.jpg",
+        "optimized": "juego-boton/juego-boton/rosado/rosado-1.webp",
+        "thumbnail": "juego-boton/juego-boton/rosado/rosado-1-thumb.webp",
+        "file": "1768176313972.jpg",
+        "size": 1470259
+      },
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Rosado C03 JBTNC03 S-155",
+        "sourceFile": "1768176340367.jpg",
+        "original": "juego-boton/juego-boton/rosado/1768176340367.jpg",
+        "optimized": "juego-boton/juego-boton/rosado/rosado-2.webp",
+        "thumbnail": "juego-boton/juego-boton/rosado/rosado-2-thumb.webp",
+        "file": "1768176340367.jpg",
+        "size": 1492050
+      },
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Rosado C03 JBTNC03 S-155",
+        "sourceFile": "1768335000985.jpg",
+        "original": "juego-boton/juego-boton/rosado/1768335000985.jpg",
+        "optimized": "juego-boton/juego-boton/rosado/rosado-3.webp",
+        "thumbnail": "juego-boton/juego-boton/rosado/rosado-3-thumb.webp",
+        "file": "1768335000985.jpg",
+        "size": 1316318
+      }
+    ],
+    "description": "Juego Botón artesanal en tono Rosado, colección Juego Botón.",
+    "longDescription": "Elegante juego botón artesanal en tono rosado. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Tejido artesanal 100% a mano",
+      "Colección: Juego Botón",
+      "Color: Rosado",
+      "Tamaño: 155mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.93,
+    "reviews": 27,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "slug": "juego-boton-juego-boton-verde-botella",
+    "sku": "JBTNC15",
+    "name": "Juego Botón Verde Botella",
+    "fullName": "Juego Botón Verde Botella — Juego Botón",
+    "price": null,
+    "collection": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "type": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Verde Botella",
+      "code": "C15"
+    },
+    "size": 155,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Verde Botella C15 JBTNC15 S-155",
+        "sourceFile": "1767803114495.jpg",
+        "original": "juego-boton/juego-boton/verde-botella/1767803114495.jpg",
+        "optimized": "juego-boton/juego-boton/verde-botella/verde-botella-1.webp",
+        "thumbnail": "juego-boton/juego-boton/verde-botella/verde-botella-1-thumb.webp",
+        "file": "1767803114495.jpg",
+        "size": 1558439
+      },
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Verde Botella C15 JBTNC15 S-155",
+        "sourceFile": "1767803214653.jpg",
+        "original": "juego-boton/juego-boton/verde-botella/1767803214653.jpg",
+        "optimized": "juego-boton/juego-boton/verde-botella/verde-botella-2.webp",
+        "thumbnail": "juego-boton/juego-boton/verde-botella/verde-botella-2-thumb.webp",
+        "file": "1767803214653.jpg",
+        "size": 1989228
+      }
+    ],
+    "description": "Juego Botón artesanal en tono Verde Botella, colección Juego Botón.",
+    "longDescription": "Elegante juego botón artesanal en tono verde botella. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Tejido artesanal 100% a mano",
+      "Colección: Juego Botón",
+      "Color: Verde Botella",
+      "Tamaño: 155mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.92,
+    "reviews": 24,
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "slug": "juego-boton-pulsera-boton-rosado",
+    "sku": "PBTNC03",
+    "name": "Pulsera Botón Rosado",
+    "fullName": "Pulsera Botón Rosado — Juego Botón",
+    "price": null,
+    "collection": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "type": {
+      "id": "pulsera-boton",
+      "name": "Pulsera Botón"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Rosado",
+      "code": "C03"
+    },
+    "size": 180,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Rosado C03 PBTNC03 S-180",
+        "sourceFile": "1768335048433.jpg",
+        "original": "juego-boton/pulsera-boton/rosado/1768335048433.jpg",
+        "optimized": "juego-boton/pulsera-boton/rosado/rosado-1.webp",
+        "thumbnail": "juego-boton/pulsera-boton/rosado/rosado-1-thumb.webp",
+        "file": "1768335048433.jpg",
+        "size": 1393408
+      },
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Rosado C03 PBTNC03 S-180",
+        "sourceFile": "1768335730525.jpg",
+        "original": "juego-boton/pulsera-boton/rosado/1768335730525.jpg",
+        "optimized": "juego-boton/pulsera-boton/rosado/rosado-2.webp",
+        "thumbnail": "juego-boton/pulsera-boton/rosado/rosado-2-thumb.webp",
+        "file": "1768335730525.jpg",
+        "size": 1228046
+      },
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Rosado C03 PBTNC03 S-180",
+        "sourceFile": "1768347300676.jpg",
+        "original": "juego-boton/pulsera-boton/rosado/1768347300676.jpg",
+        "optimized": "juego-boton/pulsera-boton/rosado/rosado-3.webp",
+        "thumbnail": "juego-boton/pulsera-boton/rosado/rosado-3-thumb.webp",
+        "file": "1768347300676.jpg",
+        "size": 1302835
+      }
+    ],
+    "description": "Pulsera Botón artesanal en tono Rosado, colección Juego Botón.",
+    "longDescription": "Elegante pulsera botón artesanal en tono rosado. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Tejido artesanal 100% a mano",
+      "Colección: Juego Botón",
+      "Color: Rosado",
+      "Tamaño: 180mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.91,
+    "reviews": 64,
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "slug": "juego-boton-pulsera-boton-verde-botella",
+    "sku": "PBTNC15",
+    "name": "Pulsera Botón Verde Botella",
+    "fullName": "Pulsera Botón Verde Botella — Juego Botón",
+    "price": null,
+    "collection": {
+      "id": "juego-boton",
+      "name": "Juego Botón"
+    },
+    "type": {
+      "id": "pulsera-boton",
+      "name": "Pulsera Botón"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Verde Botella",
+      "code": "C15"
+    },
+    "size": 180,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Verde Botella C15 PBTNC15 S-180",
+        "sourceFile": "1767802846029.jpg",
+        "original": "juego-boton/pulsera-boton/verde-botella/1767802846029.jpg",
+        "optimized": "juego-boton/pulsera-boton/verde-botella/verde-botella-1.webp",
+        "thumbnail": "juego-boton/pulsera-boton/verde-botella/verde-botella-1-thumb.webp",
+        "file": "1767802846029.jpg",
+        "size": 975100
+      },
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Verde Botella C15 PBTNC15 S-180",
+        "sourceFile": "1768347024307.jpg",
+        "original": "juego-boton/pulsera-boton/verde-botella/1768347024307.jpg",
+        "optimized": "juego-boton/pulsera-boton/verde-botella/verde-botella-2.webp",
+        "thumbnail": "juego-boton/pulsera-boton/verde-botella/verde-botella-2-thumb.webp",
+        "file": "1768347024307.jpg",
+        "size": 1224124
+      },
+      {
+        "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Verde Botella C15 PBTNC15 S-180",
+        "sourceFile": "1768347024307~2.jpg",
+        "original": "juego-boton/pulsera-boton/verde-botella/1768347024307~2.jpg",
+        "optimized": "juego-boton/pulsera-boton/verde-botella/verde-botella-3.webp",
+        "thumbnail": "juego-boton/pulsera-boton/verde-botella/verde-botella-3-thumb.webp",
+        "file": "1768347024307~2.jpg",
+        "size": 114771
+      }
+    ],
+    "description": "Pulsera Botón artesanal en tono Verde Botella, colección Juego Botón.",
+    "longDescription": "Elegante pulsera botón artesanal en tono verde botella. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Tejido artesanal 100% a mano",
+      "Colección: Juego Botón",
+      "Color: Verde Botella",
+      "Tamaño: 180mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.819999999999999,
+    "reviews": 48,
+    "inStock": true
+  },
+  {
+    "slug": "juego-maria-swarovski-aretes-maria-swarovski-fucsia",
+    "sku": "AMR4S0",
+    "name": "Aretes María Swarovski Fucsia",
+    "fullName": "Aretes María Swarovski Fucsia — Juego María Swarovski",
+    "price": null,
+    "collection": {
+      "id": "juego-maria-swarovski",
+      "name": "Juego María Swarovski"
+    },
+    "type": {
+      "id": "aretes-maria-swarovski",
+      "name": "Aretes María Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Fucsia",
+      "code": "S04"
+    },
+    "size": 165,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego María Swarovski/Juego María Swarovski/Aretes María Swarovski/Aretes María Swarovski Fucsia 4S04 AMR4S0 S-165",
+        "sourceFile": "1778112820251.png",
+        "imageDir": "juego-maria-swarovski/aretes-maria-swarovski/fucsia",
+        "destName": "fucsia-1",
+        "original": "juego-maria-swarovski/aretes-maria-swarovski/fucsia/1778112820251.png",
+        "optimized": "juego-maria-swarovski/aretes-maria-swarovski/fucsia/fucsia-1.webp",
+        "thumbnail": "juego-maria-swarovski/aretes-maria-swarovski/fucsia/fucsia-1-thumb.webp",
+        "file": "1778112820251.png",
+        "size": 1486909
+      }
+    ],
+    "description": "Aretes María Swarovski artesanal en tono Fucsia, colección Juego María Swarovski.",
+    "longDescription": "Elegante aretes maría swarovski artesanal en tono fucsia. Parte de la exclusiva colección \"Juego María Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego María Swarovski",
+      "Color: Fucsia",
+      "Tamaño: 165mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.91,
+    "reviews": 54,
+    "inStock": true,
+    "id": 7
+  },
+  {
+    "slug": "juego-maria-swarovski-aretes-maria-swarovski-turquesa",
+    "sku": "AMR4S08",
+    "name": "Aretes María Swarovski Turquesa",
+    "fullName": "Aretes María Swarovski Turquesa — Juego María Swarovski",
+    "price": null,
+    "collection": {
+      "id": "juego-maria-swarovski",
+      "name": "Juego María Swarovski"
+    },
+    "type": {
+      "id": "aretes-maria-swarovski",
+      "name": "Aretes María Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Turquesa",
+      "code": "S08"
+    },
+    "size": 165,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego María Swarovski/Juego María Swarovski/Aretes María Swarovski/Aretes María Swarovski Turquesa 4S08 AMR4S08 S-165",
+        "sourceFile": "1778112384444.png",
+        "imageDir": "juego-maria-swarovski/aretes-maria-swarovski/turquesa",
+        "destName": "turquesa-1",
+        "original": "juego-maria-swarovski/aretes-maria-swarovski/turquesa/1778112384444.png",
+        "optimized": "juego-maria-swarovski/aretes-maria-swarovski/turquesa/turquesa-1.webp",
+        "thumbnail": "juego-maria-swarovski/aretes-maria-swarovski/turquesa/turquesa-1-thumb.webp",
+        "file": "1778112384444.png",
+        "size": 1498211
+      }
+    ],
+    "description": "Aretes María Swarovski artesanal en tono Turquesa, colección Juego María Swarovski.",
+    "longDescription": "Elegante aretes maría swarovski artesanal en tono turquesa. Parte de la exclusiva colección \"Juego María Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego María Swarovski",
+      "Color: Turquesa",
+      "Tamaño: 165mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 64,
+    "inStock": true,
+    "id": 8
+  },
+  {
+    "slug": "juego-maria-swarovski-collar-maria-swarovski-fucsia",
+    "sku": "CMR4S04",
+    "name": "Collar María Swarovski Fucsia",
+    "fullName": "Collar María Swarovski Fucsia — Juego María Swarovski",
+    "price": null,
+    "collection": {
+      "id": "juego-maria-swarovski",
+      "name": "Juego María Swarovski"
+    },
+    "type": {
+      "id": "collar-maria-swarovski",
+      "name": "Collar María Swarovski"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Fucsia",
+      "code": "S04"
+    },
+    "size": 130,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego María Swarovski/Juego María Swarovski/Collar María Swarovski/Collar María Swarovski Fucsia 4S04 CMR4S04 S-130",
+        "sourceFile": "1778112864973.png",
+        "imageDir": "juego-maria-swarovski/collar-maria-swarovski/fucsia",
+        "destName": "fucsia-1",
+        "original": "juego-maria-swarovski/collar-maria-swarovski/fucsia/1778112864973.png",
+        "optimized": "juego-maria-swarovski/collar-maria-swarovski/fucsia/fucsia-1.webp",
+        "thumbnail": "juego-maria-swarovski/collar-maria-swarovski/fucsia/fucsia-1-thumb.webp",
+        "file": "1778112864973.png",
+        "size": 1620231
+      }
+    ],
+    "description": "Collar María Swarovski artesanal en tono Fucsia, colección Juego María Swarovski.",
+    "longDescription": "Elegante collar maría swarovski artesanal en tono fucsia. Parte de la exclusiva colección \"Juego María Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego María Swarovski",
+      "Color: Fucsia",
+      "Tamaño: 130mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.99,
+    "reviews": 20,
+    "inStock": true,
+    "id": 9
+  },
+  {
+    "slug": "juego-maria-swarovski-collar-maria-swarovski-turquesa",
+    "sku": "CMR4S08",
+    "name": "Collar María Swarovski Turquesa",
+    "fullName": "Collar María Swarovski Turquesa — Juego María Swarovski",
+    "price": null,
+    "collection": {
+      "id": "juego-maria-swarovski",
+      "name": "Juego María Swarovski"
+    },
+    "type": {
+      "id": "collar-maria-swarovski",
+      "name": "Collar María Swarovski"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Turquesa",
+      "code": "S08"
+    },
+    "size": 130,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego María Swarovski/Juego María Swarovski/Collar María Swarovski/Collar María Swarovski Turquesa 4S08 CMR4S08 S-130",
+        "sourceFile": "1778112834434.png",
+        "imageDir": "juego-maria-swarovski/collar-maria-swarovski/turquesa",
+        "destName": "turquesa-1",
+        "original": "juego-maria-swarovski/collar-maria-swarovski/turquesa/1778112834434.png",
+        "optimized": "juego-maria-swarovski/collar-maria-swarovski/turquesa/turquesa-1.webp",
+        "thumbnail": "juego-maria-swarovski/collar-maria-swarovski/turquesa/turquesa-1-thumb.webp",
+        "file": "1778112834434.png",
+        "size": 1674267
+      }
+    ],
+    "description": "Collar María Swarovski artesanal en tono Turquesa, colección Juego María Swarovski.",
+    "longDescription": "Elegante collar maría swarovski artesanal en tono turquesa. Parte de la exclusiva colección \"Juego María Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego María Swarovski",
+      "Color: Turquesa",
+      "Tamaño: 130mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.79,
+    "reviews": 38,
+    "inStock": true,
+    "id": 10
+  },
+  {
+    "slug": "juego-maria-swarovski-juegos-maria-swarovski-morado",
+    "sku": "JMR4S05",
+    "name": "Juegos María Swarovski Morado",
+    "fullName": "Juegos María Swarovski Morado — Juego María Swarovski",
+    "price": null,
+    "collection": {
+      "id": "juego-maria-swarovski",
+      "name": "Juego María Swarovski"
+    },
+    "type": {
+      "id": "juegos-maria-swarovski",
+      "name": "Juegos María Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Morado",
+      "code": "S05"
+    },
+    "size": 240,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego María Swarovski/Juego María Swarovski/Juegos María Swarovski/Juego María Swarovski Morado 4S05 JMR4S05 S-240",
+        "sourceFile": "1778110931476.png",
+        "imageDir": "juego-maria-swarovski/juegos-maria-swarovski/morado",
+        "destName": "morado-1",
+        "original": "juego-maria-swarovski/juegos-maria-swarovski/morado/1778110931476.png",
+        "optimized": "juego-maria-swarovski/juegos-maria-swarovski/morado/morado-1.webp",
+        "thumbnail": "juego-maria-swarovski/juegos-maria-swarovski/morado/morado-1-thumb.webp",
+        "file": "1778110931476.png",
+        "size": 1562334
+      }
+    ],
+    "description": "Juegos María Swarovski artesanal en tono Morado, colección Juego María Swarovski.",
+    "longDescription": "Elegante juegos maría swarovski artesanal en tono morado. Parte de la exclusiva colección \"Juego María Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego María Swarovski",
+      "Color: Morado",
+      "Tamaño: 240mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 63,
+    "inStock": true,
+    "id": 11
+  },
+  {
+    "slug": "juego-maria-swarovski-juegos-maria-swarovski-turquesa",
+    "sku": "JMR4S08",
+    "name": "Juegos María Swarovski Turquesa",
+    "fullName": "Juegos María Swarovski Turquesa — Juego María Swarovski",
+    "price": null,
+    "collection": {
+      "id": "juego-maria-swarovski",
+      "name": "Juego María Swarovski"
+    },
+    "type": {
+      "id": "juegos-maria-swarovski",
+      "name": "Juegos María Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Turquesa",
+      "code": "S08"
+    },
+    "size": 240,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego María Swarovski/Juego María Swarovski/Juegos María Swarovski/Juego María Swarovski Turquesa 4S08 JMR4S08 S-240",
+        "sourceFile": "1778110921764.png",
+        "imageDir": "juego-maria-swarovski/juegos-maria-swarovski/turquesa",
+        "destName": "turquesa-1",
+        "original": "juego-maria-swarovski/juegos-maria-swarovski/turquesa/1778110921764.png",
+        "optimized": "juego-maria-swarovski/juegos-maria-swarovski/turquesa/turquesa-1.webp",
+        "thumbnail": "juego-maria-swarovski/juegos-maria-swarovski/turquesa/turquesa-1-thumb.webp",
+        "file": "1778110921764.png",
+        "size": 1623697
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego María Swarovski/Juego María Swarovski/Juegos María Swarovski/Juego María Swarovski Turquesa 4S08 JMR4S08 S-240",
+        "sourceFile": "1779226987356.png",
+        "imageDir": "juego-maria-swarovski/juegos-maria-swarovski/turquesa",
+        "destName": "turquesa-2",
+        "original": "juego-maria-swarovski/juegos-maria-swarovski/turquesa/1779226987356.png",
+        "optimized": "juego-maria-swarovski/juegos-maria-swarovski/turquesa/turquesa-2.webp",
+        "thumbnail": "juego-maria-swarovski/juegos-maria-swarovski/turquesa/turquesa-2-thumb.webp",
+        "file": "1779226987356.png",
+        "size": 1723870
+      }
+    ],
+    "description": "Juegos María Swarovski artesanal en tono Turquesa, colección Juego María Swarovski.",
+    "longDescription": "Elegante juegos maría swarovski artesanal en tono turquesa. Parte de la exclusiva colección \"Juego María Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego María Swarovski",
+      "Color: Turquesa",
+      "Tamaño: 240mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.77,
+    "reviews": 34,
+    "inStock": true,
+    "id": 12
+  },
+  {
+    "slug": "juego-rosa-aretes-rosa-pastel",
+    "sku": "AROSCPT",
+    "name": "Aretes Rosa Pastel",
+    "fullName": "Aretes Rosa Pastel — Juego Rosa",
+    "price": null,
+    "collection": {
+      "id": "juego-rosa",
+      "name": "Juego Rosa"
+    },
+    "type": {
+      "id": "aretes",
+      "name": "Aretes"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Rosa Pastel",
+      "code": null
+    },
+    "size": 95,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego Rosa/Juego Rosa/Aretes Rosa Pastel Tricolor AROSCPT S-95",
+        "sourceFile": "IMG-20260522-WA0013.jpg",
+        "imageDir": "juego-rosa/aretes/rosa-pastel",
+        "destName": "rosa-pastel-1",
+        "original": "juego-rosa/aretes/rosa-pastel/IMG-20260522-WA0013.jpg",
+        "optimized": "juego-rosa/aretes/rosa-pastel/rosa-pastel-1.webp",
+        "thumbnail": "juego-rosa/aretes/rosa-pastel/rosa-pastel-1-thumb.webp",
+        "file": "IMG-20260522-WA0013.jpg",
+        "size": 99725
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego Rosa/Juego Rosa/Aretes Rosa Pastel Tricolor AROSCPT S-95",
+        "sourceFile": "IMG-20260522-WA0015.jpg",
+        "imageDir": "juego-rosa/aretes/rosa-pastel",
+        "destName": "rosa-pastel-2",
+        "original": "juego-rosa/aretes/rosa-pastel/IMG-20260522-WA0015.jpg",
+        "optimized": "juego-rosa/aretes/rosa-pastel/rosa-pastel-2.webp",
+        "thumbnail": "juego-rosa/aretes/rosa-pastel/rosa-pastel-2-thumb.webp",
+        "file": "IMG-20260522-WA0015.jpg",
+        "size": 101900
+      }
+    ],
+    "description": "Aretes artesanal en tono Rosa Pastel, colección Juego Rosa.",
+    "longDescription": "Elegante aretes artesanal en tono rosa pastel. Parte de la exclusiva colección \"Juego Rosa\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Rosa",
+      "Color: Rosa Pastel",
+      "Tamaño: 95mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.82,
+    "reviews": 29,
+    "inStock": true,
+    "id": 13
+  },
+  {
+    "slug": "juego-rosa-collar-rosa-pastel",
+    "sku": "CROSCPT",
+    "name": "Collar Rosa Pastel",
+    "fullName": "Collar Rosa Pastel — Juego Rosa",
+    "price": null,
+    "collection": {
+      "id": "juego-rosa",
+      "name": "Juego Rosa"
+    },
+    "type": {
+      "id": "collar",
+      "name": "Collar"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Rosa Pastel",
+      "code": null
+    },
+    "size": 95,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego Rosa/Juego Rosa/Collar Rosa Pastel Tricolor CROSCPT S-95",
+        "sourceFile": "IMG-20260522-WA0014.jpg",
+        "imageDir": "juego-rosa/collar/rosa-pastel",
+        "destName": "rosa-pastel-1",
+        "original": "juego-rosa/collar/rosa-pastel/IMG-20260522-WA0014.jpg",
+        "optimized": "juego-rosa/collar/rosa-pastel/rosa-pastel-1.webp",
+        "thumbnail": "juego-rosa/collar/rosa-pastel/rosa-pastel-1-thumb.webp",
+        "file": "IMG-20260522-WA0014.jpg",
+        "size": 106268
+      }
+    ],
+    "description": "Collar artesanal en tono Rosa Pastel, colección Juego Rosa.",
+    "longDescription": "Elegante collar artesanal en tono rosa pastel. Parte de la exclusiva colección \"Juego Rosa\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Rosa",
+      "Color: Rosa Pastel",
+      "Tamaño: 95mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.89,
+    "reviews": 64,
+    "inStock": true,
+    "id": 14
+  },
+  {
+    "slug": "juego-rosa-juego-rosa-pastel",
+    "sku": "JROSCPT",
+    "name": "Juego Rosa Pastel",
+    "fullName": "Juego Rosa Pastel — Juego Rosa",
+    "price": null,
+    "collection": {
+      "id": "juego-rosa",
+      "name": "Juego Rosa"
+    },
+    "type": {
+      "id": "juego",
+      "name": "Juego"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Rosa Pastel",
+      "code": null
+    },
+    "size": 180,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego Rosa/Juego Rosa/Juego Rosa Pastel Tricolor JROSCPT S-180",
+        "sourceFile": "IMG-20260522-WA0012.jpg",
+        "imageDir": "juego-rosa/juego/rosa-pastel",
+        "destName": "rosa-pastel-1",
+        "original": "juego-rosa/juego/rosa-pastel/IMG-20260522-WA0012.jpg",
+        "optimized": "juego-rosa/juego/rosa-pastel/rosa-pastel-1.webp",
+        "thumbnail": "juego-rosa/juego/rosa-pastel/rosa-pastel-1-thumb.webp",
+        "file": "IMG-20260522-WA0012.jpg",
+        "size": 141487
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego Rosa/Juego Rosa/Juego Rosa Pastel Tricolor JROSCPT S-180",
+        "sourceFile": "IMG-20260522-WA0016.jpg",
+        "imageDir": "juego-rosa/juego/rosa-pastel",
+        "destName": "rosa-pastel-2",
+        "original": "juego-rosa/juego/rosa-pastel/IMG-20260522-WA0016.jpg",
+        "optimized": "juego-rosa/juego/rosa-pastel/rosa-pastel-2.webp",
+        "thumbnail": "juego-rosa/juego/rosa-pastel/rosa-pastel-2-thumb.webp",
+        "file": "IMG-20260522-WA0016.jpg",
+        "size": 94424
+      }
+    ],
+    "description": "Juego artesanal en tono Rosa Pastel, colección Juego Rosa.",
+    "longDescription": "Elegante juego artesanal en tono rosa pastel. Parte de la exclusiva colección \"Juego Rosa\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Rosa",
+      "Color: Rosa Pastel",
+      "Tamaño: 180mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.95,
+    "reviews": 61,
+    "inStock": true,
+    "id": 15
+  },
+  {
+    "slug": "juego-rosario-aretes-verde-agua",
+    "sku": "ARSAC13",
+    "name": "Aretes Verde Agua",
+    "fullName": "Aretes Verde Agua — Juego Rosario",
+    "price": null,
+    "collection": {
+      "id": "juego-rosario",
+      "name": "Juego Rosario"
+    },
+    "type": {
+      "id": "aretes",
+      "name": "Aretes"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Verde Agua",
+      "code": "C13"
+    },
+    "size": 85,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego Rosario/Juego Rosario/Aretes Rosario Verde Agua C13 ARSAC13 S-85",
+        "sourceFile": "IMG-20251205-WA0015.jpg",
+        "imageDir": "juego-rosario/aretes/verde-agua",
+        "destName": "verde-agua-1",
+        "original": "juego-rosario/aretes/verde-agua/IMG-20251205-WA0015.jpg",
+        "optimized": "juego-rosario/aretes/verde-agua/verde-agua-1.webp",
+        "thumbnail": "juego-rosario/aretes/verde-agua/verde-agua-1-thumb.webp",
+        "file": "IMG-20251205-WA0015.jpg",
+        "size": 93232
+      }
+    ],
+    "description": "Aretes artesanal en tono Verde Agua, colección Juego Rosario.",
+    "longDescription": "Elegante aretes artesanal en tono verde agua. Parte de la exclusiva colección \"Juego Rosario\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Rosario",
+      "Color: Verde Agua",
+      "Tamaño: 85mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.88,
+    "reviews": 52,
+    "inStock": true,
+    "id": 16
+  },
+  {
+    "slug": "juego-rosario-aretes-verde-botella",
+    "sku": "ARSAC15",
+    "name": "Aretes Verde Botella",
+    "fullName": "Aretes Verde Botella — Juego Rosario",
+    "price": null,
+    "collection": {
+      "id": "juego-rosario",
+      "name": "Juego Rosario"
+    },
+    "type": {
+      "id": "aretes",
+      "name": "Aretes"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Verde Botella",
+      "code": "C15"
+    },
+    "size": 85,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Juego Rosario/Juego Rosario/Aretes Rosario Verde Botella C15 ARSAC15 S-85",
+        "sourceFile": "IMG-20251205-WA0017.jpg",
+        "imageDir": "juego-rosario/aretes/verde-botella",
+        "destName": "verde-botella-1",
+        "original": "juego-rosario/aretes/verde-botella/IMG-20251205-WA0017.jpg",
+        "optimized": "juego-rosario/aretes/verde-botella/verde-botella-1.webp",
+        "thumbnail": "juego-rosario/aretes/verde-botella/verde-botella-1-thumb.webp",
+        "file": "IMG-20251205-WA0017.jpg",
+        "size": 107922
+      }
+    ],
+    "description": "Aretes artesanal en tono Verde Botella, colección Juego Rosario.",
+    "longDescription": "Elegante aretes artesanal en tono verde botella. Parte de la exclusiva colección \"Juego Rosario\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Rosario",
+      "Color: Verde Botella",
+      "Tamaño: 85mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 35,
+    "inStock": true,
+    "id": 17
+  },
+  {
+    "slug": "pulsera-rombo-swarovski-morado",
+    "sku": "PRB4S05",
+    "name": "Pulsera Rombo Swarovski Morado",
+    "fullName": "Pulsera Rombo Swarovski Morado — Pulsera Rombo Swarovski",
+    "price": null,
+    "collection": {
+      "id": "pulsera-rombo-swarovski",
+      "name": "Pulsera Rombo Swarovski"
+    },
+    "type": {
+      "id": "pulsera-rombo-swarovski",
+      "name": "Pulsera Rombo Swarovski"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Morado",
+      "code": "S05"
+    },
+    "size": 185,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski Morado 4S05 PRB4S05 S-185",
+        "sourceFile": "1776120322322.png",
+        "imageDir": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado",
+        "destName": "morado-1",
+        "original": "pulsera-rombo-swarovski/pulsera-rombo-swarovski-morado-4s05-prb4s05-s-185/morado/1776120322322.png",
+        "optimized": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado/morado-1.webp",
+        "thumbnail": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado/morado-1-thumb.webp",
+        "file": "1776120322322.png",
+        "size": 1733738
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski Morado 4S05 PRB4S05 S-185",
+        "sourceFile": "IMG-20260506-WA0061.jpg",
+        "imageDir": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado",
+        "destName": "morado-2",
+        "original": "pulsera-rombo-swarovski/pulsera-rombo-swarovski-morado-4s05-prb4s05-s-185/morado/IMG-20260506-WA0061.jpg",
+        "optimized": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado/morado-1.webp",
+        "thumbnail": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/morado/morado-1-thumb.webp",
+        "file": "IMG-20260506-WA0061.jpg",
+        "size": 31191
+      }
+    ],
+    "description": "Pulsera Rombo Swarovski artesanal en tono Morado, colección Pulsera Rombo Swarovski.",
+    "longDescription": "Elegante pulsera rombo swarovski morado 4s05 prb4s05 s-185 artesanal en tono morado. Parte de la exclusiva colección \"Pulsera Rombo Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Pulsera Rombo Swarovski",
+      "Color: Morado",
+      "Tamaño: 185mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.83,
+    "reviews": 40,
+    "inStock": true,
+    "id": 18
+  },
+  {
+    "slug": "pulsera-rombo-swarovski-rosado",
+    "sku": "PRB4S03",
+    "name": "Pulsera Rombo Swarovski Rosado",
+    "fullName": "Pulsera Rombo Swarovski Rosado — Pulsera Rombo Swarovski",
+    "price": null,
+    "collection": {
+      "id": "pulsera-rombo-swarovski",
+      "name": "Pulsera Rombo Swarovski"
+    },
+    "type": {
+      "id": "pulsera-rombo-swarovski",
+      "name": "Pulsera Rombo Swarovski"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Rosado",
+      "code": "S03"
+    },
+    "size": 185,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski Rosado 4S03 PRB4S03 S-185",
+        "sourceFile": "1776120117108.png",
+        "imageDir": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado",
+        "destName": "rosado-1",
+        "original": "pulsera-rombo-swarovski/pulsera-rombo-swarovski-rosado-4s03-prb4s03-s-185/rosado/1776120117108.png",
+        "optimized": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado/rosado-1.webp",
+        "thumbnail": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado/rosado-1-thumb.webp",
+        "file": "1776120117108.png",
+        "size": 1490671
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski Rosado 4S03 PRB4S03 S-185",
+        "sourceFile": "1776120151226.png",
+        "imageDir": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado",
+        "destName": "rosado-2",
+        "original": "pulsera-rombo-swarovski/pulsera-rombo-swarovski-rosado-4s03-prb4s03-s-185/rosado/1776120151226.png",
+        "optimized": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado/rosado-1.webp",
+        "thumbnail": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/rosado/rosado-1-thumb.webp",
+        "file": "1776120151226.png",
+        "size": 1421321
+      }
+    ],
+    "description": "Pulsera Rombo Swarovski artesanal en tono Rosado, colección Pulsera Rombo Swarovski.",
+    "longDescription": "Elegante pulsera rombo swarovski rosado 4s03 prb4s03 s-185 artesanal en tono rosado. Parte de la exclusiva colección \"Pulsera Rombo Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Pulsera Rombo Swarovski",
+      "Color: Rosado",
+      "Tamaño: 185mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.96,
+    "reviews": 35,
+    "inStock": true,
+    "id": 19
+  },
+  {
+    "slug": "pulsera-rombo-swarovski-turquesa",
+    "sku": "PRB4S08",
+    "name": "Pulsera Rombo Swarovski Turquesa",
+    "fullName": "Pulsera Rombo Swarovski Turquesa — Pulsera Rombo Swarovski",
+    "price": null,
+    "collection": {
+      "id": "pulsera-rombo-swarovski",
+      "name": "Pulsera Rombo Swarovski"
+    },
+    "type": {
+      "id": "pulsera-rombo-swarovski",
+      "name": "Pulsera Rombo Swarovski"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Turquesa",
+      "code": "S08"
+    },
+    "size": 185,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski/Pulsera Rombo Swarovski Turquesa 4S08 PRB4S08 S-185",
+        "sourceFile": "IMG-20260506-WA0047.jpg",
+        "imageDir": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/turquesa",
+        "destName": "turquesa-1",
+        "original": "pulsera-rombo-swarovski/pulsera-rombo-swarovski-turquesa-4s08-prb4s08-s-185/turquesa/IMG-20260506-WA0047.jpg",
+        "optimized": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/turquesa/turquesa-1.webp",
+        "thumbnail": "pulsera-rombo-swarovski/pulsera-rombo-swarovski/turquesa/turquesa-1-thumb.webp",
+        "file": "IMG-20260506-WA0047.jpg",
+        "size": 152921
+      }
+    ],
+    "description": "Pulsera Rombo Swarovski artesanal en tono Turquesa, colección Pulsera Rombo Swarovski.",
+    "longDescription": "Elegante pulsera rombo swarovski turquesa 4s08 prb4s08 s-185 artesanal en tono turquesa. Parte de la exclusiva colección \"Pulsera Rombo Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Pulsera Rombo Swarovski",
+      "Color: Turquesa",
+      "Tamaño: 185mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.98,
+    "reviews": 60,
+    "inStock": true,
+    "id": 20
+  },
+  {
+    "slug": "pulsera-tubular-pulsera-tubular-jaspe-imperial",
+    "sku": "PTBP1JI",
+    "name": "Pulsera Tubular Jaspe Imperial",
+    "fullName": "Pulsera Tubular Jaspe Imperial — Pulsera Tubular",
+    "price": null,
+    "collection": {
+      "id": "pulsera-tubular",
+      "name": "Pulsera Tubular"
+    },
+    "type": {
+      "id": "pulsera-tubular",
+      "name": "Pulsera Tubular"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Jaspe Imperial",
+      "code": null
+    },
+    "size": 120,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Jaspe Imperial PTBP1JI S-120",
+        "sourceFile": "1770222816068.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/jaspe-imperial",
+        "destName": "jaspe-imperial-1",
+        "original": "pulsera-tubular/pulsera-tubular/jaspe-imperial/1770222816068.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-1.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-1-thumb.webp",
+        "file": "1770222816068.png",
+        "size": 1405245
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Jaspe Imperial PTBP1JI S-120",
+        "sourceFile": "1770224231982.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/jaspe-imperial",
+        "destName": "jaspe-imperial-2",
+        "original": "pulsera-tubular/pulsera-tubular/jaspe-imperial/1770224231982.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-2.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-2-thumb.webp",
+        "file": "1770224231982.png",
+        "size": 1529009
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Jaspe Imperial PTBP1JI S-120",
+        "sourceFile": "1770224414642.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/jaspe-imperial",
+        "destName": "jaspe-imperial-3",
+        "original": "pulsera-tubular/pulsera-tubular/jaspe-imperial/1770224414642.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-3.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/jaspe-imperial/jaspe-imperial-3-thumb.webp",
+        "file": "1770224414642.png",
+        "size": 1456431
+      }
+    ],
+    "description": "Pulsera Tubular artesanal en tono Jaspe Imperial, colección Pulsera Tubular.",
+    "longDescription": "Elegante pulsera tubular artesanal en tono jaspe imperial. Parte de la exclusiva colección \"Pulsera Tubular\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Pulsera Tubular",
+      "Color: Jaspe Imperial",
+      "Tamaño: 120mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 40,
+    "inStock": true,
+    "id": 21
+  },
+  {
+    "slug": "pulsera-tubular-pulsera-tubular-rodocrosita",
+    "sku": "PTBP1RC",
+    "name": "Pulsera Tubular Rodocrosita",
+    "fullName": "Pulsera Tubular Rodocrosita — Pulsera Tubular",
+    "price": null,
+    "collection": {
+      "id": "pulsera-tubular",
+      "name": "Pulsera Tubular"
+    },
+    "type": {
+      "id": "pulsera-tubular",
+      "name": "Pulsera Tubular"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Rodocrosita",
+      "code": null
+    },
+    "size": 120,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Rodocrosita PTBP1RC S-120",
+        "sourceFile": "1770222802495.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/rodocrosita",
+        "destName": "rodocrosita-1",
+        "original": "pulsera-tubular/pulsera-tubular/rodocrosita/1770222802495.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-1.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-1-thumb.webp",
+        "file": "1770222802495.png",
+        "size": 1742299
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Rodocrosita PTBP1RC S-120",
+        "sourceFile": "1770222829917.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/rodocrosita",
+        "destName": "rodocrosita-2",
+        "original": "pulsera-tubular/pulsera-tubular/rodocrosita/1770222829917.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-2.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-2-thumb.webp",
+        "file": "1770222829917.png",
+        "size": 1426109
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Rodocrosita PTBP1RC S-120",
+        "sourceFile": "1770222860264.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/rodocrosita",
+        "destName": "rodocrosita-3",
+        "original": "pulsera-tubular/pulsera-tubular/rodocrosita/1770222860264.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-3.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-3-thumb.webp",
+        "file": "1770222860264.png",
+        "size": 1332602
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Rodocrosita PTBP1RC S-120",
+        "sourceFile": "1770224241994.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/rodocrosita",
+        "destName": "rodocrosita-4",
+        "original": "pulsera-tubular/pulsera-tubular/rodocrosita/1770224241994.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-4.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-4-thumb.webp",
+        "file": "1770224241994.png",
+        "size": 1456889
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Rodocrosita PTBP1RC S-120",
+        "sourceFile": "1770224319229.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/rodocrosita",
+        "destName": "rodocrosita-5",
+        "original": "pulsera-tubular/pulsera-tubular/rodocrosita/1770224319229.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-5.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-5-thumb.webp",
+        "file": "1770224319229.png",
+        "size": 1413778
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Rodocrosita PTBP1RC S-120",
+        "sourceFile": "1770224642125.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/rodocrosita",
+        "destName": "rodocrosita-6",
+        "original": "pulsera-tubular/pulsera-tubular/rodocrosita/1770224642125.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-6.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/rodocrosita/rodocrosita-6-thumb.webp",
+        "file": "1770224642125.png",
+        "size": 1434403
+      }
+    ],
+    "description": "Pulsera Tubular artesanal en tono Rodocrosita, colección Pulsera Tubular.",
+    "longDescription": "Elegante pulsera tubular artesanal en tono rodocrosita. Parte de la exclusiva colección \"Pulsera Tubular\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Pulsera Tubular",
+      "Color: Rodocrosita",
+      "Tamaño: 120mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.83,
+    "reviews": 22,
+    "inStock": true,
+    "id": 22
+  },
+  {
+    "slug": "pulsera-tubular-pulsera-tubular-simple",
+    "sku": "PTBLSP",
+    "name": "Pulsera Tubular Simple",
+    "fullName": "Pulsera Tubular Simple — Pulsera Tubular",
+    "price": null,
+    "collection": {
+      "id": "pulsera-tubular",
+      "name": "Pulsera Tubular"
+    },
+    "type": {
+      "id": "pulsera-tubular",
+      "name": "Pulsera Tubular"
+    },
+    "category": "pulseras",
+    "categoryLabel": "Pulseras",
+    "color": {
+      "name": "Simple",
+      "code": null
+    },
+    "size": 100,
+    "images": [
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Simple PTBLSP S-100",
+        "sourceFile": "1770224069043.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/simple",
+        "destName": "simple-1",
+        "original": "pulsera-tubular/pulsera-tubular/simple/1770224069043.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/simple/simple-1.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/simple/simple-1-thumb.webp",
+        "file": "1770224069043.png",
+        "size": 1324048
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Simple PTBLSP S-100",
+        "sourceFile": "1770224819446.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/simple",
+        "destName": "simple-2",
+        "original": "pulsera-tubular/pulsera-tubular/simple/1770224819446.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/simple/simple-2.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/simple/simple-2-thumb.webp",
+        "file": "1770224819446.png",
+        "size": 1504094
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Simple PTBLSP S-100",
+        "sourceFile": "1772466910370.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/simple",
+        "destName": "simple-3",
+        "original": "pulsera-tubular/pulsera-tubular/simple/1772466910370.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/simple/simple-3.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/simple/simple-3-thumb.webp",
+        "file": "1772466910370.png",
+        "size": 1824262
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Simple PTBLSP S-100",
+        "sourceFile": "1772467023789.png",
+        "imageDir": "pulsera-tubular/pulsera-tubular/simple",
+        "destName": "simple-4",
+        "original": "pulsera-tubular/pulsera-tubular/simple/1772467023789.png",
+        "optimized": "pulsera-tubular/pulsera-tubular/simple/simple-4.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/simple/simple-4-thumb.webp",
+        "file": "1772467023789.png",
+        "size": 1389633
+      },
+      {
+        "sourcePath": "/tmp/maia-batch-import/Pulsera Tubular/Pulsera Tubular/Pulsera Tubular Simple PTBLSP S-100",
+        "sourceFile": "Pulsera Tubular PTBLSP.jpg",
+        "imageDir": "pulsera-tubular/pulsera-tubular/simple",
+        "destName": "simple-5",
+        "original": "pulsera-tubular/pulsera-tubular/simple/Pulsera Tubular PTBLSP.jpg",
+        "optimized": "pulsera-tubular/pulsera-tubular/simple/simple-5.webp",
+        "thumbnail": "pulsera-tubular/pulsera-tubular/simple/simple-5-thumb.webp",
+        "file": "Pulsera Tubular PTBLSP.jpg",
+        "size": 110276
+      }
+    ],
+    "description": "Pulsera Tubular artesanal en tono Simple, colección Pulsera Tubular.",
+    "longDescription": "Elegante pulsera tubular artesanal en tono simple. Parte de la exclusiva colección \"Pulsera Tubular\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Pulsera Tubular",
+      "Color: Simple",
+      "Tamaño: 100mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.83,
+    "reviews": 22,
+    "inStock": true,
+    "id": 23
+  },
+  {
+    "id": 24,
+    "slug": "juego-flor-de-plata-swarovski-juego-flor-de-plata-swarovski-rombo-rombo",
+    "sku": "JFPSSWROM",
+    "name": "Juego Flor de Plata Swarovski Rombo",
+    "fullName": "Juego Flor de Plata Swarovski Rombo — Juego Flor de Plata Swarovski",
+    "price": 150,
+    "collection": {
+      "id": "juego-flor-de-plata-swarovski",
+      "name": "Juego Flor de Plata Swarovski"
+    },
+    "type": {
+      "id": "juego-flor-de-plata-swarovski-rombo",
+      "name": "Juego Flor de Plata Swarovski Rombo"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Rombo",
+      "code": "SWROM"
+    },
+    "size": 175,
+    "images": [
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juego-flor-de-plata-swarovski-rombo/rombo/rombo-1.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juego-flor-de-plata-swarovski-rombo/rombo/rombo-1-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juego-flor-de-plata-swarovski-rombo/rombo/rombo-1-thumb.webp",
+        "file": "1778110949978.png"
+      }
+    ],
+    "description": "Juego Flor de Plata Swarovski Rombo artesanal, colección Juego Flor de Plata Swarovski.",
+    "longDescription": "Elegante juego flor de plata swarovski rombo artesanal. Parte de la exclusiva colección \"Juego Flor de Plata Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Flor de Plata Swarovski",
+      "Color: Rombo",
+      "Tamaño: 175mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 5,
+    "reviews": 27,
+    "inStock": true,
+    "image": "/products/juego-flor-de-plata-swarovski/juego-flor-de-plata-swarovski-rombo/rombo/rombo-1.webp",
+    "imageSecondary": "/products/juego-flor-de-plata-swarovski/juego-flor-de-plata-swarovski-rombo/rombo/rombo-1-800.webp"
+  },
+  {
+    "id": 25,
+    "slug": "juego-flor-de-plata-swarovski-aretes-flor-de-plata-swarovski-modelo-1",
+    "sku": "AFPSCPYM01",
+    "name": "Aretes Flor de Plata Swarovski Modelo 1",
+    "fullName": "Aretes Flor de Plata Swarovski Modelo 1 — Juego Flor de Plata Swarovski",
+    "price": 75,
+    "collection": {
+      "id": "juego-flor-de-plata-swarovski",
+      "name": "Juego Flor de Plata Swarovski"
+    },
+    "type": {
+      "id": "aretes-flor-de-plata-swarovski",
+      "name": "Aretes Flor de Plata Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Modelo 1",
+      "code": "M01"
+    },
+    "size": 150,
+    "images": [
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-1-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-1-thumb.webp",
+        "file": "1773594258353.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-2-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-2-thumb.webp",
+        "file": "1773594286733.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-3.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-3-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-3-thumb.webp",
+        "file": "1773594509390.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-4.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-4-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-4-thumb.webp",
+        "file": "1773594662326.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-5.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-5-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-5-thumb.webp",
+        "file": "1773595404597.png"
+      }
+    ],
+    "description": "Aretes Flor de Plata Swarovski artesanal, colección Juego Flor de Plata Swarovski.",
+    "longDescription": "Elegante aretes flor de plata swarovski artesanal. Parte de la exclusiva colección \"Juego Flor de Plata Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Flor de Plata Swarovski",
+      "Color: Modelo 1",
+      "Tamaño: 150mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 49,
+    "inStock": true,
+    "image": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
+    "imageSecondary": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp"
+  },
+  {
+    "id": 26,
+    "slug": "juego-flor-de-plata-swarovski-aretes-flor-de-plata-swarovski-modelo-2",
+    "sku": "AFPSCPYM20",
+    "name": "Aretes Flor de Plata Swarovski Modelo 2",
+    "fullName": "Aretes Flor de Plata Swarovski Modelo 2 — Juego Flor de Plata Swarovski",
+    "price": 75,
+    "collection": {
+      "id": "juego-flor-de-plata-swarovski",
+      "name": "Juego Flor de Plata Swarovski"
+    },
+    "type": {
+      "id": "aretes-flor-de-plata-swarovski",
+      "name": "Aretes Flor de Plata Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Modelo 2",
+      "code": "M20"
+    },
+    "size": 150,
+    "images": [
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-1-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-1-thumb.webp",
+        "file": "1774202023738.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-2-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-2-thumb.webp",
+        "file": "1774202087236.png"
+      }
+    ],
+    "description": "Aretes Flor de Plata Swarovski artesanal, colección Juego Flor de Plata Swarovski.",
+    "longDescription": "Elegante aretes flor de plata swarovski artesanal. Parte de la exclusiva colección \"Juego Flor de Plata Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Flor de Plata Swarovski",
+      "Color: Modelo 2",
+      "Tamaño: 150mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 44,
+    "inStock": true,
+    "image": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
+    "imageSecondary": "/products/juego-flor-de-plata-swarovski/aretes-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp"
+  },
+  {
+    "id": 27,
+    "slug": "juego-flor-de-plata-swarovski-collar-flor-de-plata-swarovski-modelo-1",
+    "sku": "CFPSCPYM01",
+    "name": "Collar Flor de Plata Swarovski Modelo 1",
+    "fullName": "Collar Flor de Plata Swarovski Modelo 1 — Juego Flor de Plata Swarovski",
+    "price": 85,
+    "collection": {
+      "id": "juego-flor-de-plata-swarovski",
+      "name": "Juego Flor de Plata Swarovski"
+    },
+    "type": {
+      "id": "collar-flor-de-plata-swarovski",
+      "name": "Collar Flor de Plata Swarovski"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Modelo 1",
+      "code": "M01"
+    },
+    "size": 140,
+    "images": [
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-1-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-1-thumb.webp",
+        "file": "1773594882807.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-2-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-2-thumb.webp",
+        "file": "1773595093070.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-3.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-3-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-3-thumb.webp",
+        "file": "1773595906449.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-4.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-4-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-4-thumb.webp",
+        "file": "1773595906449~2.png"
+      }
+    ],
+    "description": "Collar Flor de Plata Swarovski artesanal, colección Juego Flor de Plata Swarovski.",
+    "longDescription": "Elegante collar flor de plata swarovski artesanal. Parte de la exclusiva colección \"Juego Flor de Plata Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Flor de Plata Swarovski",
+      "Color: Modelo 1",
+      "Tamaño: 140mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 51,
+    "inStock": true,
+    "image": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
+    "imageSecondary": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp"
+  },
+  {
+    "id": 28,
+    "slug": "juego-flor-de-plata-swarovski-collar-flor-de-plata-swarovski-modelo-2",
+    "sku": "CFPSCPYM20",
+    "name": "Collar Flor de Plata Swarovski Modelo 2",
+    "fullName": "Collar Flor de Plata Swarovski Modelo 2 — Juego Flor de Plata Swarovski",
+    "price": 85,
+    "collection": {
+      "id": "juego-flor-de-plata-swarovski",
+      "name": "Juego Flor de Plata Swarovski"
+    },
+    "type": {
+      "id": "collar-flor-de-plata-swarovski",
+      "name": "Collar Flor de Plata Swarovski"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Modelo 2",
+      "code": "M20"
+    },
+    "size": 140,
+    "images": [
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-1-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-1-thumb.webp",
+        "file": "1774202075316.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-2-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-2-thumb.webp",
+        "file": "1774202210316.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-3.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-3-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-3-thumb.webp",
+        "file": "1774202389259.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-4.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-4-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-4-thumb.webp",
+        "file": "1774202408135.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-5.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-5-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-5-thumb.webp",
+        "file": "1774202473712.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-6.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-6-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-6-thumb.webp",
+        "file": "1774202724721.png"
+      }
+    ],
+    "description": "Collar Flor de Plata Swarovski artesanal, colección Juego Flor de Plata Swarovski.",
+    "longDescription": "Elegante collar flor de plata swarovski artesanal. Parte de la exclusiva colección \"Juego Flor de Plata Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Flor de Plata Swarovski",
+      "Color: Modelo 2",
+      "Tamaño: 140mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 39,
+    "inStock": true,
+    "image": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
+    "imageSecondary": "/products/juego-flor-de-plata-swarovski/collar-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp"
+  },
+  {
+    "id": 29,
+    "slug": "juego-flor-de-plata-swarovski-juegos-flor-de-plata-swarovski-modelo-1",
+    "sku": "JFPSCPYM01",
+    "name": "Juegos Flor de Plata Swarovski Modelo 1",
+    "fullName": "Juegos Flor de Plata Swarovski Modelo 1 — Juego Flor de Plata Swarovski",
+    "price": 160,
+    "collection": {
+      "id": "juego-flor-de-plata-swarovski",
+      "name": "Juego Flor de Plata Swarovski"
+    },
+    "type": {
+      "id": "juegos-flor-de-plata-swarovski",
+      "name": "Juegos Flor de Plata Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Modelo 1",
+      "code": "M01"
+    },
+    "size": 260,
+    "images": [
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-1-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-1-thumb.webp",
+        "file": "1773595240095.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-2-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-2-thumb.webp",
+        "file": "1773595608405.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-3.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-3-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-3-thumb.webp",
+        "file": "1773691321555.png"
+      }
+    ],
+    "description": "Juegos Flor de Plata Swarovski artesanal, colección Juego Flor de Plata Swarovski.",
+    "longDescription": "Elegante juegos flor de plata swarovski artesanal. Parte de la exclusiva colección \"Juego Flor de Plata Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Flor de Plata Swarovski",
+      "Color: Modelo 1",
+      "Tamaño: 260mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 40,
+    "inStock": true,
+    "image": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-1.webp",
+    "imageSecondary": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-1/modelo-1-2.webp"
+  },
+  {
+    "id": 30,
+    "slug": "juego-engaste-abierto-juego-engaste-abierto-rodocrosita-rodocrosita",
+    "sku": "JEAPRRC",
+    "name": "Juego Engaste Abierto Rodocrosita",
+    "fullName": "Juego Engaste Abierto Rodocrosita — Juego Engaste Abierto",
+    "price": 145,
+    "collection": {
+      "id": "juego-engaste-abierto",
+      "name": "Juego Engaste Abierto"
+    },
+    "type": {
+      "id": "juego-engaste-abierto-rodocrosita",
+      "name": "Juego Engaste Abierto Rodocrosita"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Rodocrosita",
+      "code": null
+    },
+    "size": 175,
+    "images": [
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-1.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-1-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-1-thumb.webp",
+        "file": "1774650582589.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-2.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-2-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-2-thumb.webp",
+        "file": "1774650621168.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-3.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-3-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-3-thumb.webp",
+        "file": "1774650634024.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-4.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-4-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-4-thumb.webp",
+        "file": "1774650891145.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-5.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-5-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-5-thumb.webp",
+        "file": "1774651003068.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-6.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-6-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-6-thumb.webp",
+        "file": "1774651119477.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-7.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-7-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-7-thumb.webp",
+        "file": "1774651233207.png"
+      }
+    ],
+    "description": "Juego Engaste Abierto Rodocrosita artesanal, colección Juego Engaste Abierto.",
+    "longDescription": "Elegante juego engaste abierto rodocrosita artesanal. Parte de la exclusiva colección \"Juego Engaste Abierto\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Engaste Abierto",
+      "Color: Rodocrosita",
+      "Tamaño: 175mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 5,
+    "reviews": 50,
+    "inStock": true,
+    "image": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-1.webp",
+    "imageSecondary": "/products/juego-engaste-abierto/juego-engaste-abierto-rodocrosita/rodocrosita/rodocrosita-2.webp"
+  },
+  {
+    "id": 31,
+    "slug": "juego-engaste-abierto-juego-engaste-abierto-cuarzo-rosa-cuarzo-rosa",
+    "sku": "JCCRD03",
+    "name": "Juego Engaste Abierto Cuarzo Rosa",
+    "fullName": "Juego Engaste Abierto Cuarzo Rosa — Juego Engaste Abierto",
+    "price": 145,
+    "collection": {
+      "id": "juego-engaste-abierto",
+      "name": "Juego Engaste Abierto"
+    },
+    "type": {
+      "id": "juego-engaste-abierto-cuarzo-rosa",
+      "name": "Juego Engaste Abierto Cuarzo Rosa"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Cuarzo Rosa",
+      "code": null
+    },
+    "size": 175,
+    "images": [
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-1.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-1-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-1-thumb.webp",
+        "file": "1770223623210.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-2.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-2-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-2-thumb.webp",
+        "file": "1770223706472.png"
+      },
+      {
+        "original": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-3.webp",
+        "optimized": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-3-800.webp",
+        "thumbnail": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-3-thumb.webp",
+        "file": "1770223802490.png"
+      }
+    ],
+    "description": "Juego Engaste Abierto Cuarzo Rosa artesanal, colección Juego Engaste Abierto.",
+    "longDescription": "Elegante juego engaste abierto cuarzo rosa artesanal. Parte de la exclusiva colección \"Juego Engaste Abierto\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Engaste Abierto",
+      "Color: Cuarzo Rosa",
+      "Tamaño: 175mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 5,
+    "reviews": 39,
+    "inStock": true,
+    "image": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-1.webp",
+    "imageSecondary": "/products/juego-engaste-abierto/juego-engaste-abierto-cuarzo-rosa/cuarzo-rosa/cuarzo-rosa-2.webp"
+  },
+  {
+    "id": 32,
+    "slug": "dije-engaste-abierto-dije-engaste-abierto-piedra-corazon-cuarzo-rosa",
+    "sku": "DEAPC2CR",
+    "name": "Dije Engaste Corazón Cuarzo Rosa",
+    "fullName": "Dije Engaste Corazón Cuarzo Rosa — Dije Engaste Abierto",
+    "price": 55,
+    "collection": {
+      "id": "dije-engaste-abierto",
+      "name": "Dije Engaste Abierto"
+    },
+    "type": {
+      "id": "dije-engaste-abierto-piedra-corazon",
+      "name": "Dije Engaste Abierto Corazón"
+    },
+    "category": "dijes",
+    "categoryLabel": "Dijes",
+    "color": {
+      "name": "Cuarzo Rosa",
+      "code": null
+    },
+    "size": 125,
+    "images": [
+      {
+        "original": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-1.webp",
+        "optimized": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-1-800.webp",
+        "thumbnail": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-1-thumb.webp",
+        "file": "Dije Engaste Abierto Piedra Corazón Cuarzo Rosa DEAPC2CR S_125(1).png"
+      },
+      {
+        "original": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-2.webp",
+        "optimized": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-2-800.webp",
+        "thumbnail": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-2-thumb.webp",
+        "file": "Dije Engaste Abierto Piedra Corazón Cuarzo Rosa DEAPC2CR S_125(2).png"
+      },
+      {
+        "original": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-3.webp",
+        "optimized": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-3-800.webp",
+        "thumbnail": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-3-thumb.webp",
+        "file": "Dije Engaste Abierto Piedra Corazón Cuarzo Rosa DEAPC2CR S_125.png"
+      }
+    ],
+    "description": "Dije Engaste Abierto Corazón artesanal, colección Dije Engaste Abierto.",
+    "longDescription": "Elegante dije engaste abierto corazón artesanal. Parte de la exclusiva colección \"Dije Engaste Abierto\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Dije Engaste Abierto",
+      "Color: Cuarzo Rosa",
+      "Tamaño: 125mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 35,
+    "inStock": true,
+    "image": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-1.webp",
+    "imageSecondary": "/products/dije-engaste-abierto/dije-engaste-abierto-piedra-corazon/cuarzo-rosa/cuarzo-rosa-2.webp"
+  },
+  {
+    "id": 33,
+    "slug": "aretes-corazon-abierto-swarovski-aretes-corazon-abierto-swarovski-modelo-1",
+    "sku": "ACASCM01",
+    "name": "Aretes Corazón Abierto Swarovski Modelo 1",
+    "fullName": "Aretes Corazón Abierto Swarovski Modelo 1 — Aretes Corazón Abierto Swarovski",
+    "price": 65,
+    "collection": {
+      "id": "aretes-corazon-abierto-swarovski",
+      "name": "Aretes Corazón Abierto Swarovski"
+    },
+    "type": {
+      "id": "aretes-corazon-abierto-swarovski",
+      "name": "Aretes Corazón Abierto Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Modelo 1",
+      "code": "M01"
+    },
+    "size": 110,
+    "images": [
+      {
+        "original": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-1.webp",
+        "optimized": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-1-800.webp",
+        "thumbnail": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-1-thumb.webp",
+        "file": "Aretes Corazón Abierto Swarovski ACASCM01 S_110(1).png"
+      },
+      {
+        "original": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-2.webp",
+        "optimized": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-2-800.webp",
+        "thumbnail": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-2-thumb.webp",
+        "file": "Aretes Corazón Abierto Swarovski ACASCM01 S_110(2).png"
+      },
+      {
+        "original": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-3.webp",
+        "optimized": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-3-800.webp",
+        "thumbnail": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-3-thumb.webp",
+        "file": "Aretes Corazón Abierto Swarovski ACASCM01 S_110.png"
+      }
+    ],
+    "description": "Aretes Corazón Abierto Swarovski artesanal, colección Aretes Corazón Abierto Swarovski.",
+    "longDescription": "Elegante aretes corazón abierto swarovski artesanal. Parte de la exclusiva colección \"Aretes Corazón Abierto Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Aretes Corazón Abierto Swarovski",
+      "Color: Modelo 1",
+      "Tamaño: 110mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 37,
+    "inStock": true,
+    "image": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-1.webp",
+    "imageSecondary": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-1/modelo-1-2.webp"
+  },
+  {
+    "id": 34,
+    "slug": "aretes-corazon-abierto-swarovski-aretes-corazon-abierto-swarovski-modelo-2",
+    "sku": "ACASCM12",
+    "name": "Aretes Corazón Abierto Swarovski Modelo 2",
+    "fullName": "Aretes Corazón Abierto Swarovski Modelo 2 — Aretes Corazón Abierto Swarovski",
+    "price": 65,
+    "collection": {
+      "id": "aretes-corazon-abierto-swarovski",
+      "name": "Aretes Corazón Abierto Swarovski"
+    },
+    "type": {
+      "id": "aretes-corazon-abierto-swarovski",
+      "name": "Aretes Corazón Abierto Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Modelo 2",
+      "code": "M12"
+    },
+    "size": 110,
+    "images": [
+      {
+        "original": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-1.webp",
+        "optimized": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-1-800.webp",
+        "thumbnail": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-1-thumb.webp",
+        "file": "Aretes Corazón Abierto Swarovski ACASCM12 S_110(1).png"
+      },
+      {
+        "original": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-2.webp",
+        "optimized": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-2-800.webp",
+        "thumbnail": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-2-thumb.webp",
+        "file": "Aretes Corazón Abierto Swarovski ACASCM12 S_110.png"
+      }
+    ],
+    "description": "Aretes Corazón Abierto Swarovski artesanal, colección Aretes Corazón Abierto Swarovski.",
+    "longDescription": "Elegante aretes corazón abierto swarovski artesanal. Parte de la exclusiva colección \"Aretes Corazón Abierto Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Aretes Corazón Abierto Swarovski",
+      "Color: Modelo 2",
+      "Tamaño: 110mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 5,
+    "reviews": 37,
+    "inStock": true,
+    "image": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-1.webp",
+    "imageSecondary": "/products/aretes-corazon-abierto-swarovski/aretes-corazon-abierto-swarovski/modelo-2/modelo-2-2.webp"
+  },
+  {
+    "id": 35,
+    "slug": "aretes-circular-aretes-circular-12-c08-y-c12",
+    "sku": "ACL2C08",
+    "name": "Aretes Circular 12 C08 y C12",
+    "fullName": "Aretes Circular 12 C08 y C12 — Aretes Circular",
+    "price": 40,
+    "collection": {
+      "id": "aretes-circular",
+      "name": "Aretes Circular"
+    },
+    "type": {
+      "id": "aretes-circular-12",
+      "name": "Aretes Circular 12"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "C08 y C12",
+      "code": null
+    },
+    "size": 55,
+    "images": [
+      {
+        "original": "/products/aretes-circular/aretes-circular-12/c08-y-c12/c08-y-c12-1.webp",
+        "optimized": "/products/aretes-circular/aretes-circular-12/c08-y-c12/c08-y-c12-1-800.webp",
+        "thumbnail": "/products/aretes-circular/aretes-circular-12/c08-y-c12/c08-y-c12-1-thumb.webp",
+        "file": "Aretes Circular C08 y C12 ACL2C08 ACL2C12 S_55.jpg"
+      }
+    ],
+    "description": "Aretes Circular 12 artesanal, colección Aretes Circular.",
+    "longDescription": "Elegante aretes circular 12 artesanal. Parte de la exclusiva colección \"Aretes Circular\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Aretes Circular",
+      "Color: C08 y C12",
+      "Tamaño: 55mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 50,
+    "inStock": true,
+    "image": "/products/aretes-circular/aretes-circular-12/c08-y-c12/c08-y-c12-1.webp",
+    "imageSecondary": "/products/aretes-circular/aretes-circular-12/c08-y-c12/c08-y-c12-1-800.webp"
+  },
+  {
+    "id": 36,
+    "slug": "aretes-circular-aretes-circular-12-c25-y-c26",
+    "sku": "ACL2C25",
+    "name": "Aretes Circular 12 C25 y C26",
+    "fullName": "Aretes Circular 12 C25 y C26 — Aretes Circular",
+    "price": 40,
+    "collection": {
+      "id": "aretes-circular",
+      "name": "Aretes Circular"
+    },
+    "type": {
+      "id": "aretes-circular-12",
+      "name": "Aretes Circular 12"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "C25 y C26",
+      "code": null
+    },
+    "size": 55,
+    "images": [
+      {
+        "original": "/products/aretes-circular/aretes-circular-12/c25-y-c26/c25-y-c26-1.webp",
+        "optimized": "/products/aretes-circular/aretes-circular-12/c25-y-c26/c25-y-c26-1-800.webp",
+        "thumbnail": "/products/aretes-circular/aretes-circular-12/c25-y-c26/c25-y-c26-1-thumb.webp",
+        "file": "Aretes Circular C25 y C26 ACL2C25 ACL2C26  S_55.jpg"
+      }
+    ],
+    "description": "Aretes Circular 12 artesanal, colección Aretes Circular.",
+    "longDescription": "Elegante aretes circular 12 artesanal. Parte de la exclusiva colección \"Aretes Circular\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Aretes Circular",
+      "Color: C25 y C26",
+      "Tamaño: 55mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 26,
+    "inStock": true,
+    "image": "/products/aretes-circular/aretes-circular-12/c25-y-c26/c25-y-c26-1.webp",
+    "imageSecondary": "/products/aretes-circular/aretes-circular-12/c25-y-c26/c25-y-c26-1-800.webp"
+  },
+  {
+    "id": 37,
+    "slug": "juego-aro-atrapasueno-juego-aro-atrapasueno-celeste-y-rosado",
+    "sku": "JAATCYR",
+    "name": "Juego Aro Atrapasueño Celeste y Rosado",
+    "fullName": "Juego Aro Atrapasueño Celeste y Rosado — Juego Aro Atrapasueño",
+    "price": 120,
+    "collection": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "type": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Celeste y Rosado",
+      "code": null
+    },
+    "size": 180,
+    "images": [
+      {
+        "original": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1.webp",
+        "optimized": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-800.webp",
+        "thumbnail": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-thumb.webp",
+        "file": "Juego Aro Atrapasueño Celeste y Rosado JAATCYR S_180.png"
+      }
+    ],
+    "description": "Juego Aro Atrapasueño artesanal, colección Juego Aro Atrapasueño.",
+    "longDescription": "Elegante juego aro atrapasueño artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Atrapasueño",
+      "Color: Celeste y Rosado",
+      "Tamaño: 180mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 34,
+    "inStock": true,
+    "image": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1.webp",
+    "imageSecondary": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-800.webp"
+  },
+  {
+    "id": 38,
+    "slug": "juego-aro-atrapasueno-aretes-aro-atrapasueno-celeste-y-rosado",
+    "sku": "AAATCYR",
+    "name": "Aretes Aro Atrapasueño Celeste y Rosado",
+    "fullName": "Aretes Aro Atrapasueño Celeste y Rosado — Juego Aro Atrapasueño",
+    "price": 55,
+    "collection": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "type": {
+      "id": "aretes-aro-atrapasueno",
+      "name": "Aretes Aro Atrapasueño"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Celeste y Rosado",
+      "code": null
+    },
+    "size": 100,
+    "images": [
+      {
+        "original": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1.webp",
+        "optimized": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-800.webp",
+        "thumbnail": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-thumb.webp",
+        "file": "Aretes Aro Atrapasueño Celeste y Rosado AAATCYR S_100.png"
+      }
+    ],
+    "description": "Aretes Aro Atrapasueño artesanal, colección Juego Aro Atrapasueño.",
+    "longDescription": "Elegante aretes aro atrapasueño artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Atrapasueño",
+      "Color: Celeste y Rosado",
+      "Tamaño: 100mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 5,
+    "reviews": 32,
+    "inStock": true,
+    "image": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1.webp",
+    "imageSecondary": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/celeste-y-rosado/celeste-y-rosado-1-800.webp"
+  },
+  {
+    "id": 39,
+    "slug": "juego-aro-atrapasueno-aretes-aro-atrapasueno-navideno-aretes",
+    "sku": "AAATNVD",
+    "name": "Aretes Aro Atrapasueño Navideño",
+    "fullName": "Aretes Aro Atrapasueño Navideño — Juego Aro Atrapasueño",
+    "price": 55,
+    "collection": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "type": {
+      "id": "aretes-aro-atrapasueno",
+      "name": "Aretes Aro Atrapasueño"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Navideño",
+      "code": null
+    },
+    "size": 100,
+    "images": [
+      {
+        "original": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/navideno/navideno-1.webp",
+        "optimized": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/navideno/navideno-1-800.webp",
+        "thumbnail": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/navideno/navideno-1-thumb.webp",
+        "file": "Aretes Aro Atrapasueño Navideño AAATNVD S_100.png"
+      }
+    ],
+    "description": "Aretes Aro Atrapasueño artesanal, colección Juego Aro Atrapasueño.",
+    "longDescription": "Elegante aretes aro atrapasueño artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Atrapasueño",
+      "Color: Navideño",
+      "Tamaño: 100mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 30,
+    "inStock": true,
+    "image": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/navideno/navideno-1.webp",
+    "imageSecondary": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/navideno/navideno-1-800.webp"
+  },
+  {
+    "id": 40,
+    "slug": "juego-aro-atrapasueno-aretes-aro-atrapasueno-negro-y-tornasol",
+    "sku": "JAATNYT",
+    "name": "Aretes Aro Atrapasueño Negro y Tornasol",
+    "fullName": "Aretes Aro Atrapasueño Negro y Tornasol — Juego Aro Atrapasueño",
+    "price": 55,
+    "collection": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "type": {
+      "id": "aretes-aro-atrapasueno",
+      "name": "Aretes Aro Atrapasueño"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Negro y Tornasol",
+      "code": null
+    },
+    "size": 100,
+    "images": [
+      {
+        "original": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-1.webp",
+        "optimized": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-1-800.webp",
+        "thumbnail": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-1-thumb.webp",
+        "file": "Aretes Aro Atrapasueño Negro y Tornasol AAATNYT S_100(1).png"
+      },
+      {
+        "original": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-2.webp",
+        "optimized": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-2-800.webp",
+        "thumbnail": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-2-thumb.webp",
+        "file": "Aretes Aro Atrapasueño Negro y Tornasol AAATNYT S_100.png"
+      }
+    ],
+    "description": "Aretes Aro Atrapasueño artesanal, colección Juego Aro Atrapasueño.",
+    "longDescription": "Elegante aretes aro atrapasueño artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Atrapasueño",
+      "Color: Negro y Tornasol",
+      "Tamaño: 100mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 53,
+    "inStock": true,
+    "image": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-1.webp",
+    "imageSecondary": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/negro-y-tornasol/negro-y-tornasol-2.webp"
+  },
+  {
+    "id": 41,
+    "slug": "juego-aro-atrapasueno-juego-aro-atrapasueno-rojo-y-tornasol",
+    "sku": "JAATRYT",
+    "name": "Juego Aro Atrapasueño Rojo y Tornasol",
+    "fullName": "Juego Aro Atrapasueño Rojo y Tornasol — Juego Aro Atrapasueño",
+    "price": 120,
+    "collection": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "type": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Rojo y Tornasol",
+      "code": null
+    },
+    "size": 180,
+    "images": [
+      {
+        "original": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/rojo-y-tornasol/rojo-y-tornasol-1.webp",
+        "optimized": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/rojo-y-tornasol/rojo-y-tornasol-1-800.webp",
+        "thumbnail": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/rojo-y-tornasol/rojo-y-tornasol-1-thumb.webp",
+        "file": "Aretes Aro Atrapasueño Rojo y Tornasol AAATRYT S_100.png"
+      }
+    ],
+    "description": "Juego Aro Atrapasueño artesanal, colección Juego Aro Atrapasueño.",
+    "longDescription": "Elegante juego aro atrapasueño artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Atrapasueño",
+      "Color: Rojo y Tornasol",
+      "Tamaño: 180mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 54,
+    "inStock": true,
+    "image": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/rojo-y-tornasol/rojo-y-tornasol-1.webp",
+    "imageSecondary": "/products/juego-aro-atrapasueno/juego-aro-atrapasueno/rojo-y-tornasol/rojo-y-tornasol-1-800.webp"
+  },
+  {
+    "id": 42,
+    "slug": "juego-aro-atrapasueno-aretes-aro-atrapasueno-verde-y-menta",
+    "sku": "AAATVYM",
+    "name": "Aretes Aro Atrapasueño Verde y Menta",
+    "fullName": "Aretes Aro Atrapasueño Verde y Menta — Juego Aro Atrapasueño",
+    "price": 55,
+    "collection": {
+      "id": "juego-aro-atrapasueno",
+      "name": "Juego Aro Atrapasueño"
+    },
+    "type": {
+      "id": "aretes-aro-atrapasueno",
+      "name": "Aretes Aro Atrapasueño"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Verde y Menta",
+      "code": null
+    },
+    "size": 100,
+    "images": [
+      {
+        "original": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/verde-y-menta/verde-y-menta-1.webp",
+        "optimized": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/verde-y-menta/verde-y-menta-1-800.webp",
+        "thumbnail": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/verde-y-menta/verde-y-menta-1-thumb.webp",
+        "file": "Aretes Aro Atrapasueño Verde y Menta AAATVYM S_100.png"
+      }
+    ],
+    "description": "Aretes Aro Atrapasueño artesanal, colección Juego Aro Atrapasueño.",
+    "longDescription": "Elegante aretes aro atrapasueño artesanal. Parte de la exclusiva colección \"Juego Aro Atrapasueño\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Atrapasueño",
+      "Color: Verde y Menta",
+      "Tamaño: 100mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 45,
+    "inStock": true,
+    "image": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/verde-y-menta/verde-y-menta-1.webp",
+    "imageSecondary": "/products/juego-aro-atrapasueno/aretes-aro-atrapasueno/verde-y-menta/verde-y-menta-1-800.webp"
+  },
+  {
+    "id": 43,
+    "slug": "juego-aro-vertical-mariposa-swarovski-aretes-aro-vertical-mariposa-swarovski-naranja",
+    "sku": "AAVMSMG05",
+    "name": "Aretes Aro Vertical Mariposa Swarovski Naranja",
+    "fullName": "Aretes Aro Vertical Mariposa Swarovski Naranja — Juego Aro Vertical Mariposa Swarovski",
+    "price": 75,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "aretes-aro-vertical-mariposa-swarovski",
+      "name": "Aretes Aro Vertical Mariposa Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Naranja",
+      "code": null
+    },
+    "size": 120,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/naranja/naranja-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/naranja/naranja-1-thumb.webp",
+        "file": "1779227113176.png"
+      }
+    ],
+    "description": "Aretes Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante aretes aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Naranja",
+      "Tamaño: 120mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 37,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/naranja/naranja-1-800.webp"
+  },
+  {
+    "id": 44,
+    "slug": "juego-aro-vertical-mariposa-swarovski-aretes-aro-vertical-mariposa-swarovski-rojo",
+    "sku": "AAVMSMG06",
+    "name": "Aretes Aro Vertical Mariposa Swarovski Rojo",
+    "fullName": "Aretes Aro Vertical Mariposa Swarovski Rojo — Juego Aro Vertical Mariposa Swarovski",
+    "price": 75,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "aretes-aro-vertical-mariposa-swarovski",
+      "name": "Aretes Aro Vertical Mariposa Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Rojo",
+      "code": null
+    },
+    "size": 120,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-1-thumb.webp",
+        "file": "1768068073564.jpg"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-2.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-2-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-2-thumb.webp",
+        "file": "1768068280035.jpg"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-3.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-3-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-3-thumb.webp",
+        "file": "1768068312512.jpg"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-4.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-4-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-4-thumb.webp",
+        "file": "1773179102000.png"
+      }
+    ],
+    "description": "Aretes Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante aretes aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Rojo",
+      "Tamaño: 120mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 28,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/rojo/rojo-2.webp"
+  },
+  {
+    "id": 45,
+    "slug": "juego-aro-vertical-mariposa-swarovski-aretes-aro-vertical-mariposa-swarovski-celeste",
+    "sku": "AAVMSMG11",
+    "name": "Aretes Aro Vertical Mariposa Swarovski Celeste",
+    "fullName": "Aretes Aro Vertical Mariposa Swarovski Celeste — Juego Aro Vertical Mariposa Swarovski",
+    "price": 75,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "aretes-aro-vertical-mariposa-swarovski",
+      "name": "Aretes Aro Vertical Mariposa Swarovski"
+    },
+    "category": "aretes",
+    "categoryLabel": "Aretes",
+    "color": {
+      "name": "Celeste",
+      "code": null
+    },
+    "size": 120,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-1-thumb.webp",
+        "file": "1767823419720.jpg"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-2.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-2-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-2-thumb.webp",
+        "file": "1767823471310.jpg"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-3.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-3-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-3-thumb.webp",
+        "file": "1773179440782.png"
+      }
+    ],
+    "description": "Aretes Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante aretes aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Celeste",
+      "Tamaño: 120mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 44,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/aretes-aro-vertical-mariposa-swarovski/celeste/celeste-2.webp"
+  },
+  {
+    "id": 46,
+    "slug": "juego-aro-vertical-mariposa-swarovski-collar-aro-vertical-mariposa-swarovski-naranja",
+    "sku": "CAVMSMG05",
+    "name": "Collar Aro Vertical Mariposa Swarovski Naranja",
+    "fullName": "Collar Aro Vertical Mariposa Swarovski Naranja — Juego Aro Vertical Mariposa Swarovski",
+    "price": 85,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "collar-aro-vertical-mariposa-swarovski",
+      "name": "Collar Aro Vertical Mariposa Swarovski"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Naranja",
+      "code": null
+    },
+    "size": 110,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/naranja/naranja-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/naranja/naranja-1-thumb.webp",
+        "file": "1779227191056.png"
+      }
+    ],
+    "description": "Collar Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante collar aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Naranja",
+      "Tamaño: 110mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 34,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/naranja/naranja-1-800.webp"
+  },
+  {
+    "id": 47,
+    "slug": "juego-aro-vertical-mariposa-swarovski-collar-aro-vertical-mariposa-swarovski-rojo",
+    "sku": "CAVMSMG06",
+    "name": "Collar Aro Vertical Mariposa Swarovski Rojo",
+    "fullName": "Collar Aro Vertical Mariposa Swarovski Rojo — Juego Aro Vertical Mariposa Swarovski",
+    "price": 85,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "collar-aro-vertical-mariposa-swarovski",
+      "name": "Collar Aro Vertical Mariposa Swarovski"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Rojo",
+      "code": null
+    },
+    "size": 110,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/rojo/rojo-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/rojo/rojo-1-thumb.webp",
+        "file": "1773179068997.png"
+      }
+    ],
+    "description": "Collar Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante collar aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Rojo",
+      "Tamaño: 110mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 5,
+    "reviews": 20,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/rojo/rojo-1-800.webp"
+  },
+  {
+    "id": 48,
+    "slug": "juego-aro-vertical-mariposa-swarovski-collar-aro-vertical-mariposa-swarovski-celeste",
+    "sku": "CAVMSMG11",
+    "name": "Collar Aro Vertical Mariposa Swarovski Celeste",
+    "fullName": "Collar Aro Vertical Mariposa Swarovski Celeste — Juego Aro Vertical Mariposa Swarovski",
+    "price": 85,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "collar-aro-vertical-mariposa-swarovski",
+      "name": "Collar Aro Vertical Mariposa Swarovski"
+    },
+    "category": "collares",
+    "categoryLabel": "Collares",
+    "color": {
+      "name": "Celeste",
+      "code": null
+    },
+    "size": 110,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/celeste/celeste-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/celeste/celeste-1-thumb.webp",
+        "file": "1773180009358.png"
+      }
+    ],
+    "description": "Collar Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante collar aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Celeste",
+      "Tamaño: 110mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 33,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/collar-aro-vertical-mariposa-swarovski/celeste/celeste-1-800.webp"
+  },
+  {
+    "id": 49,
+    "slug": "juego-aro-vertical-mariposa-swarovski-juego-aro-vertical-mariposa-swarovski-naranja",
+    "sku": "JAVMSMG05",
+    "name": "Juego Aro Vertical Mariposa Swarovski Naranja",
+    "fullName": "Juego Aro Vertical Mariposa Swarovski Naranja — Juego Aro Vertical Mariposa Swarovski",
+    "price": 160,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Naranja",
+      "code": null
+    },
+    "size": 210,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-1-thumb.webp",
+        "file": "1778192041636.png"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-2.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-2-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-2-thumb.webp",
+        "file": "1779227427684.png"
+      }
+    ],
+    "description": "Juego Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante juego aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Naranja",
+      "Tamaño: 210mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 38,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/naranja/naranja-2.webp"
+  },
+  {
+    "id": 50,
+    "slug": "juego-aro-vertical-mariposa-swarovski-juego-aro-vertical-mariposa-swarovski-rojo",
+    "sku": "JAVMSMG06",
+    "name": "Juego Aro Vertical Mariposa Swarovski Rojo",
+    "fullName": "Juego Aro Vertical Mariposa Swarovski Rojo — Juego Aro Vertical Mariposa Swarovski",
+    "price": 160,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Rojo",
+      "code": null
+    },
+    "size": 210,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-1-thumb.webp",
+        "file": "1773179149041.png"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-2.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-2-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-2-thumb.webp",
+        "file": "1773179432186.png"
+      },
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-3.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-3-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-3-thumb.webp",
+        "file": "1773872704386.png"
+      }
+    ],
+    "description": "Juego Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante juego aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Rojo",
+      "Tamaño: 210mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 25,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rojo/rojo-2.webp"
+  },
+  {
+    "id": 51,
+    "slug": "juego-aro-vertical-mariposa-swarovski-juego-aro-vertical-mariposa-swarovski-rosado",
+    "sku": "JAVMSMG10",
+    "name": "Juego Aro Vertical Mariposa Swarovski Rosado",
+    "fullName": "Juego Aro Vertical Mariposa Swarovski Rosado — Juego Aro Vertical Mariposa Swarovski",
+    "price": 160,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Rosado",
+      "code": null
+    },
+    "size": 210,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rosado/rosado-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rosado/rosado-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rosado/rosado-1-thumb.webp",
+        "file": "1778192155211.png"
+      }
+    ],
+    "description": "Juego Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante juego aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Rosado",
+      "Tamaño: 210mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 23,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rosado/rosado-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/rosado/rosado-1-800.webp"
+  },
+  {
+    "id": 52,
+    "slug": "juego-aro-vertical-mariposa-swarovski-juego-aro-vertical-mariposa-swarovski-celeste",
+    "sku": "JAVMSMG11",
+    "name": "Juego Aro Vertical Mariposa Swarovski Celeste",
+    "fullName": "Juego Aro Vertical Mariposa Swarovski Celeste — Juego Aro Vertical Mariposa Swarovski",
+    "price": 160,
+    "collection": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "type": {
+      "id": "juego-aro-vertical-mariposa-swarovski",
+      "name": "Juego Aro Vertical Mariposa Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Celeste",
+      "code": null
+    },
+    "size": 210,
+    "images": [
+      {
+        "original": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
+        "optimized": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/celeste/celeste-1-800.webp",
+        "thumbnail": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/celeste/celeste-1-thumb.webp",
+        "file": "1773179645497.png"
+      }
+    ],
+    "description": "Juego Aro Vertical Mariposa Swarovski artesanal, colección Juego Aro Vertical Mariposa Swarovski.",
+    "longDescription": "Elegante juego aro vertical mariposa swarovski artesanal. Parte de la exclusiva colección \"Juego Aro Vertical Mariposa Swarovski\", esta pieza es elaborada a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Aro Vertical Mariposa Swarovski",
+      "Color: Celeste",
+      "Tamaño: 210mm",
+      "Materiales premium importados",
+      "Acabado profesional de lujo",
+      "Base hipoalergénica de plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.8,
+    "reviews": 42,
+    "inStock": true,
+    "image": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/celeste/celeste-1.webp",
+    "imageSecondary": "/products/juego-aro-vertical-mariposa-swarovski/juego-aro-vertical-mariposa-swarovski/celeste/celeste-1-800.webp"
+  },
+  {
+    "id": 53,
+    "slug": "juego-flor-de-plata-swarovski-juegos-flor-de-plata-swarovski-modelo-2",
+    "sku": "JFPSCPYM20",
+    "name": "Juegos Flor de Plata Swarovski Modelo 2",
+    "fullName": "Juegos Flor de Plata Swarovski Modelo 2 — Juego Flor de Plata Swarovski",
+    "price": 160,
+    "collection": {
+      "id": "juego-flor-de-plata-swarovski",
+      "name": "Juego Flor de Plata Swarovski"
+    },
+    "type": {
+      "id": "juegos-flor-de-plata-swarovski",
+      "name": "Juegos Flor de Plata Swarovski"
+    },
+    "category": "juegos",
+    "categoryLabel": "Juegos Completos",
+    "color": {
+      "name": "Modelo 2",
+      "code": "M20"
+    },
+    "size": 260,
+    "images": [
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-1-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-1-thumb.webp",
+        "file": "1774202075316.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-2-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-2-thumb.webp",
+        "file": "1774202210316.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-3.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-3-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-3-thumb.webp",
+        "file": "1774202389259.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-4.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-4-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-4-thumb.webp",
+        "file": "1774202408135.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-5.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-5-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-5-thumb.webp",
+        "file": "1774202473712.png"
+      },
+      {
+        "original": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-6.webp",
+        "optimized": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-6-800.webp",
+        "thumbnail": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-6-thumb.webp",
+        "file": "1774202724721.png"
+      }
+    ],
+    "description": "Juegos Flor de Plata Swarovski Modelo 2, colección Juego Flor de Plata Swarovski.",
+    "longDescription": "Elegante juego completo de la colección Juego Flor de Plata Swarovski en su segunda variante.",
+    "features": [
+      "Elaboración artesanal 100% a mano",
+      "Colección: Juego Flor de Plata Swarovski",
+      "Modelo 2",
+      "Tamaño: 260mm",
+      "Plata 925",
+      "Presentación en caja de regalo"
+    ],
+    "rating": 4.9,
+    "reviews": 22,
+    "inStock": true,
+    "image": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-1.webp",
+    "imageSecondary": "/products/juego-flor-de-plata-swarovski/juegos-flor-de-plata-swarovski/modelo-2/modelo-2-2.webp"
+  }
+]

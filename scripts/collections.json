@@ -1,0 +1,656 @@
+[
+  {
+    "id": "juego-boton",
+    "name": "Juego Botón",
+    "slug": "juego-boton",
+    "types": [
+      {
+        "id": "aretes-boton",
+        "name": "Aretes Botón",
+        "slug": "aretes-boton",
+        "category": "aretes",
+        "categoryLabel": "Aretes",
+        "variants": [
+          {
+            "id": 1,
+            "slug": "juego-boton-aretes-boton-crema",
+            "sku": "ABTNC06",
+            "name": "Aretes Botón Crema",
+            "fullName": "Aretes Botón Crema — Juego Botón",
+            "price": null,
+            "collection": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "type": {
+              "id": "aretes-boton",
+              "name": "Aretes Botón"
+            },
+            "category": "aretes",
+            "categoryLabel": "Aretes",
+            "color": {
+              "name": "Crema",
+              "code": "C06"
+            },
+            "size": 85,
+            "images": [
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Aretes Botón/Aretes Botón Crema C06 ABTNC06 S-85",
+                "sourceFile": "1766155913798.jpg",
+                "original": "juego-boton/aretes-boton/crema/1766155913798.jpg",
+                "optimized": "juego-boton/aretes-boton/crema/crema-1.webp",
+                "thumbnail": "juego-boton/aretes-boton/crema/crema-1-thumb.webp",
+                "file": "1766155913798.jpg",
+                "size": 1475100
+              }
+            ],
+            "description": "Aretes Botón artesanal en tono Crema, colección Juego Botón.",
+            "longDescription": "Elegante aretes botón artesanal en tono crema. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+            "features": [
+              "Tejido artesanal 100% a mano",
+              "Colección: Juego Botón",
+              "Color: Crema",
+              "Tamaño: 85mm",
+              "Materiales premium importados",
+              "Acabado profesional de lujo",
+              "Presentación en caja de regalo"
+            ],
+            "rating": 4.88,
+            "reviews": 40,
+            "inStock": true
+          },
+          {
+            "id": 2,
+            "slug": "juego-boton-aretes-boton-rosado",
+            "sku": "ABTNC03",
+            "name": "Aretes Botón Rosado",
+            "fullName": "Aretes Botón Rosado — Juego Botón",
+            "price": null,
+            "collection": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "type": {
+              "id": "aretes-boton",
+              "name": "Aretes Botón"
+            },
+            "category": "aretes",
+            "categoryLabel": "Aretes",
+            "color": {
+              "name": "Rosado",
+              "code": "C03"
+            },
+            "size": 85,
+            "images": [
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Aretes Botón/Aretes Botón Rosado C03 ABTNC03 S-85",
+                "sourceFile": "1766240888731.jpg",
+                "original": "juego-boton/aretes-boton/rosado/1766240888731.jpg",
+                "optimized": "juego-boton/aretes-boton/rosado/rosado-1.webp",
+                "thumbnail": "juego-boton/aretes-boton/rosado/rosado-1-thumb.webp",
+                "file": "1766240888731.jpg",
+                "size": 1212940
+              }
+            ],
+            "description": "Aretes Botón artesanal en tono Rosado, colección Juego Botón.",
+            "longDescription": "Elegante aretes botón artesanal en tono rosado. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+            "features": [
+              "Tejido artesanal 100% a mano",
+              "Colección: Juego Botón",
+              "Color: Rosado",
+              "Tamaño: 85mm",
+              "Materiales premium importados",
+              "Acabado profesional de lujo",
+              "Presentación en caja de regalo"
+            ],
+            "rating": 4.84,
+            "reviews": 50,
+            "inStock": true
+          }
+        ]
+      },
+      {
+        "id": "juego-boton",
+        "name": "Juego Botón",
+        "slug": "juego-boton",
+        "category": "juegos",
+        "categoryLabel": "Juegos Completos",
+        "variants": [
+          {
+            "id": 3,
+            "slug": "juego-boton-juego-boton-rosado",
+            "sku": "JBTNC03",
+            "name": "Juego Botón Rosado",
+            "fullName": "Juego Botón Rosado — Juego Botón",
+            "price": null,
+            "collection": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "type": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "category": "juegos",
+            "categoryLabel": "Juegos Completos",
+            "color": {
+              "name": "Rosado",
+              "code": "C03"
+            },
+            "size": 155,
+            "images": [
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Rosado C03 JBTNC03 S-155",
+                "sourceFile": "1768176313972.jpg",
+                "original": "juego-boton/juego-boton/rosado/1768176313972.jpg",
+                "optimized": "juego-boton/juego-boton/rosado/rosado-1.webp",
+                "thumbnail": "juego-boton/juego-boton/rosado/rosado-1-thumb.webp",
+                "file": "1768176313972.jpg",
+                "size": 1470259
+              },
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Rosado C03 JBTNC03 S-155",
+                "sourceFile": "1768176340367.jpg",
+                "original": "juego-boton/juego-boton/rosado/1768176340367.jpg",
+                "optimized": "juego-boton/juego-boton/rosado/rosado-2.webp",
+                "thumbnail": "juego-boton/juego-boton/rosado/rosado-2-thumb.webp",
+                "file": "1768176340367.jpg",
+                "size": 1492050
+              },
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Rosado C03 JBTNC03 S-155",
+                "sourceFile": "1768335000985.jpg",
+                "original": "juego-boton/juego-boton/rosado/1768335000985.jpg",
+                "optimized": "juego-boton/juego-boton/rosado/rosado-3.webp",
+                "thumbnail": "juego-boton/juego-boton/rosado/rosado-3-thumb.webp",
+                "file": "1768335000985.jpg",
+                "size": 1316318
+              }
+            ],
+            "description": "Juego Botón artesanal en tono Rosado, colección Juego Botón.",
+            "longDescription": "Elegante juego botón artesanal en tono rosado. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+            "features": [
+              "Tejido artesanal 100% a mano",
+              "Colección: Juego Botón",
+              "Color: Rosado",
+              "Tamaño: 155mm",
+              "Materiales premium importados",
+              "Acabado profesional de lujo",
+              "Presentación en caja de regalo"
+            ],
+            "rating": 4.93,
+            "reviews": 27,
+            "inStock": true
+          },
+          {
+            "id": 4,
+            "slug": "juego-boton-juego-boton-verde-botella",
+            "sku": "JBTNC15",
+            "name": "Juego Botón Verde Botella",
+            "fullName": "Juego Botón Verde Botella — Juego Botón",
+            "price": null,
+            "collection": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "type": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "category": "juegos",
+            "categoryLabel": "Juegos Completos",
+            "color": {
+              "name": "Verde Botella",
+              "code": "C15"
+            },
+            "size": 155,
+            "images": [
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Verde Botella C15 JBTNC15 S-155",
+                "sourceFile": "1767803114495.jpg",
+                "original": "juego-boton/juego-boton/verde-botella/1767803114495.jpg",
+                "optimized": "juego-boton/juego-boton/verde-botella/verde-botella-1.webp",
+                "thumbnail": "juego-boton/juego-boton/verde-botella/verde-botella-1-thumb.webp",
+                "file": "1767803114495.jpg",
+                "size": 1558439
+              },
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Juego Botón/Juego Botón Verde Botella C15 JBTNC15 S-155",
+                "sourceFile": "1767803214653.jpg",
+                "original": "juego-boton/juego-boton/verde-botella/1767803214653.jpg",
+                "optimized": "juego-boton/juego-boton/verde-botella/verde-botella-2.webp",
+                "thumbnail": "juego-boton/juego-boton/verde-botella/verde-botella-2-thumb.webp",
+                "file": "1767803214653.jpg",
+                "size": 1989228
+              }
+            ],
+            "description": "Juego Botón artesanal en tono Verde Botella, colección Juego Botón.",
+            "longDescription": "Elegante juego botón artesanal en tono verde botella. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+            "features": [
+              "Tejido artesanal 100% a mano",
+              "Colección: Juego Botón",
+              "Color: Verde Botella",
+              "Tamaño: 155mm",
+              "Materiales premium importados",
+              "Acabado profesional de lujo",
+              "Presentación en caja de regalo"
+            ],
+            "rating": 4.92,
+            "reviews": 24,
+            "inStock": true
+          }
+        ]
+      },
+      {
+        "id": "pulsera-boton",
+        "name": "Pulsera Botón",
+        "slug": "pulsera-boton",
+        "category": "pulseras",
+        "categoryLabel": "Pulseras",
+        "variants": [
+          {
+            "id": 5,
+            "slug": "juego-boton-pulsera-boton-rosado",
+            "sku": "PBTNC03",
+            "name": "Pulsera Botón Rosado",
+            "fullName": "Pulsera Botón Rosado — Juego Botón",
+            "price": null,
+            "collection": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "type": {
+              "id": "pulsera-boton",
+              "name": "Pulsera Botón"
+            },
+            "category": "pulseras",
+            "categoryLabel": "Pulseras",
+            "color": {
+              "name": "Rosado",
+              "code": "C03"
+            },
+            "size": 180,
+            "images": [
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Rosado C03 PBTNC03 S-180",
+                "sourceFile": "1768335048433.jpg",
+                "original": "juego-boton/pulsera-boton/rosado/1768335048433.jpg",
+                "optimized": "juego-boton/pulsera-boton/rosado/rosado-1.webp",
+                "thumbnail": "juego-boton/pulsera-boton/rosado/rosado-1-thumb.webp",
+                "file": "1768335048433.jpg",
+                "size": 1393408
+              },
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Rosado C03 PBTNC03 S-180",
+                "sourceFile": "1768335730525.jpg",
+                "original": "juego-boton/pulsera-boton/rosado/1768335730525.jpg",
+                "optimized": "juego-boton/pulsera-boton/rosado/rosado-2.webp",
+                "thumbnail": "juego-boton/pulsera-boton/rosado/rosado-2-thumb.webp",
+                "file": "1768335730525.jpg",
+                "size": 1228046
+              },
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Rosado C03 PBTNC03 S-180",
+                "sourceFile": "1768347300676.jpg",
+                "original": "juego-boton/pulsera-boton/rosado/1768347300676.jpg",
+                "optimized": "juego-boton/pulsera-boton/rosado/rosado-3.webp",
+                "thumbnail": "juego-boton/pulsera-boton/rosado/rosado-3-thumb.webp",
+                "file": "1768347300676.jpg",
+                "size": 1302835
+              }
+            ],
+            "description": "Pulsera Botón artesanal en tono Rosado, colección Juego Botón.",
+            "longDescription": "Elegante pulsera botón artesanal en tono rosado. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+            "features": [
+              "Tejido artesanal 100% a mano",
+              "Colección: Juego Botón",
+              "Color: Rosado",
+              "Tamaño: 180mm",
+              "Materiales premium importados",
+              "Acabado profesional de lujo",
+              "Presentación en caja de regalo"
+            ],
+            "rating": 4.91,
+            "reviews": 64,
+            "inStock": true
+          },
+          {
+            "id": 6,
+            "slug": "juego-boton-pulsera-boton-verde-botella",
+            "sku": "PBTNC15",
+            "name": "Pulsera Botón Verde Botella",
+            "fullName": "Pulsera Botón Verde Botella — Juego Botón",
+            "price": null,
+            "collection": {
+              "id": "juego-boton",
+              "name": "Juego Botón"
+            },
+            "type": {
+              "id": "pulsera-boton",
+              "name": "Pulsera Botón"
+            },
+            "category": "pulseras",
+            "categoryLabel": "Pulseras",
+            "color": {
+              "name": "Verde Botella",
+              "code": "C15"
+            },
+            "size": 180,
+            "images": [
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Verde Botella C15 PBTNC15 S-180",
+                "sourceFile": "1767802846029.jpg",
+                "original": "juego-boton/pulsera-boton/verde-botella/1767802846029.jpg",
+                "optimized": "juego-boton/pulsera-boton/verde-botella/verde-botella-1.webp",
+                "thumbnail": "juego-boton/pulsera-boton/verde-botella/verde-botella-1-thumb.webp",
+                "file": "1767802846029.jpg",
+                "size": 975100
+              },
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Verde Botella C15 PBTNC15 S-180",
+                "sourceFile": "1768347024307.jpg",
+                "original": "juego-boton/pulsera-boton/verde-botella/1768347024307.jpg",
+                "optimized": "juego-boton/pulsera-boton/verde-botella/verde-botella-2.webp",
+                "thumbnail": "juego-boton/pulsera-boton/verde-botella/verde-botella-2-thumb.webp",
+                "file": "1768347024307.jpg",
+                "size": 1224124
+              },
+              {
+                "sourcePath": "/tmp/maia-zip/Juego Botón/Pulsera Botón/Pulsera Botón Verde Botella C15 PBTNC15 S-180",
+                "sourceFile": "1768347024307~2.jpg",
+                "original": "juego-boton/pulsera-boton/verde-botella/1768347024307~2.jpg",
+                "optimized": "juego-boton/pulsera-boton/verde-botella/verde-botella-3.webp",
+                "thumbnail": "juego-boton/pulsera-boton/verde-botella/verde-botella-3-thumb.webp",
+                "file": "1768347024307~2.jpg",
+                "size": 114771
+              }
+            ],
+            "description": "Pulsera Botón artesanal en tono Verde Botella, colección Juego Botón.",
+            "longDescription": "Elegante pulsera botón artesanal en tono verde botella. Parte de la exclusiva colección \"Juego Botón\", esta pieza es tejida a mano con materiales premium, destacando los detalles característicos de la joyería peruana contemporánea. Ideal para quienes buscan accesorios únicos con personalidad propia.",
+            "features": [
+              "Tejido artesanal 100% a mano",
+              "Colección: Juego Botón",
+              "Color: Verde Botella",
+              "Tamaño: 180mm",
+              "Materiales premium importados",
+              "Acabado profesional de lujo",
+              "Presentación en caja de regalo"
+            ],
+            "rating": 4.819999999999999,
+            "reviews": 48,
+            "inStock": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "juego-maria-swarovski",
+    "name": "Juego María Swarovski",
+    "slug": "juego-maria-swarovski",
+    "types": [
+      {
+        "id": "aretes-maria-swarovski",
+        "name": "Aretes María Swarovski",
+        "slug": "aretes-maria-swarovski",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      },
+      {
+        "id": "collar-maria-swarovski",
+        "name": "Collar María Swarovski",
+        "slug": "collar-maria-swarovski",
+        "category": "collares",
+        "categoryLabel": "Collares"
+      },
+      {
+        "id": "juegos-maria-swarovski",
+        "name": "Juegos María Swarovski",
+        "slug": "juegos-maria-swarovski",
+        "category": "juegos",
+        "categoryLabel": "Juegos Completos"
+      },
+      {
+        "id": "pulsera-maria-swarovski",
+        "name": "Pulsera María Swarovski",
+        "slug": "pulsera-maria-swarovski",
+        "category": "pulseras",
+        "categoryLabel": "Pulseras"
+      }
+    ]
+  },
+  {
+    "id": "juego-rosa",
+    "name": "Juego Rosa",
+    "slug": "juego-rosa",
+    "types": [
+      {
+        "id": "aretes",
+        "name": "Aretes",
+        "slug": "aretes",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      },
+      {
+        "id": "collar",
+        "name": "Collar",
+        "slug": "collar",
+        "category": "collares",
+        "categoryLabel": "Collares"
+      },
+      {
+        "id": "juego",
+        "name": "Juego",
+        "slug": "juego",
+        "category": "juegos",
+        "categoryLabel": "Juegos Completos"
+      }
+    ]
+  },
+  {
+    "id": "juego-rosario",
+    "name": "Juego Rosario",
+    "slug": "juego-rosario",
+    "types": [
+      {
+        "id": "aretes",
+        "name": "Aretes",
+        "slug": "aretes",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      }
+    ]
+  },
+  {
+    "id": "pulsera-rombo-swarovski",
+    "name": "Pulsera Rombo Swarovski",
+    "slug": "pulsera-rombo-swarovski",
+    "types": [
+      {
+        "id": "pulsera-rombo-swarovski-morado-4s05-prb4s05-s-185",
+        "name": "Pulsera Rombo Swarovski Morado 4S05 PRB4S05 S-185",
+        "slug": "pulsera-rombo-swarovski-morado-4s05-prb4s05-s-185",
+        "category": "pulseras",
+        "categoryLabel": "Pulseras"
+      },
+      {
+        "id": "pulsera-rombo-swarovski-rosado-4s03-prb4s03-s-185",
+        "name": "Pulsera Rombo Swarovski Rosado 4S03 PRB4S03 S-185",
+        "slug": "pulsera-rombo-swarovski-rosado-4s03-prb4s03-s-185",
+        "category": "pulseras",
+        "categoryLabel": "Pulseras"
+      },
+      {
+        "id": "pulsera-rombo-swarovski-turquesa-4s08-prb4s08-s-185",
+        "name": "Pulsera Rombo Swarovski Turquesa 4S08 PRB4S08 S-185",
+        "slug": "pulsera-rombo-swarovski-turquesa-4s08-prb4s08-s-185",
+        "category": "pulseras",
+        "categoryLabel": "Pulseras"
+      }
+    ]
+  },
+  {
+    "id": "pulsera-tubular",
+    "name": "Pulsera Tubular",
+    "slug": "pulsera-tubular",
+    "types": [
+      {
+        "id": "pulsera-tubular",
+        "name": "Pulsera Tubular",
+        "slug": "pulsera-tubular",
+        "category": "pulseras",
+        "categoryLabel": "Pulseras"
+      }
+    ]
+  },
+  {
+    "id": "juego-flor-de-plata-swarovski-rombo",
+    "name": "Juego Flor de Plata Swarovski Rombo",
+    "slug": "juego-flor-de-plata-swarovski-rombo",
+    "types": []
+  },
+  {
+    "id": "juego-flor-de-plata-swarovski",
+    "name": "Juego Flor de Plata Swarovski",
+    "slug": "juego-flor-de-plata-swarovski",
+    "types": [
+      {
+        "id": "aretes-flor-de-plata-swarovski",
+        "name": "Aretes Flor de Plata Swarovski",
+        "slug": "aretes-flor-de-plata-swarovski",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      },
+      {
+        "id": "collar-flor-de-plata-swarovski",
+        "name": "Collar Flor de Plata Swarovski",
+        "slug": "collar-flor-de-plata-swarovski",
+        "category": "collares",
+        "categoryLabel": "Collares"
+      },
+      {
+        "id": "juegos-flor-de-plata-swarovski",
+        "name": "Juegos Flor de Plata Swarovski",
+        "slug": "juegos-flor-de-plata-swarovski",
+        "category": "juegos",
+        "categoryLabel": "Juegos Completos"
+      }
+    ]
+  },
+  {
+    "id": "juego-engaste-abierto-piedra-redonda-rodocrosita-jeaprrc-s-175",
+    "name": "Juego Engaste Abierto Piedra Redonda Rodocrosita JEAPRRC S-175",
+    "slug": "juego-engaste-abierto-piedra-redonda-rodocrosita-jeaprrc-s-175",
+    "types": []
+  },
+  {
+    "id": "juego-engaste-abierta-piedra-redonda-cuarzo-rosa-jccrd03-s-175",
+    "name": "Juego Engaste Abierta Piedra Redonda Cuarzo Rosa JCCRD03 S-175",
+    "slug": "juego-engaste-abierta-piedra-redonda-cuarzo-rosa-jccrd03-s-175",
+    "types": []
+  },
+  {
+    "id": "dije-engaste-abierto-piedra-corazon",
+    "name": "Dije Engaste Abierto Piedra Corazón",
+    "slug": "dije-engaste-abierto-piedra-corazon",
+    "types": [
+      {
+        "id": "dije-engaste-abierto-piedra-corazon-cuarzo-rosa-deapc2cr-s-125",
+        "name": "Dije Engaste Abierto Piedra Corazón Cuarzo Rosa DEAPC2CR S-125",
+        "slug": "dije-engaste-abierto-piedra-corazon-cuarzo-rosa-deapc2cr-s-125",
+        "category": "dije-engaste-abierto-piedra-corazon-cuarzo-rosa-deapc2cr-s-125",
+        "categoryLabel": "Dije Engaste Abierto Piedra Corazón Cuarzo Rosa DEAPC2CR S-125"
+      }
+    ]
+  },
+  {
+    "id": "aretes-corazon-abierto-swarovski",
+    "name": "Aretes Corazón Abierto Swarovski",
+    "slug": "aretes-corazon-abierto-swarovski",
+    "types": [
+      {
+        "id": "aretes",
+        "name": "Aretes",
+        "slug": "aretes",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      }
+    ]
+  },
+  {
+    "id": "aretes-circular-12",
+    "name": "Aretes Circular 12",
+    "slug": "aretes-circular-12",
+    "types": []
+  },
+  {
+    "id": "juego-aro-atrapasueno",
+    "name": "Juego Aro Atrapasueño",
+    "slug": "juego-aro-atrapasueno",
+    "types": [
+      {
+        "id": "juego-aro-atrapasueno-celeste-y-rosado-jaatcyr-s-180",
+        "name": "Juego Aro Atrapasueño Celeste y Rosado JAATCYR S-180",
+        "slug": "juego-aro-atrapasueno-celeste-y-rosado-jaatcyr-s-180",
+        "category": "juegos",
+        "categoryLabel": "Juegos Completos"
+      },
+      {
+        "id": "juego-aro-atrapasueno-navideno-jaatnvd-s-180",
+        "name": "Juego Aro Atrapasueño Navideño JAATNVD S-180",
+        "slug": "juego-aro-atrapasueno-navideno-jaatnvd-s-180",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      },
+      {
+        "id": "juego-aro-atrapasueno-negro-y-tornasol-jaatnyt-s-180",
+        "name": "Juego Aro Atrapasueño Negro y Tornasol JAATNYT S-180",
+        "slug": "juego-aro-atrapasueno-negro-y-tornasol-jaatnyt-s-180",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      },
+      {
+        "id": "juego-aro-atrapasueno-rojo-y-tornasol-jaatryt-s-180",
+        "name": "Juego Aro Atrapasueño Rojo y Tornasol JAATRYT S-180",
+        "slug": "juego-aro-atrapasueno-rojo-y-tornasol-jaatryt-s-180",
+        "category": "juegos",
+        "categoryLabel": "Juegos Completos"
+      },
+      {
+        "id": "juego-aro-atrapasueno-verde-y-menta-jaatvym-s-180",
+        "name": "Juego Aro Atrapasueño Verde y Menta JAATVYM S-180",
+        "slug": "juego-aro-atrapasueno-verde-y-menta-jaatvym-s-180",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      }
+    ]
+  },
+  {
+    "id": "juego-aro-vertical-mariposa-swarovski",
+    "name": "Juego Aro Vertical Mariposa Swarovski",
+    "slug": "juego-aro-vertical-mariposa-swarovski",
+    "types": [
+      {
+        "id": "aretes-aro-vertical-mariposa-swarovski",
+        "name": "Aretes Aro Vertical Mariposa Swarovski",
+        "slug": "aretes-aro-vertical-mariposa-swarovski",
+        "category": "aretes",
+        "categoryLabel": "Aretes"
+      },
+      {
+        "id": "collar-aro-vertical-mariposa-swarovski",
+        "name": "Collar Aro Vertical Mariposa Swarovski",
+        "slug": "collar-aro-vertical-mariposa-swarovski",
+        "category": "collares",
+        "categoryLabel": "Collares"
+      },
+      {
+        "id": "juego-aro-vertical-mariposa-swarovski",
+        "name": "Juego Aro Vertical Mariposa Swarovski",
+        "slug": "juego-aro-vertical-mariposa-swarovski",
+        "category": "juegos",
+        "categoryLabel": "Juegos Completos"
+      }
+    ]
+  }
+]
