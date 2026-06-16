@@ -11,11 +11,13 @@ export default function BottomAppBar() {
 
   const isActive = (page: string) => route.page === page;
 
+  const openCartDrawer = () => window.dispatchEvent(new Event('open-cart-drawer'));
+
   const tabs = [
     { icon: Home, label: 'Inicio', page: 'home', href: '#/' },
     { icon: Gem, label: 'Colección', page: 'coleccion', href: '#/coleccion' },
     { icon: Heart, label: 'Favoritos', page: 'favoritos', href: '#/favoritos', badge: favorites.length },
-    { icon: ShoppingBag, label: 'Carrito', page: 'carrito', href: '#/carrito', badge: cartCount },
+    { icon: ShoppingBag, label: 'Carrito', page: 'carrito', href: '#/carrito', badge: cartCount, drawer: true },
     { icon: Search, label: 'Buscar', page: 'buscar', href: '#/buscar' },
   ];
 
@@ -38,7 +40,13 @@ export default function BottomAppBar() {
                 label={tab.label}
                 active={isActive(tab.page)}
                 badge={tab.badge}
-                onClick={() => navigate(tab.href)}
+                onClick={() => {
+                  if ('drawer' in tab && tab.drawer) {
+                    openCartDrawer();
+                  } else {
+                    navigate(tab.href);
+                  }
+                }}
               />
             ))}
           </div>

@@ -6,6 +6,9 @@ import { RouterProvider, useRouter } from '@/lib/router';
 import Navigation from '@/components/maia/Navigation';
 import Footer from '@/components/maia/Footer';
 import BottomAppBar from '@/components/maia/BottomAppBar';
+import CartDrawer from '@/components/maia/CartDrawer';
+import ScrollToTop from '@/components/maia/ScrollToTop';
+import ScrollProgress from '@/components/maia/ScrollProgress';
 import HomePage from '@/components/maia/pages/HomePage';
 import NosotrosPage from '@/components/maia/pages/NosotrosPage';
 import ColeccionPage from '@/components/maia/pages/ColeccionPage';
@@ -82,6 +85,9 @@ function PageRouter() {
       </main>
       <Footer />
       <BottomAppBar />
+      <CartDrawer />
+      <ScrollToTop />
+      <ScrollProgress />
     </div>
   );
 }
