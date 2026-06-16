@@ -10,7 +10,7 @@ import {
   Heart,
   Truck,
   ShieldCheck,
-  Gem,
+  Star,
   ChevronRight,
 } from 'lucide-react';
 import { useRouter } from '@/lib/router';
@@ -31,9 +31,9 @@ const trustItems = [
     desc: 'Olva Courier y Shalom',
   },
   {
-    icon: Gem,
-    label: 'Garantia Artesanal',
-    desc: '6 meses de respaldo',
+    icon: Star,
+    label: 'Calidad Premium',
+    desc: 'Materiales de primera',
   },
   {
     icon: ShieldCheck,
@@ -234,7 +234,6 @@ function FooterContent() {
               {[
                 { label: 'Nosotros', href: '#/nosotros' },
                 { label: 'Envios', href: '#/comprar' },
-                { label: 'Garantia', href: '#/comprar' },
                 { label: 'Contacto', href: '#/contacto' },
               ].map((link) => (
                 <li key={link.label}>

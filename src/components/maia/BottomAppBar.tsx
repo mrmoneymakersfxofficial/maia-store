@@ -1,116 +1,46 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Heart, ShoppingBag, MessageCircle, Gem, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Home, Heart, ShoppingBag, Gem, Search } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 import { useStore } from '@/lib/store-context';
-import { formatPrice } from '@/lib/store-data';
 
 export default function BottomAppBar() {
   const { navigate, route } = useRouter();
-  const { cartCount, cartTotal, favorites, toggleFavorite, cart } = useStore();
-  const [showWhatsAppPulse, setShowWhatsAppPulse] = useState(false);
-
-  // Pulse WhatsApp badge periodically
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowWhatsAppPulse(true);
-      setTimeout(() => setShowWhatsAppPulse(false), 2000);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
+  const { cartCount, favorites } = useStore();
 
   const isActive = (page: string) => route.page === page;
 
-  const handleWhatsApp = useCallback(() => {
-    let message = 'Hola Maia Store! Me interesa ver la colección.';
-    if (cart.length > 0) {
-      const items = cart
-        .map((item) => `• ${item.product.name} (x${item.quantity}) - ${formatPrice(item.product.price * item.quantity)}`)
-        .join('\n');
-      const total = cart.reduce((s, i) => s + i.product.price * i.quantity, 0);
-      message = `Hola Maia Store! Quisiera hacer un pedido:\n\n${items}\n\nTotal: ${formatPrice(total)}`;
-    }
-    const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/51977333858?text=${encoded}`, '_blank');
-  }, [cart]);
+  const tabs = [
+    { icon: Home, label: 'Inicio', page: 'home', href: '#/' },
+    { icon: Gem, label: 'Colección', page: 'coleccion', href: '#/coleccion' },
+    { icon: Heart, label: 'Favoritos', page: 'favoritos', href: '#/favoritos', badge: favorites.length },
+    { icon: ShoppingBag, label: 'Carrito', page: 'carrito', href: '#/carrito', badge: cartCount },
+    { icon: Search, label: 'Buscar', page: 'buscar', href: '#/buscar' },
+  ];
 
   return (
     <>
       {/* Spacer so bottom bar doesn't cover content */}
-      <div className="h-20 sm:h-4" />
+      <div className="h-16 sm:h-4" />
 
       {/* Bottom Bar Container */}
       <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden">
         {/* Subtle top border glow */}
         <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-turquoise-300/30 to-transparent" />
 
-        <div className="bg-white/80 backdrop-blur-2xl border-t border-zinc-100/50">
-          <div className="flex items-center justify-around px-2 py-2 max-w-lg mx-auto">
-            {/* Home */}
-            <BottomTab
-              icon={Home}
-              label="Inicio"
-              active={isActive('home')}
-              onClick={() => navigate('#/')}
-            />
-
-            {/* Coleccion */}
-            <BottomTab
-              icon={Gem}
-              label="Coleccion"
-              active={isActive('coleccion')}
-              onClick={() => navigate('#/coleccion')}
-            />
-
-            {/* Favorites */}
-            <BottomTab
-              icon={Heart}
-              label="Favoritos"
-              active={isActive('favoritos')}
-              badge={favorites.length > 0 ? favorites.length : undefined}
-              onClick={() => navigate('#/favoritos')}
-            />
-
-            {/* WhatsApp CTA — Center elevated button */}
-            <motion.button
-              onClick={handleWhatsApp}
-              className="relative -mt-6 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg shadow-green-500/30"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.93 }}
-            >
-              {/* Ping animation */}
-              <AnimatePresence>
-                {showWhatsAppPulse && (
-                  <motion.span
-                    initial={{ scale: 1, opacity: 0.4 }}
-                    animate={{ scale: 1.6, opacity: 0 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1.5 }}
-                    className="absolute inset-0 rounded-full bg-[#25D366]"
-                  />
-                )}
-              </AnimatePresence>
-              <MessageCircle className="w-6 h-6 text-white relative z-10" strokeWidth={2} />
-            </motion.button>
-
-            {/* Cart */}
-            <BottomTab
-              icon={ShoppingBag}
-              label="Carrito"
-              active={isActive('carrito')}
-              badge={cartCount > 0 ? cartCount : undefined}
-              onClick={() => navigate('#/carrito')}
-            />
-
-            {/* Search */}
-            <BottomTab
-              icon={Search}
-              label="Buscar"
-              active={isActive('buscar')}
-              onClick={() => navigate('#/buscar')}
-            />
+        <div className="bg-white/90 backdrop-blur-2xl border-t border-zinc-100/50">
+          <div className="grid grid-cols-5 items-center justify-items-center max-w-md mx-auto px-1 py-1.5">
+            {tabs.map((tab) => (
+              <BottomTab
+                key={tab.page}
+                icon={tab.icon}
+                label={tab.label}
+                active={isActive(tab.page)}
+                badge={tab.badge}
+                onClick={() => navigate(tab.href)}
+              />
+            ))}
           </div>
 
           {/* Safe area bottom for iOS */}
@@ -129,38 +59,32 @@ function BottomTab({
   active,
   badge,
   onClick,
-  variant = 'default',
 }: {
   icon: React.ElementType;
   label: string;
   active: boolean;
   badge?: number;
   onClick: () => void;
-  variant?: 'default' | 'outline';
 }) {
   return (
     <motion.button
       onClick={onClick}
-      className="relative flex flex-col items-center justify-center gap-0.5 w-14 py-1.5 rounded-xl transition-colors"
+      className="relative flex flex-col items-center justify-center gap-0.5 w-full py-1.5 transition-colors"
       whileTap={{ scale: 0.9 }}
     >
       <div className="relative">
         <Icon
           className={`w-5 h-5 transition-colors duration-200 ${
-            active
-              ? variant === 'outline'
-                ? 'text-primary'
-                : 'text-primary'
-              : 'text-foreground/40'
+            active ? 'text-primary' : 'text-foreground/35'
           }`}
-          strokeWidth={active ? 2.5 : 2}
-          fill={active && variant !== 'outline' ? 'currentColor' : 'none'}
+          strokeWidth={active ? 2.5 : 1.8}
+          fill={active ? 'currentColor' : 'none'}
         />
         {badge !== undefined && badge > 0 && (
           <motion.span
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute -top-1.5 -right-2 min-w-[16px] h-4 flex items-center justify-center px-1 rounded-full bg-primary text-white text-[10px] font-bold"
+            className="absolute -top-1.5 -right-2.5 min-w-[16px] h-4 flex items-center justify-center px-1 rounded-full bg-primary text-white text-[10px] font-bold"
           >
             {badge > 99 ? '99+' : badge}
           </motion.span>
@@ -168,7 +92,7 @@ function BottomTab({
       </div>
       <span
         className={`text-[10px] font-medium tracking-wide transition-colors duration-200 ${
-          active ? 'text-primary' : 'text-foreground/40'
+          active ? 'text-primary' : 'text-foreground/35'
         }`}
       >
         {label}
