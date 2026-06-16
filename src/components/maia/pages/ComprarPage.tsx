@@ -9,7 +9,6 @@ import {
   Building2,
   ShieldCheck,
   Truck,
-  CheckCircle2,
   ChevronRight,
 } from 'lucide-react';
 import { useRouter } from '@/lib/router';
@@ -97,12 +96,11 @@ export default function ComprarPage() {
           })}
         </div>
 
-        {/* Guarantees */}
-        <div id="comprar-garantias" className="grid sm:grid-cols-3 gap-4 mb-14 scroll-mt-16">
+{/* Trust Signals */}
+        <div className="grid sm:grid-cols-2 gap-4 mb-14">
           {[
-            { icon: ShieldCheck, title: 'Pago 100% Seguro', desc: 'Todas las transacciones están protegidas con encriptación SSL de 256 bits y verificación en tiempo real.' },
-            { icon: Truck, title: 'Envío a Todo el Perú', desc: 'Realizamos envíos a través de Olva Courier y Shalom Express a todas las ciudades del país.' },
-            { icon: CheckCircle2, title: 'Satisfacción Garantizada', desc: 'Si tu joya llega con algún defecto de fabricación, la reparamos o reemplazamos sin costo adicional.' },
+            { icon: ShieldCheck, title: 'Pago 100% Seguro', desc: 'Todas las transacciones estan protegidas con encriptacion SSL de 256 bits y verificacion en tiempo real.' },
+            { icon: Truck, title: 'Envio a Todo el Peru', desc: 'Realizamos envios a traves de Olva Courier y Shalom Express a todas las ciudades del pais.' },
           ].map((item, i) => (
             <motion.div
               key={item.title}
@@ -132,7 +130,6 @@ export default function ComprarPage() {
             { q: '¿Cuánto tiempo tarda el envío?', a: 'Los envíos a Lima metropolitan toman de 1 a 2 días hábiles. A provincias, de 3 a 5 días hábiles. Te enviaremos el número de rastreo para que puedas seguir tu pedido en todo momento.' },
             { q: '¿Puedo personalizar una joya?', a: '¡Por supuesto! Ofrecemos servicio de personalización. Escríbenos por WhatsApp con tu idea y te enviaremos una propuesta con diseño y precio. Las personalizaciones pueden tomar de 5 a 7 días adicionales.' },
             { q: '¿Qué pasa si no me queda bien?', a: 'Ofrecemos cambios sin costo dentro de los primeros 7 días posteriores a la recepción. La joya debe estar en su estado original. Los costos de envío del cambio corren por nuestra cuenta.' },
-            { q: '¿Las joyas vienen con garantía?', a: 'Sí, todas nuestras joyas tienen garantía de 6 meses contra defectos de fabricación. Esto incluye el tejido, los acabados metálicos y las uniones. El uso indebido o desgaste natural no están cubiertos.' },
           ].map((faq, i) => (
             <motion.details
               key={i}

@@ -107,7 +107,7 @@ export function RouterProvider({ children }: { children: ReactNode }) {
       const clean = cleanHash.split('?')[0];
       historyRef.current.push(clean);
       window.location.hash = clean;
-      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+      // Scroll is handled per-page via useEffect to avoid hero flash
     },
     []
   );
@@ -117,10 +117,7 @@ export function RouterProvider({ children }: { children: ReactNode }) {
     const prev = historyRef.current[historyRef.current.length - 1] || '#/';
     const cleanPrev = prev.split('?')[0];
     window.location.hash = cleanPrev;
-    // Don't scroll to top if the target has a section — the scroll spy handles it
-    if (!prev.includes('?section=')) {
-      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
-    }
+    // Scroll is handled per-page via useEffect to avoid hero flash
   }, []);
 
   const isActive = useCallback(

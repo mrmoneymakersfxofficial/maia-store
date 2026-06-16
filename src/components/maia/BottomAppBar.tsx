@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Heart, ShoppingBag, MessageCircle } from 'lucide-react';
+import { Home, Heart, ShoppingBag, MessageCircle, Gem, Search } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 import { useStore } from '@/lib/store-context';
 import { formatPrice } from '@/lib/store-data';
@@ -56,11 +56,19 @@ export default function BottomAppBar() {
               onClick={() => navigate('#/')}
             />
 
+            {/* Coleccion */}
+            <BottomTab
+              icon={Gem}
+              label="Coleccion"
+              active={isActive('coleccion')}
+              onClick={() => navigate('#/coleccion')}
+            />
+
             {/* Favorites */}
             <BottomTab
               icon={Heart}
               label="Favoritos"
-              active={isActive('favorites')}
+              active={isActive('favoritos')}
               badge={favorites.length > 0 ? favorites.length : undefined}
               onClick={() => navigate('#/favoritos')}
             />
@@ -96,13 +104,12 @@ export default function BottomAppBar() {
               onClick={() => navigate('#/carrito')}
             />
 
-            {/* Contact */}
+            {/* Search */}
             <BottomTab
-              icon={MessageCircle}
-              label="Contacto"
-              active={isActive('contacto')}
-              onClick={() => navigate('#/contacto')}
-              variant="outline"
+              icon={Search}
+              label="Buscar"
+              active={isActive('buscar')}
+              onClick={() => navigate('#/buscar')}
             />
           </div>
 

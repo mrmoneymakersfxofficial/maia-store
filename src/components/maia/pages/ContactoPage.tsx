@@ -4,6 +4,15 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { Instagram, Phone, ChevronRight, MapPin } from 'lucide-react';
+
+// TikTok SVG icon (Lucide doesn't have TikTok)
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+    </svg>
+  );
+}
 import { useRouter } from '@/lib/router';
 import { testimonials } from '@/lib/store-data';
 import InfiniteMarquee from '@/components/maia/InfiniteMarquee';
@@ -38,10 +47,11 @@ export default function ContactoPage() {
         </motion.nav>
 
         {/* Contact Cards */}
-        <div id="contacto-info" className="grid sm:grid-cols-3 gap-4 lg:gap-6 mb-16 sm:mb-20 scroll-mt-16">
+<div className="grid sm:grid-cols-4 gap-4 lg:gap-6 mb-16 sm:mb-20">
           {[
             { icon: Phone, title: 'WhatsApp', detail: '+51 977 333 858', desc: 'Respuesta inmediata. Lunes a Sabado de 9am a 8pm.', href: 'https://wa.me/51977333858?text=Hola%20Maia%20Store!', color: 'bg-green-50 border-green-100' },
             { icon: Instagram, title: 'Instagram', detail: '@maia_store81', desc: 'Siguenos para nuevas colecciones y ofertas exclusivas.', href: 'https://instagram.com/maia_store81', color: 'bg-pink-50 border-pink-100' },
+            { icon: TikTokIcon, title: 'TikTok', detail: '@maia_store81', desc: 'Nuestra red social oficial. Videos de nuestras joyas y contenido exclusivo.', href: 'https://tiktok.com/@maia_store81', color: 'bg-slate-50 border-slate-100' },
             { icon: MapPin, title: 'Ubicacion', detail: 'Peru', desc: 'Envios a todo el pais a traves de Olva Courier y Shalom Express.', href: '#', color: 'bg-turquoise-50 border-turquoise-100' },
           ].map((card, i) => (
             <motion.a

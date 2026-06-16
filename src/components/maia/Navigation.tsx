@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 
 const navLinks = [
@@ -74,6 +74,22 @@ export default function Navigation() {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-0.5">
+              {/* Search Icon */}
+              <motion.button
+                onClick={() => handleNavClick('#/buscar')}
+                className={`mr-1 p-1.5 rounded-lg transition-colors duration-300 ${
+                  isActive('buscar')
+                    ? 'text-primary'
+                    : showBg
+                      ? 'text-foreground/40 hover:text-foreground'
+                      : 'text-white/60 hover:text-white'
+                }`}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label="Buscar"
+              >
+                <Search className="w-[18px] h-[18px]" strokeWidth={isActive('buscar') ? 2.5 : 2} />
+              </motion.button>
               {navLinks.map((link) => (
                 <motion.button
                   key={link.page}
