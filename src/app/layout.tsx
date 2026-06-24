@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maia-store.vercel.app';
+
 export const metadata: Metadata = {
   title: "Maia Store | Joyas Tejidas a Mano - Artesanía Peruana de Lujo",
   description:
@@ -25,11 +27,20 @@ export const metadata: Metadata = {
     "pulseras artesanales",
     "aretes hechos a mano",
     "joyería lujo Perú",
+    "Swarovski",
+    "piedras naturales",
+    "joyería artesanal",
   ],
   authors: [{ name: "Maia Store" }],
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
   icons: {
     icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Maia Store | Joyas Tejidas a Mano",
     description:
@@ -37,12 +48,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_PE",
     siteName: "Maia Store",
+    url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
     title: "Maia Store | Joyas Tejidas a Mano",
     description:
       "Colección exclusiva de joyas artesanales tejidas a mano. Diseños únicos peruanos.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

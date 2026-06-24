@@ -1,0 +1,19 @@
+{
+  "name": "Maia Store",
+  "short_name": "Maia",
+  "description": "Joyas Tejidas a Mano - Artesanía Peruana de Lujo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf7f2",
+  "theme_color": "#8b5e3c",
+  "orientation": "portrait-primary",
+  "lang": "es",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
