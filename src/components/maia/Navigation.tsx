@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Search } from 'lucide-react';
-import { useRouter } from '@/lib/router';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 // ─── WhatsApp Icon (official SVG) ────────────────────────────
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -15,19 +16,20 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 const navLinks = [
-  { page: 'home', href: '#/', label: 'Inicio' },
-  { page: 'nosotros', href: '#/nosotros', label: 'Nosotros' },
-  { page: 'coleccion', href: '#/coleccion', label: 'Colección' },
-  { page: 'comprar', href: '#/comprar', label: 'Comprar' },
-  { page: 'contacto', href: '#/contacto', label: 'Contacto' },
+  { page: 'home', href: '/', label: 'Inicio' },
+  { page: 'nosotros', href: '/nosotros', label: 'Nosotros' },
+  { page: 'coleccion', href: '/coleccion', label: 'Colección' },
+  { page: 'comprar', href: '/comprar', label: 'Comprar' },
+  { page: 'contacto', href: '/contacto', label: 'Contacto' },
 ];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const { navigate, route } = useRouter();
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const isHomePage = route.page === 'home';
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 30);
@@ -39,19 +41,19 @@ export default function Navigation() {
   useEffect(() => {
     setIsScrolled(false);
     setIsMobileOpen(false);
-  }, [route.page]);
+  }, [pathname]);
 
   const handleNavClick = useCallback((href: string) => {
     setIsMobileOpen(false);
-    navigate(href);
-  }, [navigate]);
+    router.push(href);
+  }, [router]);
 
   const handleWhatsApp = useCallback(() => {
     const encoded = encodeURIComponent('Hola Maia Store! Me interesa ver la colección.');
     window.open(`https://wa.me/51977333858?text=${encoded}`, '_blank');
   }, []);
 
-  const isActive = (page: string) => route.page === page;
+  const isActive = (path: string) => pathname === path;
 
   // On home page: transparent when top, blur when scrolled
   // On sub-pages: always show background for contrast
@@ -77,7 +79,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
             <motion.button
-              onClick={() => handleNavClick('#/')}
+              onClick={() => router.push('/')}
               className="flex items-center gap-1.5 group"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -94,9 +96,9 @@ export default function Navigation() {
             <div className="hidden md:flex items-center gap-0.5">
               {/* Search Icon */}
               <motion.button
-                onClick={() => handleNavClick('#/buscar')}
+                onClick={() => router.push('/buscar')}
                 className={`mr-1 p-1.5 rounded-lg transition-colors duration-300 ${
-                  isActive('buscar')
+                  isActive('/buscar')
                     ? 'text-primary'
                     : showBg
                       ? 'text-foreground/40 hover:text-foreground'
@@ -106,14 +108,14 @@ export default function Navigation() {
                 whileTap={{ scale: 0.9 }}
                 aria-label="Buscar"
               >
-                <Search className="w-[18px] h-[18px]" strokeWidth={isActive('buscar') ? 2.5 : 2} />
+                <Search className="w-[18px] h-[18px]" strokeWidth={isActive('/buscar') ? 2.5 : 2} />
               </motion.button>
               {navLinks.map((link) => (
                 <motion.button
                   key={link.page}
                   onClick={() => handleNavClick(link.href)}
                   className={`relative px-3 py-1.5 text-[13px] font-medium transition-colors duration-300 tracking-wide ${
-                    isActive(link.page)
+                    isActive(link.href)
                       ? 'text-primary'
                       : showBg
                         ? 'text-foreground/60 hover:text-foreground'
@@ -123,7 +125,7 @@ export default function Navigation() {
                   whileTap={{ y: 0 }}
                 >
                   {link.label}
-                  {isActive(link.page) && (
+                  {isActive(link.href) && (
                     <motion.div
                       layoutId="nav-underline"
                       className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-5 h-[2px] bg-primary rounded-full"
@@ -199,7 +201,7 @@ export default function Navigation() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.06, duration: 0.3 }}
                   className={`text-xl font-semibold transition-colors tracking-wide ${
-                    isActive(link.page) ? 'text-primary' : 'text-foreground/70 hover:text-primary'
+                    isActive(link.href) ? 'text-primary' : 'text-foreground/70 hover:text-primary'
                   }`}
                 >
                   {link.label}

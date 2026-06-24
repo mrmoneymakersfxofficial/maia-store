@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/maia/Providers";
+import Navigation from "@/components/maia/Navigation";
+import Footer from "@/components/maia/Footer";
+import BottomAppBar from "@/components/maia/BottomAppBar";
+import CartDrawer from "@/components/maia/CartDrawer";
+import ScrollToTop from "@/components/maia/ScrollToTop";
+import ScrollProgress from "@/components/maia/ScrollProgress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +22,10 @@ const geistMono = Geist_Mono({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maia-store.vercel.app';
 
 export const metadata: Metadata = {
-  title: "Maia Store | Joyas Tejidas a Mano - Artesanía Peruana de Lujo",
+  title: {
+    default: "Maia Store | Joyas Tejidas a Mano - Artesanía Peruana de Lujo",
+    template: "%s | Maia Store",
+  },
   description:
     "Descubre nuestra colección exclusiva de joyas tejidas a mano. Cada pieza es una obra de arte artesanal peruana, elaborada con dedicación y materiales de primera calidad. Envíos a todo el Perú.",
   keywords: [
@@ -79,7 +88,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navigation />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <BottomAppBar />
+          <CartDrawer />
+          <ScrollToTop />
+          <ScrollProgress />
+        </Providers>
       </body>
     </html>
   );

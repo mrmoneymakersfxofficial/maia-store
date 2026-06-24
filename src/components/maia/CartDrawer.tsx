@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/sheet';
 import { useStore } from '@/lib/store-context';
 import { formatPrice } from '@/lib/store-data';
-import { useRouter } from '@/lib/router';
+import { useRouter } from 'next/navigation';
 
 // ─── Listen for custom "open-cart-drawer" DOM event ──────────
 function useCartDrawerOpen() {
@@ -31,11 +31,11 @@ function useCartDrawerOpen() {
 export default function CartDrawer() {
   const [open, setOpen] = useCartDrawerOpen();
   const { cart, cartCount, cartTotal, updateQuantity, removeFromCart, clearCart } = useStore();
-  const { navigate } = useRouter();
+  const router = useRouter();
 
   const handleCheckout = () => {
     setOpen(false);
-    navigate('#/checkout');
+    router.push('/checkout');
   };
 
   const handleWhatsApp = () => {
@@ -54,7 +54,7 @@ export default function CartDrawer() {
 
   const navigateTo = (href: string) => {
     setOpen(false);
-    navigate(href);
+    router.push(href);
   };
 
   return (
@@ -108,7 +108,7 @@ export default function CartDrawer() {
                     {/* Product Image — clickable */}
                     <div
                       className="relative w-[60px] h-[60px] rounded-lg overflow-hidden bg-zinc-100 flex-shrink-0 cursor-pointer"
-                      onClick={() => navigateTo(`#/coleccion/${item.product.slug}`)}
+                      onClick={() => navigateTo(`/coleccion/${item.product.slug}`)}
                     >
                       <img
                         src={item.product.image}
@@ -122,7 +122,7 @@ export default function CartDrawer() {
                       <div>
                         <h4
                           className="text-[12px] font-semibold text-foreground truncate cursor-pointer hover:text-primary transition-colors leading-tight"
-                          onClick={() => navigateTo(`#/coleccion/${item.product.slug}`)}
+                          onClick={() => navigateTo(`/coleccion/${item.product.slug}`)}
                         >
                           {item.product.name}
                         </h4>
@@ -188,7 +188,7 @@ export default function CartDrawer() {
                 Explora nuestra colección y encuentra la joya perfecta para ti
               </p>
               <button
-                onClick={() => navigateTo('#/coleccion')}
+                onClick={() => navigateTo('/coleccion')}
                 className="px-6 py-2.5 rounded-xl bg-primary text-white text-xs font-semibold hover:bg-turquoise-600 transition-colors active:scale-95"
               >
                 Ver Colección
@@ -228,7 +228,7 @@ export default function CartDrawer() {
 
             {/* Link to full cart page */}
             <button
-              onClick={() => navigateTo('#/carrito')}
+              onClick={() => navigateTo('/carrito')}
               className="w-full text-[11px] text-foreground/30 hover:text-primary transition-colors font-medium py-1"
             >
               Ver carrito completo

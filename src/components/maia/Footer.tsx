@@ -13,7 +13,8 @@ import {
   Star,
   ChevronRight,
 } from 'lucide-react';
-import { useRouter } from '@/lib/router';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 // ═══════════════════════════════════════════════════════════════
 // TRUST BAND — Banda de confianza CRO (2x2 mobile)
@@ -78,7 +79,7 @@ function TrustBand() {
 function Storytelling() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-60px' });
-  const { navigate } = useRouter();
+  const router = useRouter();
 
   return (
     <div ref={ref} className="relative bg-deep-800 overflow-hidden">
@@ -118,7 +119,7 @@ function Storytelling() {
           </p>
 
           <motion.button
-            onClick={() => navigate('#/coleccion')}
+            onClick={() => router.push('/coleccion')}
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -145,7 +146,6 @@ function Storytelling() {
 // ═══════════════════════════════════════════════════════════════
 
 function FooterContent() {
-  const { navigate } = useRouter();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -175,10 +175,10 @@ function FooterContent() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-14">
           {/* Column 1 — Brand */}
           <div className="col-span-2 lg:col-span-1">
-            <button onClick={() => navigate('#/')} className="mb-4 block group">
+            <Link href="/" className="mb-4 block group">
               <span className="text-2xl font-extrabold text-white group-hover:text-warm-400 transition-colors duration-300">MAIA</span>
               <span className="text-2xl font-extralight tracking-[0.2em] text-warm-400 ml-1.5 group-hover:text-warm-300 transition-colors duration-300">STORE</span>
-            </button>
+            </Link>
             <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
               Joyeria artesanal peruana creada para contar historias unicas. Cada pieza lleva el alma de nuestras artesanas.
             </p>
@@ -208,20 +208,20 @@ function FooterContent() {
             <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-warm-400/80 mb-4">Tienda</h4>
             <ul className="space-y-2.5">
               {[
-                { label: 'Pulseras', href: '#/coleccion/categoria/pulseras' },
-                { label: 'Collares', href: '#/coleccion/categoria/collares' },
-                { label: 'Aretes', href: '#/coleccion/categoria/aretes' },
-                { label: 'Anillos', href: '#/coleccion/categoria/anillos' },
-                { label: 'Ver Todo', href: '#/coleccion' },
+                { label: 'Pulseras', href: '/coleccion?categoria=pulseras' },
+                { label: 'Collares', href: '/coleccion?categoria=collares' },
+                { label: 'Aretes', href: '/coleccion?categoria=aretes' },
+                { label: 'Anillos', href: '/coleccion?categoria=anillos' },
+                { label: 'Ver Todo', href: '/coleccion' },
               ].map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => navigate(link.href)}
+                  <Link
+                    href={link.href}
                     className="text-sm text-white/40 hover:text-warm-400 transition-colors duration-300 inline-flex items-center gap-1 group"
                   >
                     <span className="w-0 group-hover:w-2 h-px bg-warm-400 transition-all duration-300" />
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -232,18 +232,18 @@ function FooterContent() {
             <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-warm-400/80 mb-4">Informacion</h4>
             <ul className="space-y-2.5">
               {[
-                { label: 'Nosotros', href: '#/nosotros' },
-                { label: 'Envios', href: '#/comprar' },
-                { label: 'Contacto', href: '#/contacto' },
+                { label: 'Nosotros', href: '/nosotros' },
+                { label: 'Envios', href: '/comprar' },
+                { label: 'Contacto', href: '/contacto' },
               ].map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => navigate(link.href)}
+                  <Link
+                    href={link.href}
                     className="text-sm text-white/40 hover:text-warm-400 transition-colors duration-300 inline-flex items-center gap-1 group"
                   >
                     <span className="w-0 group-hover:w-2 h-px bg-warm-400 transition-all duration-300" />
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

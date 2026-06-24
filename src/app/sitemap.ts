@@ -12,33 +12,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/#/nosotros`,
+      url: `${baseUrl}/nosotros`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/#/coleccion`,
+      url: `${baseUrl}/coleccion`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/#/comprar`,
+      url: `${baseUrl}/comprar`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/#/contacto`,
+      url: `${baseUrl}/contacto`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/buscar`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/favoritos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/carrito`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
   ];
 
   const productPages: MetadataRoute.Sitemap = products.map((product) => ({
-    url: `${baseUrl}/#/coleccion/${product.slug}`,
+    url: `${baseUrl}/coleccion/${product.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
@@ -47,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const categoryPages: MetadataRoute.Sitemap = categories
     .filter((c) => c.id !== 'todos')
     .map((cat) => ({
-      url: `${baseUrl}/#/${cat.slug}`,
+      url: `${baseUrl}/coleccion?categoria=${cat.id}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.7,

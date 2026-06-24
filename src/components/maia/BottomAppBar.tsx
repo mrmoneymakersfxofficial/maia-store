@@ -2,23 +2,24 @@
 
 import { motion } from 'framer-motion';
 import { Home, Heart, ShoppingBag, Gem, Search } from 'lucide-react';
-import { useRouter } from '@/lib/router';
+import { usePathname, useRouter } from 'next/navigation';
 import { useStore } from '@/lib/store-context';
 
 export default function BottomAppBar() {
-  const { navigate, route } = useRouter();
+  const pathname = usePathname();
+  const router = useRouter();
   const { cartCount, favorites } = useStore();
 
-  const isActive = (page: string) => route.page === page;
+  const isActive = (path: string) => pathname === path;
 
   const openCartDrawer = () => window.dispatchEvent(new Event('open-cart-drawer'));
 
   const tabs = [
-    { icon: Home, label: 'Inicio', page: 'home', href: '#/' },
-    { icon: Gem, label: 'Colección', page: 'coleccion', href: '#/coleccion' },
-    { icon: Heart, label: 'Favoritos', page: 'favoritos', href: '#/favoritos', badge: favorites.length },
-    { icon: ShoppingBag, label: 'Carrito', page: 'carrito', href: '#/carrito', badge: cartCount, drawer: true },
-    { icon: Search, label: 'Buscar', page: 'buscar', href: '#/buscar' },
+    { icon: Home, label: 'Inicio', path: '/', href: '/' },
+    { icon: Gem, label: 'Colección', path: '/coleccion', href: '/coleccion' },
+    { icon: Heart, label: 'Favoritos', path: '/favoritos', href: '/favoritos', badge: favorites.length },
+    { icon: ShoppingBag, label: 'Carrito', path: '/carrito', href: '/carrito', badge: cartCount, drawer: true },
+    { icon: Search, label: 'Buscar', path: '/buscar', href: '/buscar' },
   ];
 
   return (
@@ -35,16 +36,16 @@ export default function BottomAppBar() {
           <div className="grid grid-cols-5 items-center justify-items-center max-w-md mx-auto px-1 py-1.5">
             {tabs.map((tab) => (
               <BottomTab
-                key={tab.page}
+                key={tab.path}
                 icon={tab.icon}
                 label={tab.label}
-                active={isActive(tab.page)}
+                active={isActive(tab.path)}
                 badge={tab.badge}
                 onClick={() => {
                   if ('drawer' in tab && tab.drawer) {
                     openCartDrawer();
                   } else {
-                    navigate(tab.href);
+                    router.push(tab.href);
                   }
                 }}
               />
