@@ -288,17 +288,18 @@ function FooterContent() {
             <p className="text-[11px] text-white/25 text-center sm:text-left">
               &copy; {currentYear} Maia Store. Todos los derechos reservados.
             </p>
-            <a
-              href="https://fastpagepro.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] text-white/25 hover:text-warm-400 transition-colors duration-300 text-center sm:text-right"
-            >
-              Diseno y desarrollo por{' '}
-              <span className="font-semibold hover:text-warm-300 transition-colors">
-                fastpagepro.com
-              </span>
-            </a>
+            {/* HARDCODED FastPagePro Credit (NEVER in CMS) */}
+            <p className="text-[11px] text-white/25 text-center sm:text-right">
+              Desarrollado por{' '}
+              <a
+                href="https://www.fastpagepro.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#c9a86c] hover:text-warm-300 transition-colors font-semibold"
+              >
+                FastPagePro
+              </a>
+            </p>
           </div>
         </div>
       </div>
