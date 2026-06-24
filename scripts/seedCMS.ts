@@ -100,7 +100,7 @@ const services = [
   {
     _type: "service", title: "Hecho a Mano", slug: { _type: "slug", current: "hecho-a-mano" },
     description: [{ _type: "block", _key: "sd1", style: "normal", children: [{ _type: "span", _key: "sd1s1", text: "Cada joya Maia Store es creada artesanalmente utilizando tecnicas tradicionales peruanas. Nuestra artesanas invierten horas en cada pieza, asegurando que cada tejido sea perfecto y unico." }] }],
-    category: { _type: "reference", _ref: "REPLACE_CAT_CALIDAD" },
+    category: { _type: "reference", _ref: "REPLACE_CAT_CALIDAD_ARTESANAL" },
     featured: true, order: 1,
     subservices: [
       { title: "Tejido a mano con hilos premium", description: "Utilizamos hilos de alta calidad resistentes al paso del tiempo" },
@@ -111,7 +111,7 @@ const services = [
   {
     _type: "service", title: "Envios a Todo Peru", slug: { _type: "slug", current: "envios-todo-peru" },
     description: [{ _type: "block", _key: "sd2", style: "normal", children: [{ _type: "span", _key: "sd2s1", text: "Recibe tus joyas artesanales en cualquier ciudad del Peru. Trabajamos con Olva Courier y Shalom Express para garantizar entregas seguras y en tiempo." }] }],
-    category: { _type: "reference", _ref: "REPLACE_CAT_ENVIOS" },
+    category: { _type: "reference", _ref: "REPLACE_CAT_ENVIOS_LOGISTICA" },
     featured: true, order: 2,
     subservices: [
       { title: "Olva Courier", description: "Envio nacional con seguimiento en linea" },
@@ -122,7 +122,7 @@ const services = [
   {
     _type: "service", title: "Atencion Personalizada", slug: { _type: "slug", current: "atencion-personalizada" },
     description: [{ _type: "block", _key: "sd3", style: "normal", children: [{ _type: "span", _key: "sd3s1", text: "Escribenos por WhatsApp y recibe asesoramiento personalizado para elegir la joya perfecta. Te ayudamos a encontrar la pieza ideal para ti o para regalo." }] }],
-    category: { _type: "reference", _ref: "REPLACE_CAT_ATENCION" },
+    category: { _type: "reference", _ref: "REPLACE_CAT_ATENCION_CLIENTE" },
     featured: true, order: 3,
     subservices: [
       { title: "WhatsApp directo", description: "Respuesta rapida por WhatsApp al +51 977 333 858" },
@@ -133,7 +133,7 @@ const services = [
   {
     _type: "service", title: "Pago Seguro", slug: { _type: "slug", current: "pago-seguro" },
     description: [{ _type: "block", _key: "sd4", style: "normal", children: [{ _type: "span", _key: "sd4s1", text: "Paga de forma segura y conveniente. Aceptamos Yape, Plin y transferencia bancaria. Tu compra esta protegida con encriptacion SSL de 256 bits." }] }],
-    category: { _type: "reference", _ref: "REPLACE_CAT_PAGOS" },
+    category: { _type: "reference", _ref: "REPLACE_CAT_PAGOS_SEGUROS" },
     featured: true, order: 4,
     subservices: [
       { title: "Yape", description: "Transferencia instantanea desde tu app Yape" },
