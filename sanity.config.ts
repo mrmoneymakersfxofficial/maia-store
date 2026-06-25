@@ -8,12 +8,12 @@ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 
 /**
- * Resolve the site URL for production vs development.
+ * Site URL — NEVER falls back to localhost.
  *
  * Priority:
- * 1. NEXT_PUBLIC_SITE_URL (explicit, works everywhere)
- * 2. VERCEL_URL (auto-set by Vercel, always HTTPS)
- * 3. http://localhost:3000 (local dev fallback)
+ * 1. NEXT_PUBLIC_SITE_URL (explicit, recommended for Vercel)
+ * 2. VERCEL_URL (auto-set by Vercel during builds)
+ * 3. Hardcoded production URL (maia-store.vercel.app)
  */
 function getSiteUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
@@ -22,7 +22,8 @@ function getSiteUrl(): string {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL.replace(/\/$/, "")}`;
   }
-  return "http://localhost:3000";
+  // Production hardcoded fallback — never localhost
+  return "https://maia-store.vercel.app";
 }
 
 const siteUrl = getSiteUrl();
@@ -46,7 +47,7 @@ export default defineConfig({
       resolve: {
         /**
          * mainDocuments — maps URL routes to Sanity documents.
-         * When the user navigates in the preview iframe (e.g., clicks a link),
+         * When the user navigates in the preview iframe,
          * this tells the Studio which document is being viewed.
          */
         mainDocuments: defineDocuments([
@@ -79,11 +80,11 @@ export default defineConfig({
 
         /**
          * locations — maps Sanity documents to frontend URLs.
-         * Uses `select` to specify which GROQ fields to fetch,
-         * and `resolve` to return the frontend URL(s) for each document.
+         * When a user clicks on a document in the Studio,
+         * this tells the Presentation Tool which page to navigate to.
+         * Also used by the Document Inspector overlay.
          */
         locations: {
-          // Singleton types → Home page
           siteSettings: defineLocations({
             select: { title: "title" },
             resolve: () => ({
@@ -114,14 +115,12 @@ export default defineConfig({
               locations: [{ title: "Inicio — Testimonios", href: "/" }],
             }),
           }),
-          // Team → About page
           teamMember: defineLocations({
             select: { name: "name", slug: "slug.current" },
             resolve: (doc) => ({
               locations: [{ title: `Nosotros — ${doc?.name || "Equipo"}`, href: "/nosotros" }],
             }),
           }),
-          // Categories → Collection page with filter
           serviceCategory: defineLocations({
             select: { name: "name", slug: "slug.current" },
             resolve: (doc) => {
@@ -130,15 +129,11 @@ export default defineConfig({
               }
               return {
                 locations: [
-                  {
-                    title: `Colección — ${doc.name || doc.slug}`,
-                    href: `/coleccion?categoria=${doc.slug}`,
-                  },
+                  { title: `Colección — ${doc.name || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` },
                 ],
               };
             },
           }),
-          // Services (categories) → Collection page
           service: defineLocations({
             select: { title: "title", slug: "slug.current" },
             resolve: (doc) => {
@@ -147,15 +142,11 @@ export default defineConfig({
               }
               return {
                 locations: [
-                  {
-                    title: `Servicio — ${doc.title || doc.slug}`,
-                    href: `/coleccion?categoria=${doc.slug}`,
-                  },
+                  { title: `Servicio — ${doc.title || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` },
                 ],
               };
             },
           }),
-          // Products → Product detail page
           project: defineLocations({
             select: { title: "title", slug: "slug.current" },
             resolve: (doc) => {
@@ -164,15 +155,11 @@ export default defineConfig({
               }
               return {
                 locations: [
-                  {
-                    title: `Producto — ${doc.title || doc.slug}`,
-                    href: `/coleccion/${doc.slug}`,
-                  },
+                  { title: `Producto — ${doc.title || doc.slug}`, href: `/coleccion/${doc.slug}` },
                 ],
               };
             },
           }),
-          // Studio guide → Admin
           studioGuide: defineLocations({
             select: { title: "title" },
             resolve: () => ({
