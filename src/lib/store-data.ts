@@ -2422,11 +2422,29 @@ export function formatPrice(price: number): string {
   return `S/. ${price.toFixed(2)}`;
 }
 
-export function generateWhatsAppLink(product: Product): string {
-  const message = encodeURIComponent(
-    `¡Hola Maia Store! 🌟\n\nMe interesa la siguiente joya:\n\n📦 ${product.fullName}\n🏷️ SKU: ${product.sku}\n💰 ${formatPrice(product.price)}\n\n¿Está disponible?`
-  );
-  return `https://wa.me/51977333858?text=${message}`;
+export function generateWhatsAppLink(
+  product: Product,
+  options?: { quantity?: number; productUrl?: string },
+): string {
+  const quantity = options?.quantity ?? 1;
+  const productUrl = options?.productUrl || (typeof window !== 'undefined' ? window.location.href : '');
+
+  const message = [
+    `\u{1F6CD}\u{FE0F} Hola, estoy interesado en este producto:`,
+    ``,
+    `\u{1F4FF} Producto: ${product.fullName}`,
+    `\u{1F3A8} Color: ${product.color.name}`,
+    `\u{1F4E6} SKU: ${product.sku}`,
+    `\u{1F4B0} Precio: ${formatPrice(product.price)}`,
+    `\u{1F522} Cantidad: ${quantity}`,
+    ``,
+    `\u{1F517} Enlace:`,
+    productUrl,
+    ``,
+    `Gracias.`,
+  ].join('\n');
+
+  return `https://wa.me/51977333858?text=${encodeURIComponent(message)}`;
 }
 
 export function generateWhatsAppGeneral(): string {

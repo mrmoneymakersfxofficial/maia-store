@@ -14,6 +14,8 @@ import {
   ChevronRight,
   Share2,
   ZoomIn,
+  Minus,
+  Plus,
 } from 'lucide-react';
 import { useRouter } from '@/lib/router';
 import { useStore } from '@/lib/store-context';
@@ -52,6 +54,8 @@ export default function ProductDetailPage() {
   const product = getProductBySlug(slug);
   const pageRef = useRef<HTMLDivElement>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [productUrl, setProductUrl] = useState('');
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
   const [isZooming, setIsZooming] = useState(false);
@@ -71,6 +75,8 @@ export default function ProductDetailPage() {
     if (product) {
       setActiveVariant(product);
       setSelectedImageIndex(0);
+      setQuantity(1);
+      if (typeof window !== 'undefined') setProductUrl(window.location.href);
     }
   }, [slug, product]);
 
@@ -360,10 +366,32 @@ export default function ProductDetailPage() {
               </div>
             )}
 
+            {/* Quantity Selector */}
+            <div className="detail-animate">
+              <h3 className="text-sm font-bold text-foreground mb-3">Cantidad</h3>
+              <div className="inline-flex items-center gap-0 border border-zinc-200 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                  className="w-10 h-10 flex items-center justify-center text-foreground/50 hover:bg-zinc-100 hover:text-foreground transition-colors"
+                  aria-label="Reducir cantidad"
+                >
+                  <Minus className="w-4 h-4" />
+                </button>
+                <span className="w-12 text-center text-sm font-semibold text-foreground tabular-nums">{quantity}</span>
+                <button
+                  onClick={() => setQuantity((q) => Math.min(99, q + 1))}
+                  className="w-10 h-10 flex items-center justify-center text-foreground/50 hover:bg-zinc-100 hover:text-foreground transition-colors"
+                  aria-label="Aumentar cantidad"
+                >
+                  <Plus className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
             {/* CTAs */}
             <div className="detail-animate flex flex-col sm:flex-row gap-2.5 pt-3">
               <motion.a
-                href={generateWhatsAppLink(displayProduct)}
+                href={generateWhatsAppLink(displayProduct, { quantity, productUrl })}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-5 py-3.5 rounded-xl font-semibold text-sm transition-colors shadow-lg shadow-green-500/15"
