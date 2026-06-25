@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { products, categories, formatPrice } from '@/lib/store-data';
 
-// GET /api — API info
+// GET /api/store — Store API info
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const endpoint = searchParams.get('endpoint');
@@ -12,9 +12,9 @@ export async function GET(request: Request) {
       name: 'Maia Store API',
       version: '1.0.0',
       endpoints: {
-        products: '/api?endpoint=products',
-        categories: '/api?endpoint=categories',
-        product: '/api?endpoint=product&slug=<slug>',
+        products: '/api/store?endpoint=products',
+        categories: '/api/store?endpoint=categories',
+        product: '/api/store?endpoint=product&slug=<slug>',
       },
     });
   }
