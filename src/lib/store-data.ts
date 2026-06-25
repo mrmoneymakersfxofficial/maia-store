@@ -2429,20 +2429,24 @@ export function generateWhatsAppLink(
   const quantity = options?.quantity ?? 1;
   const productUrl = options?.productUrl || (typeof window !== 'undefined' ? window.location.href : '');
 
+  // Build message with UTF-8 emojis — DO NOT use escape(), only encodeURIComponent()
   const message = [
-    `\u{1F6CD}\u{FE0F} Hola, estoy interesado en este producto:`,
+    `🛍️ Producto: ${product.fullName}`,
+    `🎨 Color: ${product.color.name}`,
+    `📦 SKU: ${product.sku}`,
+    `💰 Precio: ${formatPrice(product.price)}`,
+    `🔢 Cantidad: ${quantity}`,
     ``,
-    `\u{1F4FF} Producto: ${product.fullName}`,
-    `\u{1F3A8} Color: ${product.color.name}`,
-    `\u{1F4E6} SKU: ${product.sku}`,
-    `\u{1F4B0} Precio: ${formatPrice(product.price)}`,
-    `\u{1F522} Cantidad: ${quantity}`,
+    `🔗 ${productUrl}`,
     ``,
-    `\u{1F517} Enlace:`,
-    productUrl,
-    ``,
-    `Gracias.`,
+    `Hola, estoy interesado en este producto. Gracias.`,
   ].join('\n');
+
+  // Debug: inspect raw message before encoding (check browser console)
+  if (typeof window !== 'undefined') {
+    console.log('[WhatsApp Debug] Raw message:', message);
+    console.log('[WhatsApp Debug] Encoded URL:', `https://wa.me/51977333858?text=${encodeURIComponent(message)}`);
+  }
 
   return `https://wa.me/51977333858?text=${encodeURIComponent(message)}`;
 }

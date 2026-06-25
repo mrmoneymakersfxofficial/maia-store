@@ -115,10 +115,18 @@ export default function ProductGallery() {
     `S/. ${price.toFixed(2)}`;
 
   const handleWhatsApp = (product: Product) => {
-    const message = encodeURIComponent(
-      `¡Hola Maia Store! 🌟\n\nMe interesa la siguiente joya:\n\n📦 ${product.name}\n💰 ${formatPrice(product.price)}\n\n¿Está disponible?`
-    );
-    window.open(`https://wa.me/51977333858?text=${message}`, '_blank');
+    // Build UTF-8 message — DO NOT use escape(), only encodeURIComponent()
+    const message = [
+      `🛍️ Producto: ${product.name}`,
+      `💰 Precio: ${formatPrice(product.price)}`,
+      ``,
+      `Hola, estoy interesado en este producto. ¿Está disponible?`,
+    ].join('\n');
+
+    console.log('[WhatsApp Debug] ProductGallery message:', message);
+
+    const url = `https://wa.me/51977333858?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
 
   return (
