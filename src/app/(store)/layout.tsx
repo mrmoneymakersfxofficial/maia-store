@@ -42,12 +42,22 @@ export const metadata: Metadata = {
     locale: "es_PE",
     siteName: "Maia Store",
     url: siteUrl,
+    images: [
+      {
+        url: "/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Maia Store — Joyas Tejidas a Mano",
+        type: "image/webp",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Maia Store | Joyas Tejidas a Mano",
     description:
       "Colección exclusiva de joyas artesanales tejidas a mano. Diseños únicos peruanos.",
+    images: ["/og-image.webp"],
   },
   robots: {
     index: true,

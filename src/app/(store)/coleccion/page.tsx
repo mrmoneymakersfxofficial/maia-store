@@ -11,6 +11,19 @@ export const metadata: Metadata = {
     description:
       'Explora nuestra colección completa de joyas artesanales peruanas. Pulseras, collares, aretes y más — cada pieza tejida a mano.',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Maia Store — Colección de Joyas Artesanales',
+        type: 'image/webp',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.webp'],
   },
 };
 
