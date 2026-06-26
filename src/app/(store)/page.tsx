@@ -1,13 +1,19 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown, Sparkles, ShoppingBag, Heart } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useStore } from '@/lib/store-context';
 import { products, testimonials, formatPrice } from '@/lib/store-data';
 import InfiniteMarquee from '@/components/maia/InfiniteMarquee';
+
+const HERO_SLIDES = [
+  { desktop: '/images/hero-craft.webp', mobile: '/images/hero-craft-mobile.webp' },
+  { desktop: '/images/hero-slide-1.webp', mobile: '/images/hero-slide-1-mobile.webp' },
+  { desktop: '/images/hero-slide-2.webp', mobile: '/images/hero-slide-2-mobile.webp' },
+];
 
 export default function HomePage() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -16,6 +22,16 @@ export default function HomePage() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const { isFavorite, toggleFavorite, addToCart } = useStore();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-rotate hero every 3 seconds
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+  }, []);
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 3000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
 
   useEffect(() => {
     let ctx: { revert: () => void } | undefined;
@@ -53,14 +69,47 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ═══ HERO — FULL BLEED ═══ */}
+      {/* ═══ HERO — FULL BLEED SLIDESHOW ═══ */}
       <section id="hero" ref={heroRef} className="relative w-full h-screen overflow-hidden scroll-mt-16">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/hero-craft.jpg')" }}
-        />
+        {/* Background slides — crossfade every 3s */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+            className="absolute inset-0"
+          >
+            {/* Desktop: 1920x1080 landscape, centered */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"
+              style={{ backgroundImage: `url('${HERO_SLIDES[currentSlide].desktop}')` }}
+            />
+            {/* Mobile: 1080x1920 portrait, focuses on center content */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat block sm:hidden"
+              style={{ backgroundImage: `url('${HERO_SLIDES[currentSlide].mobile}')` }}
+            />
+          </motion.div>
+        </AnimatePresence>
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/60" />
         <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-background/60 to-transparent" />
+
+        {/* Slide indicators */}
+        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+          {HERO_SLIDES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              className={`h-1 rounded-full transition-all duration-300 ${
+                i === currentSlide ? 'w-6 bg-white/80' : 'w-2 bg-white/30'
+              }`}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
+        </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
           <motion.div

@@ -22,8 +22,8 @@ export default function ColeccionClient() {
 
   // Grid classes based on view mode
   const gridClass = viewMode === 'single'
-    ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 px-4 sm:px-0'
-    : 'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-6 px-2 sm:px-0';
+    ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8'
+    : 'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 lg:gap-6';
 
   const aspectClass = viewMode === 'single' ? 'aspect-[3/4]' : 'aspect-[3/4] sm:aspect-square';
 
@@ -43,7 +43,7 @@ export default function ColeccionClient() {
 
   return (
     <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+      <div className="max-w-[1440px] mx-auto px-2 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div id="coleccion-header" className="text-center mb-8 pt-4 scroll-mt-16">
           <motion.span
@@ -131,7 +131,7 @@ export default function ColeccionClient() {
               >
                 <Link href={`/coleccion/${product.slug}`}>
                   {/* Image with dual hover effect */}
-                  <div className={`relative ${aspectClass} rounded-2xl overflow-hidden mb-2.5 bg-zinc-100`}>
+                  <div className={`relative ${aspectClass} rounded-sm sm:rounded-2xl overflow-hidden mb-2 sm:mb-2.5 bg-zinc-100`}>
                     {/* Main image */}
                     <img
                       src={product.image}
