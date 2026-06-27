@@ -22,7 +22,7 @@ export default function ContactoClient() {
   const isInView = useInView(sectionRef, { once: true, margin: '-60px' });
 
   return (
-    <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24">
+    <div ref={sectionRef} className="relative pt-20 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div className="text-center mb-10 pt-4">

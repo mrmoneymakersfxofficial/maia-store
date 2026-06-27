@@ -26,7 +26,7 @@ export default function ComprarClient() {
   const isInView = useInView(sectionRef, { once: true, margin: '-60px' });
 
   return (
-    <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24">
+    <div ref={sectionRef} className="relative pt-20 pb-20 sm:pb-24">
       {/* Hero */}
       <div id="comprar-metodos" className="bg-primary py-12 sm:py-16 px-4 mb-10 scroll-mt-16">
         <div className="max-w-4xl mx-auto text-center">

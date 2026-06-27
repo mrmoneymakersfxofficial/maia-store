@@ -37,7 +37,7 @@ export default function ColeccionPage() {
 
 function ColeccionSkeleton() {
   return (
-    <div className="relative pt-20 pb-32 sm:pb-24">
+    <div className="relative pt-20 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="text-center mb-8 pt-4">
           <div className="h-4 w-32 bg-zinc-200 animate-pulse mx-auto mb-3 rounded" />

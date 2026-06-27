@@ -99,7 +99,7 @@ export default function SearchClient() {
     query.trim() !== '' || selectedCategory !== 'todos' || sortBy !== 'relevance';
 
   return (
-    <div className="relative pt-16 pb-32 sm:pb-24 min-h-screen bg-background">
+    <div className="relative pt-16 pb-20 sm:pb-24 min-h-screen bg-background">
       {/* ═══ STICKY SEARCH HEADER ═══ */}
       <div className="sticky top-14 sm:top-16 z-30 bg-background/90 backdrop-blur-xl border-b border-zinc-100/60">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 py-3">

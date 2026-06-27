@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowDown, Sparkles, ShoppingBag, Heart } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -10,9 +10,9 @@ import { products, testimonials, formatPrice } from '@/lib/store-data';
 import InfiniteMarquee from '@/components/maia/InfiniteMarquee';
 
 const HERO_SLIDES = [
-  { desktop: '/images/hero-craft.webp', mobile: '/images/hero-craft-mobile.webp' },
-  { desktop: '/images/hero-slide-1.webp', mobile: '/images/hero-slide-1-mobile.webp' },
-  { desktop: '/images/hero-slide-2.webp', mobile: '/images/hero-slide-2-mobile.webp' },
+  '/images/hero-craft.webp',
+  '/images/hero-slide-1.webp',
+  '/images/hero-slide-2.webp',
 ];
 
 export default function HomePage() {
@@ -71,28 +71,19 @@ export default function HomePage() {
     <>
       {/* ═══ HERO — FULL BLEED SLIDESHOW ═══ */}
       <section id="hero" ref={heroRef} className="relative w-full h-screen overflow-hidden scroll-mt-16">
-        {/* Background slides — crossfade every 3s */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
-            className="absolute inset-0"
-          >
-            {/* Desktop: 1920x1080 landscape, centered */}
+        {/* Background slides — true crossfade, no gray flash */}
+        <div className="absolute inset-0" aria-hidden="true">
+          {HERO_SLIDES.map((slide, i) => (
             <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"
-              style={{ backgroundImage: `url('${HERO_SLIDES[currentSlide].desktop}')` }}
+              key={i}
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out"
+              style={{
+                backgroundImage: `url('${slide}')`,
+                opacity: i === currentSlide ? 1 : 0,
+              }}
             />
-            {/* Mobile: 1080x1920 portrait, focuses on center content */}
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat block sm:hidden"
-              style={{ backgroundImage: `url('${HERO_SLIDES[currentSlide].mobile}')` }}
-            />
-          </motion.div>
-        </AnimatePresence>
+          ))}
+        </div>
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/60" />
         <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-background/60 to-transparent" />

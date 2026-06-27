@@ -42,7 +42,7 @@ export default function ColeccionClient() {
   }, [activeCategory]);
 
   return (
-    <div ref={sectionRef} className="relative pt-20 pb-32 sm:pb-24">
+    <div ref={sectionRef} className="relative pt-20 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-2 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div id="coleccion-header" className="text-center mb-8 pt-4 scroll-mt-16">

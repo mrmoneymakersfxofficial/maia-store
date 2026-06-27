@@ -188,7 +188,7 @@ export default function ProductDetailClient({ slug: initialSlug }: ProductDetail
   const displayProduct = activeVariant || product;
 
   return (
-    <div ref={pageRef} className="relative pt-16 pb-32 sm:pb-24">
+    <div ref={pageRef} className="relative pt-16 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-xs text-foreground/40 mb-4 pt-2 detail-animate">
