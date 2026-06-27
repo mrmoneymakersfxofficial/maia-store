@@ -24,6 +24,13 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Maia Store — Joyas Tejidas a Mano",
+        type: "image/jpeg",
+      },
+      {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
