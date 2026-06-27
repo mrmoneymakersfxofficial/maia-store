@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { MessageCircle, ShoppingBag, Heart, ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 import { useStore } from '@/lib/store-context';
@@ -28,17 +28,8 @@ export default function ColeccionClient() {
   const aspectClass = viewMode === 'single' ? 'aspect-[3/4]' : 'aspect-[3/4] sm:aspect-square';
 
   useEffect(() => {
-    let ctx: { revert: () => void } | undefined;
-
-    (async () => {
-      const gsap = (await import('gsap')).default;
-      if (!sectionRef.current) return;
-      ctx = gsap.context(() => {
-        gsap.fromTo('.product-card', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.06 });
-      }, sectionRef);
-    })();
-
-    return () => ctx?.revert();
+    // Scroll to top on category change
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [activeCategory]);
 
   return (
@@ -118,16 +109,14 @@ export default function ColeccionClient() {
 
         {/* Product Grid */}
         <div id="coleccion-productos" className={gridClass}>
-          <AnimatePresence>
-            {filteredProducts.map((product) => (
+            {filteredProducts.map((product, i) => (
               <motion.div
                 key={product.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="product-card group cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.35, delay: i * 0.04 }}
+                className="product-card group cursor-pointer overflow-hidden"
               >
                 <Link href={`/coleccion/${product.slug}`}>
                   {/* Image with dual hover effect */}
@@ -159,13 +148,8 @@ export default function ColeccionClient() {
                     </div>
 
                     {/* Quick actions */}
-                    <AnimatePresence>
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 0 }}
-                        exit={{ opacity: 0 }}
-                        className="absolute bottom-2 left-2 right-2 flex gap-1.5 group-hover:!opacity-100"
-                        style={{ opacity: 0 }}
+                      <div
+                        className="absolute bottom-2 left-2 right-2 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       >
                         <button
                           onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(generateWhatsAppLink(product), '_blank'); }}
@@ -188,8 +172,7 @@ export default function ColeccionClient() {
                         >
                           <ShoppingBag className="w-4 h-4 text-white" />
                         </button>
-                      </motion.div>
-                    </AnimatePresence>
+                      </div>
                   </div>
 
                   {/* Info */}
@@ -207,7 +190,6 @@ export default function ColeccionClient() {
                 </Link>
               </motion.div>
             ))}
-          </AnimatePresence>
         </div>
 
         {filteredProducts.length === 0 && (

@@ -56,7 +56,7 @@ export default function FavoritosClient() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.06 }}
-                className="flex gap-4 p-3 rounded-2xl bg-white/60 border border-zinc-100/60"
+                className="flex gap-4 p-3 rounded-2xl bg-white/60 border border-zinc-100/60 overflow-hidden min-w-0"
               >
                 <Link
                   href={`/coleccion/${product.slug}`}
@@ -68,10 +68,10 @@ export default function FavoritosClient() {
                     className="w-full h-full object-cover"
                   />
                 </Link>
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 overflow-hidden">
                   <Link
                     href={`/coleccion/${product.slug}`}
-                    className="font-semibold text-sm text-foreground truncate cursor-pointer hover:text-primary transition-colors"
+                    className="block font-semibold text-sm text-foreground line-clamp-2 cursor-pointer hover:text-primary transition-colors"
                   >
                     {product.name}
                   </Link>
