@@ -44,6 +44,20 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
+        url: "/og-image-square.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Maia Store — Joyas Tejidas a Mano",
+        type: "image/jpeg",
+      },
+      {
+        url: "/og-image-square.webp",
+        width: 1200,
+        height: 1200,
+        alt: "Maia Store — Joyas Tejidas a Mano",
+        type: "image/webp",
+      },
+      {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
@@ -64,7 +78,7 @@ export const metadata: Metadata = {
     title: "Maia Store | Joyas Tejidas a Mano",
     description:
       "Colección exclusiva de joyas artesanales tejidas a mano. Diseños únicos peruanos.",
-    images: ["/og-image.jpg", "/og-image.webp"],
+    images: ["/og-image-square.jpg", "/og-image-square.webp", "/og-image.jpg", "/og-image.webp"],
   },
   robots: {
     index: true,

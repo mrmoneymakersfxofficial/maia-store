@@ -56,7 +56,7 @@ export default function FavoritosClient() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.06 }}
-                className="flex gap-4 p-3 rounded-2xl bg-white/60 border border-zinc-100/60 overflow-hidden min-w-0"
+                className="flex gap-4 p-3 rounded-2xl bg-white/60 border border-zinc-100/60 overflow-hidden max-w-full"
               >
                 <Link
                   href={`/coleccion/${product.slug}`}
@@ -68,17 +68,17 @@ export default function FavoritosClient() {
                     className="w-full h-full object-cover"
                   />
                 </Link>
-                <div className="flex-1 min-w-0 overflow-hidden">
+                <div className="flex-1 min-w-0 w-0 overflow-hidden break-words">
                   <Link
                     href={`/coleccion/${product.slug}`}
-                    className="block font-semibold text-sm text-foreground line-clamp-2 cursor-pointer hover:text-primary transition-colors"
+                    className="block font-semibold text-sm text-foreground line-clamp-2 cursor-pointer hover:text-primary transition-colors break-words"
                   >
                     {product.name}
                   </Link>
                   <p className="text-xs text-foreground/40 mt-0.5 line-clamp-2">
                     {product.description}
                   </p>
-                  <div className="flex items-center justify-between mt-3">
+                  <div className="flex items-center justify-between mt-3 min-w-0 gap-2">
                     <span className="text-base font-bold text-primary">
                       {formatPrice(product.price)}
                     </span>

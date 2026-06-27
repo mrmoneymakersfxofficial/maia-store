@@ -1,8 +1,8 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { MessageCircle, ShoppingBag, Heart, ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 import { useStore } from '@/lib/store-context';
@@ -13,9 +13,6 @@ export default function ColeccionClient() {
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get('categoria') || 'todos';
   const { isFavorite, toggleFavorite, addToCart } = useStore();
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: '-60px' });
-
   const { viewMode, setViewMode, isReady } = useGridView('single');
 
   const filteredProducts = getProductsByCategory(activeCategory);
@@ -33,13 +30,13 @@ export default function ColeccionClient() {
   }, [activeCategory]);
 
   return (
-    <div ref={sectionRef} className="relative pt-20 pb-20 sm:pb-24">
+    <div className="relative pt-20 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-2 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div id="coleccion-header" className="text-center mb-8 pt-4 scroll-mt-16">
           <motion.span
             initial={{ opacity: 0, y: 15 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block"
           >
@@ -47,7 +44,7 @@ export default function ColeccionClient() {
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3"
           >
@@ -55,7 +52,7 @@ export default function ColeccionClient() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-sm text-foreground/40 max-w-md mx-auto"
           >
@@ -66,7 +63,7 @@ export default function ColeccionClient() {
         {/* Breadcrumb */}
         <motion.nav
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.15 }}
           className="flex items-center justify-center gap-1.5 text-xs text-foreground/40 mb-6"
         >
@@ -84,7 +81,7 @@ export default function ColeccionClient() {
         {/* Category Filters + Grid Toggle */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-2 mb-10"
         >
@@ -114,7 +111,7 @@ export default function ColeccionClient() {
                 key={product.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
+                viewport={{ once: false, margin: '-40px' }}
                 transition={{ duration: 0.35, delay: i * 0.04 }}
                 className="product-card group cursor-pointer overflow-hidden"
               >

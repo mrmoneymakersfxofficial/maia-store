@@ -13,6 +13,20 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
+        url: '/og-image-square.jpg',
+        width: 1200,
+        height: 1200,
+        alt: 'Maia Store — Colección de Joyas Artesanales',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/og-image-square.webp',
+        width: 1200,
+        height: 1200,
+        alt: 'Maia Store — Colección de Joyas Artesanales',
+        type: 'image/webp',
+      },
+      {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
@@ -30,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/og-image.jpg', '/og-image.webp'],
+    images: ['/og-image-square.jpg', '/og-image-square.webp', '/og-image.jpg', '/og-image.webp'],
   },
 };
 
