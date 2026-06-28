@@ -1,6 +1,10 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { presentationTool, defineDocuments, defineLocations } from "sanity/presentation";
+import {
+  GemIcon, CogIcon, BookIcon, HomeIcon,
+  LayersIcon, TagIcon, MessageSquareIcon,
+} from "@sanity/icons";
 import { schemaTypes } from "./sanity/schema";
 import { STUDIO_TITLE } from "./sanity/lib/constants";
 
@@ -9,11 +13,6 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 
 /**
  * Site URL — NEVER falls back to localhost.
- *
- * Priority:
- * 1. NEXT_PUBLIC_SITE_URL (explicit, recommended for Vercel)
- * 2. VERCEL_URL (auto-set by Vercel during builds)
- * 3. Hardcoded production URL (maia-store.vercel.app)
  */
 function getSiteUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
@@ -22,7 +21,6 @@ function getSiteUrl(): string {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL.replace(/\/$/, "")}`;
   }
-  // Production hardcoded fallback — never localhost
   return "https://maia-store.vercel.app";
 }
 
@@ -34,7 +32,43 @@ export default defineConfig({
   projectId,
   dataset,
   plugins: [
-    structureTool(),
+    structureTool({
+      structure: (S) => {
+        return S.list().title("Panel de Control").items([
+          // ─── INICIO ────────────────────────────
+          S.listItem().title("Inicio").icon(HomeIcon).id("home-group").child(
+            S.list().title("Inicio").items([
+              S.listItem().title("Hero (Slides)").icon(LayersIcon).id("hero-slides").child(
+                S.documentTypeList("heroSlide").title("Slides del Hero").defaultOrdering([{ field: "order", direction: "asc" }]),
+              ),
+              S.listItem().title("Testimonios").icon(MessageSquareIcon).id("testimonials-list").child(
+                S.documentTypeList("testimonial").title("Testimonios").defaultOrdering([{ field: "order", direction: "asc" }]),
+              ),
+              S.listItem().title("Datos del Sitio").icon(CogIcon).id("site-settings-editor").child(
+                S.document().schemaType("siteSettings").documentId("siteSettings").title("Configuración"),
+              ),
+            ]),
+          ),
+          // ─── PRODUCTOS ─────────────────────────
+          S.listItem().title("Productos").icon(GemIcon).id("products-group").child(
+            S.list().title("Productos").items([
+              S.listItem().title("Categorías").icon(TagIcon).id("product-categories-list").child(
+                S.documentTypeList("productCategory").title("Categorías").defaultOrdering([{ field: "order", direction: "asc" }]),
+              ),
+              ...S.documentTypeListItems().filter((item) => item.getId() === "product"),
+            ]),
+          ),
+          // ─── CONFIGURACIÓN ─────────────────────
+          S.listItem().title("Configuración").icon(CogIcon).id("settings-group").child(
+            S.document().schemaType("siteSettings").documentId("siteSettings").title("Configuración del Sitio"),
+          ),
+          // ─── GUÍA ──────────────────────────────
+          S.listItem().title("Guía de Uso").icon(BookIcon).id("guide-group").child(
+            S.document().schemaType("studioGuide").documentId("studio-guide").title("Guía Paso a Paso"),
+          ),
+        ]);
+      },
+    }),
     presentationTool({
       name: "presentation",
       title: "Vista Previa",
@@ -45,11 +79,6 @@ export default defineConfig({
         },
       },
       resolve: {
-        /**
-         * mainDocuments — maps URL routes to Sanity documents.
-         * When the user navigates in the preview iframe,
-         * this tells the Studio which document is being viewed.
-         */
         mainDocuments: defineDocuments([
           {
             route: "/",
@@ -60,35 +89,28 @@ export default defineConfig({
             type: "heroSlide",
           },
           {
-            route: "/nosotros",
-            type: "teamMember",
+            route: "/",
+            type: "testimonial",
           },
           {
             route: "/coleccion",
-            type: "serviceCategory",
+            type: "productCategory",
           },
           {
             route: "/coleccion/:slug",
+            type: "product",
             filter: ({ params }) =>
-              `_type == "project" && slug.current == "${params.slug}"`,
-          },
-          {
-            route: "/coleccion",
-            type: "service",
+              `_type == "product" && slug.current == "${params.slug}"`,
           },
         ]),
-
-        /**
-         * locations — maps Sanity documents to frontend URLs.
-         * When a user clicks on a document in the Studio,
-         * this tells the Presentation Tool which page to navigate to.
-         * Also used by the Document Inspector overlay.
-         */
         locations: {
           siteSettings: defineLocations({
-            select: { title: "title" },
+            select: { title: "companyName" },
             resolve: () => ({
-              locations: [{ title: "Inicio", href: "/" }],
+              locations: [
+                { title: "Inicio", href: "/" },
+                { title: "Contacto", href: "/contacto" },
+              ],
             }),
           }),
           heroSlide: defineLocations({
@@ -97,65 +119,34 @@ export default defineConfig({
               locations: [{ title: "Inicio — Hero", href: "/" }],
             }),
           }),
-          stat: defineLocations({
-            select: { label: "label" },
-            resolve: () => ({
-              locations: [{ title: "Inicio — Estadísticas", href: "/" }],
-            }),
-          }),
-          partner: defineLocations({
-            select: { name: "name" },
-            resolve: () => ({
-              locations: [{ title: "Inicio — Socios", href: "/" }],
-            }),
-          }),
           testimonial: defineLocations({
             select: { authorName: "authorName" },
             resolve: () => ({
               locations: [{ title: "Inicio — Testimonios", href: "/" }],
             }),
           }),
-          teamMember: defineLocations({
-            select: { name: "name", slug: "slug.current" },
-            resolve: (doc) => ({
-              locations: [{ title: `Nosotros — ${doc?.name || "Equipo"}`, href: "/nosotros" }],
-            }),
-          }),
-          serviceCategory: defineLocations({
+          productCategory: defineLocations({
             select: { name: "name", slug: "slug.current" },
             resolve: (doc) => {
               if (!doc?.slug) {
-                return { locations: [{ title: "Colecciones", href: "/coleccion" }] };
+                return { locations: [{ title: "Colección", href: "/coleccion" }] };
               }
               return {
                 locations: [
-                  { title: `Colección — ${doc.name || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` },
+                  { title: `Categoría — ${doc.name || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` },
                 ],
               };
             },
           }),
-          service: defineLocations({
-            select: { title: "title", slug: "slug.current" },
-            resolve: (doc) => {
-              if (!doc?.slug) {
-                return { locations: [{ title: "Colecciones", href: "/coleccion" }] };
-              }
-              return {
-                locations: [
-                  { title: `Servicio — ${doc.title || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` },
-                ],
-              };
-            },
-          }),
-          project: defineLocations({
-            select: { title: "title", slug: "slug.current" },
+          product: defineLocations({
+            select: { name: "name", slug: "slug.current" },
             resolve: (doc) => {
               if (!doc?.slug) {
                 return { message: "Este producto no tiene slug", tone: "caution" as const };
               }
               return {
                 locations: [
-                  { title: `Producto — ${doc.title || doc.slug}`, href: `/coleccion/${doc.slug}` },
+                  { title: `Producto — ${doc.name || doc.slug}`, href: `/coleccion/${doc.slug}` },
                 ],
               };
             },

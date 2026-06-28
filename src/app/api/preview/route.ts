@@ -5,32 +5,24 @@ import { NextRequest, NextResponse } from "next/server";
  * /api/preview
  *
  * Called by Sanity Presentation Tool to enable Next.js draft mode.
- * Validates the preview secret, enables draft mode, then redirects
- * to the appropriate page so edits appear in real-time.
+ * If SANITY_PREVIEW_SECRET is set, validates it first.
+ * Otherwise, enables draft mode directly (Studio is already behind auth).
  */
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
 
+  // Optional secret validation
   const secret = searchParams.get("secret");
-  const redirectUrl = searchParams.get("redirect") || "/";
-
-  // Validate preview secret
   const previewSecret = process.env.SANITY_PREVIEW_SECRET;
-  if (!previewSecret) {
-    console.error("[preview] SANITY_PREVIEW_SECRET is not configured in env");
-    return NextResponse.json(
-      { error: "Preview secret not configured on server" },
-      { status: 500 },
-    );
-  }
-
-  if (secret !== previewSecret) {
+  if (previewSecret && secret !== previewSecret) {
     console.error("[preview] Invalid preview secret provided");
     return NextResponse.json(
       { error: "Invalid preview secret" },
       { status: 401 },
     );
   }
+
+  const redirectUrl = searchParams.get("redirect") || "/";
 
   // Enable Next.js draft mode
   const draft = await draftMode();
