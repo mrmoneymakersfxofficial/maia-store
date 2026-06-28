@@ -2,8 +2,8 @@ import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { presentationTool, defineDocuments, defineLocations } from "sanity/presentation";
 import {
-  GemIcon, CogIcon, BookIcon, HomeIcon,
-  LayersIcon, TagIcon, MessageSquareIcon,
+  CogIcon, BookIcon, HomeIcon,
+  StackIcon, TagIcon, ChatBubbleIcon,
 } from "@sanity/icons";
 import { schemaTypes } from "./sanity/schema";
 import { STUDIO_TITLE } from "./sanity/lib/constants";
@@ -38,10 +38,10 @@ export default defineConfig({
           // ─── INICIO ────────────────────────────
           S.listItem().title("Inicio").icon(HomeIcon).id("home-group").child(
             S.list().title("Inicio").items([
-              S.listItem().title("Hero (Slides)").icon(LayersIcon).id("hero-slides").child(
+              S.listItem().title("Hero (Slides)").icon(StackIcon).id("hero-slides").child(
                 S.documentTypeList("heroSlide").title("Slides del Hero").defaultOrdering([{ field: "order", direction: "asc" }]),
               ),
-              S.listItem().title("Testimonios").icon(MessageSquareIcon).id("testimonials-list").child(
+              S.listItem().title("Testimonios").icon(ChatBubbleIcon).id("testimonials-list").child(
                 S.documentTypeList("testimonial").title("Testimonios").defaultOrdering([{ field: "order", direction: "asc" }]),
               ),
               S.listItem().title("Datos del Sitio").icon(CogIcon).id("site-settings-editor").child(
@@ -50,7 +50,7 @@ export default defineConfig({
             ]),
           ),
           // ─── PRODUCTOS ─────────────────────────
-          S.listItem().title("Productos").icon(GemIcon).id("products-group").child(
+          S.listItem().title("Productos").icon(TagIcon).id("products-group").child(
             S.list().title("Productos").items([
               S.listItem().title("Categorías").icon(TagIcon).id("product-categories-list").child(
                 S.documentTypeList("productCategory").title("Categorías").defaultOrdering([{ field: "order", direction: "asc" }]),
