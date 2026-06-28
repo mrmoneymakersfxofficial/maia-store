@@ -1,10 +1,7 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { presentationTool, defineDocuments, defineLocations } from "sanity/presentation";
-import {
-  CogIcon, BookIcon, HomeIcon,
-  StackIcon, TagIcon, ChatBubbleIcon,
-} from "@sanity/icons";
+// Icons via emoji functions — avoids non-existent @sanity/icons exports
 import { schemaTypes } from "./sanity/schema";
 import { STUDIO_TITLE } from "./sanity/lib/constants";
 
@@ -36,34 +33,34 @@ export default defineConfig({
       structure: (S) => {
         return S.list().title("Panel de Control").items([
           // ─── INICIO ────────────────────────────
-          S.listItem().title("Inicio").icon(HomeIcon).id("home-group").child(
+          S.listItem().title("Inicio").icon(() => "🏠").id("home-group").child(
             S.list().title("Inicio").items([
-              S.listItem().title("Hero (Slides)").icon(StackIcon).id("hero-slides").child(
+              S.listItem().title("Hero (Slides)").icon(() => "📊").id("hero-slides").child(
                 S.documentTypeList("heroSlide").title("Slides del Hero").defaultOrdering([{ field: "order", direction: "asc" }]),
               ),
-              S.listItem().title("Testimonios").icon(ChatBubbleIcon).id("testimonials-list").child(
+              S.listItem().title("Testimonios").icon(() => "💬").id("testimonials-list").child(
                 S.documentTypeList("testimonial").title("Testimonios").defaultOrdering([{ field: "order", direction: "asc" }]),
               ),
-              S.listItem().title("Datos del Sitio").icon(CogIcon).id("site-settings-editor").child(
+              S.listItem().title("Datos del Sitio").icon(() => "⚙️").id("site-settings-editor").child(
                 S.document().schemaType("siteSettings").documentId("siteSettings").title("Configuración"),
               ),
             ]),
           ),
           // ─── PRODUCTOS ─────────────────────────
-          S.listItem().title("Productos").icon(TagIcon).id("products-group").child(
+          S.listItem().title("Productos").icon(() => "🏷️").id("products-group").child(
             S.list().title("Productos").items([
-              S.listItem().title("Categorías").icon(TagIcon).id("product-categories-list").child(
+              S.listItem().title("Categorías").icon(() => "📂").id("product-categories-list").child(
                 S.documentTypeList("productCategory").title("Categorías").defaultOrdering([{ field: "order", direction: "asc" }]),
               ),
               ...S.documentTypeListItems().filter((item) => item.getId() === "product"),
             ]),
           ),
           // ─── CONFIGURACIÓN ─────────────────────
-          S.listItem().title("Configuración").icon(CogIcon).id("settings-group").child(
+          S.listItem().title("Configuración").icon(() => "⚙️").id("settings-group").child(
             S.document().schemaType("siteSettings").documentId("siteSettings").title("Configuración del Sitio"),
           ),
           // ─── GUÍA ──────────────────────────────
-          S.listItem().title("Guía de Uso").icon(BookIcon).id("guide-group").child(
+          S.listItem().title("Guía de Uso").icon(() => "📖").id("guide-group").child(
             S.document().schemaType("studioGuide").documentId("studio-guide").title("Guía Paso a Paso"),
           ),
         ]);
