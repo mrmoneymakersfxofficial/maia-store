@@ -96,8 +96,6 @@ export default defineConfig({
           {
             route: "/coleccion/:slug",
             type: "product",
-            filter: ({ params }) =>
-              `_type == "product" && slug.current == "${params.slug}"`,
           },
         ]),
         locations: {
