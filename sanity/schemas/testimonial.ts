@@ -11,7 +11,7 @@ export default defineType({
     defineField({ name: "quote", title: "Testimonio", type: "array", of: [{ type: "block" }] }),
     defineField({ name: "photo", title: "Foto del Autor", type: "image", options: { hotspot: true } }),
     defineField({ name: "rating", title: "Calificacion", type: "number", validation: (R: any) => R.min(1).max(5), initialValue: 5 }),
-    defineField({ name: "project", title: "Producto Relacionado", type: "reference", to: [{ type: "product" }] }),
+    defineField({ name: "product", title: "Producto Relacionado", type: "reference", to: [{ type: "product" }] }),
     featuredField("Testimonio Destacado", "Activa para mostrarlo en secciones principales"),
     orderField(),
   ],

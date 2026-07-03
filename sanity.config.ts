@@ -32,7 +32,6 @@ export default defineConfig({
     structureTool({
       structure: (S) => {
         return S.list().title("Panel de Control").items([
-          // ─── INICIO ────────────────────────────
           S.listItem().title("Inicio").icon(() => "🏠").id("home-group").child(
             S.list().title("Inicio").items([
               S.listItem().title("Hero (Slides)").icon(() => "📊").id("hero-slides").child(
@@ -46,7 +45,6 @@ export default defineConfig({
               ),
             ]),
           ),
-          // ─── PRODUCTOS ─────────────────────────
           S.listItem().title("Productos").icon(() => "🏷️").id("products-group").child(
             S.list().title("Productos").items([
               S.listItem().title("Categorías").icon(() => "📂").id("product-categories-list").child(
@@ -55,11 +53,9 @@ export default defineConfig({
               ...S.documentTypeListItems().filter((item) => item.getId() === "product"),
             ]),
           ),
-          // ─── CONFIGURACIÓN ─────────────────────
           S.listItem().title("Configuración").icon(() => "⚙️").id("settings-group").child(
             S.document().schemaType("siteSettings").documentId("siteSettings").title("Configuración del Sitio"),
           ),
-          // ─── GUÍA ──────────────────────────────
           S.listItem().title("Guía de Uso").icon(() => "📖").id("guide-group").child(
             S.document().schemaType("studioGuide").documentId("studio-guide").title("Guía Paso a Paso"),
           ),
