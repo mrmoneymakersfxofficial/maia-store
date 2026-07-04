@@ -107,7 +107,7 @@ export default defineConfig({
         },
       },
     }),,
-  ].filter(Boolean),
+  ],
   schema: {
     types: schemaTypes,
   },
