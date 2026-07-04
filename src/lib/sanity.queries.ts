@@ -1,20 +1,29 @@
+import { createQuery } from "next-sanity";
+
 const IMAGE_FIELDS = `asset->, alt, caption, hotspot, crop`;
 const FILE_FIELDS = `asset-> { _id, url, mimeType }`;
 
-export const ALL_SERVICE_CATEGORIES_QUERY = `*[_type == "serviceCategory"] | order(order asc) { _id, name, "slug": slug.current, description, icon, color, order }`;
-export const ALL_SERVICES_QUERY = `*[_type == "service"] | order(order asc) { _id, title, "slug": slug.current, coverImage { ${IMAGE_FIELDS} }, description, category-> { _id, name, "slug": slug.current, icon, color }, subservices[] { title, description, image { ${IMAGE_FIELDS} } }, featured, order }`;
-export const FEATURED_SERVICES_QUERY = `*[_type == "service" && featured == true] | order(order asc) { _id, title, "slug": slug.current, coverImage { ${IMAGE_FIELDS} }, description, category-> { _id, name, "slug": slug.current, icon, color }, subservices[] { title, description, image { ${IMAGE_FIELDS} } }, featured, order }[0..5]`;
-export function serviceBySlugQuery(slug: string) { return `*[_type == "service" && slug.current == "${slug}"][0] { _id, title, "slug": slug.current, coverImage { ${IMAGE_FIELDS} }, description, category-> { _id, name, "slug": slug.current, icon, color }, subservices[] { title, description, image { ${IMAGE_FIELDS} } }, featured, order }`; }
+// === PRODUCTS ===
+export const PRODUCT_FIELDS = `_id, "slug": slug.current, name, sku, "categoryName": category->name, "categorySlug": category->slug.current, collection, price, compareAtPrice, description, longDescription, features[], mainImage { ${IMAGE_FIELDS} }, secondaryImage { ${IMAGE_FIELDS} }, gallery[] { image { ${IMAGE_FIELDS} }, alt }, color, size, materials[], rating, "reviewCount": reviewCount, inStock, featured, order, seoTitle, seoDescription`;
 
-const PROJECT_FIELDS = `_id, title, "slug": slug.current, coverImage { ${IMAGE_FIELDS} }, gallery[] { ${IMAGE_FIELDS} }, description, excerpt, client, location, year, area, status, tags[], service-> { _id, title, "slug": slug.current }, featured, order`;
-export const ALL_PROJECTS_QUERY = `*[_type == "project"] | order(order asc) { ${PROJECT_FIELDS} }`;
-export const FEATURED_PROJECTS_QUERY = `*[_type == "project" && featured == true] | order(order asc) { ${PROJECT_FIELDS} }[0..8]`;
-export function projectBySlugQuery(slug: string) { return `*[_type == "project" && slug.current == "${slug}"][0] { ${PROJECT_FIELDS} }`; }
+export const ALL_PRODUCTS_QUERY = createQuery(`*[_type == "product"] | order(order asc) { ${PRODUCT_FIELDS} }`);
 
-export const ALL_TEAM_QUERY = `*[_type == "teamMember"] | order(order asc) { _id, name, "slug": slug.current, role, department, photo { ${IMAGE_FIELDS} }, bio, email, phone, linkedinUrl, order }`;
-export const ALL_TESTIMONIALS_QUERY = `*[_type == "testimonial"] | order(order asc) { _id, authorName, authorRole, company, quote, photo { ${IMAGE_FIELDS} }, rating, project-> { _id, title, "slug": slug.current }, featured, order }`;
-export const FEATURED_TESTIMONIALS_QUERY = `*[_type == "testimonial" && featured == true] | order(order asc) { _id, authorName, authorRole, company, quote, photo { ${IMAGE_FIELDS} }, rating, project-> { _id, title, "slug": slug.current }, featured, order }[0..6]`;
-export const ALL_PARTNERS_QUERY = `*[_type == "partner"] | order(order asc) { _id, name, logo { ${IMAGE_FIELDS} }, url, order }`;
-export const ALL_HERO_SLIDES_QUERY = `*[_type == "heroSlide"] | order(order asc) { _id, title, subtitle, backgroundImage { ${IMAGE_FIELDS} }, backgroundVideoMp4 { ${FILE_FIELDS} }, backgroundVideoWebm { ${FILE_FIELDS} }, posterImage { ${IMAGE_FIELDS} }, mobileFallbackImage { ${IMAGE_FIELDS} }, videoAutoplay, videoMuted, videoLoop, ctaLabel, ctaLink, ctaType, order }`;
-export const ALL_STATS_QUERY = `*[_type == "stat"] | order(order asc) { _id, label, value, suffix, prefix, order }`;
-export const SITE_SETTINGS_QUERY = `*[_type == "siteSettings"][0] { _id, companyName, slogan, tagline, logo { ${IMAGE_FIELDS} }, logoWhite { ${IMAGE_FIELDS} }, ogImage { ${IMAGE_FIELDS} }, phone, whatsapp, email, address, businessHours, facebookUrl, instagramUrl, linkedinUrl, tiktokUrl, youtubeUrl, mapLatitude, mapLongitude, mapZoom, seoTitle, seoDescription }`;
+export const FEATURED_PRODUCTS_QUERY = createQuery(`*[_type == "product" && featured == true] | order(order asc) { ${PRODUCT_FIELDS} }[0..11]`);
+
+export const PRODUCTS_BY_CATEGORY_QUERY = createQuery(`*[_type == "product" && $categorySlug == "todos" || category->slug.current == $categorySlug] | order(order asc) { ${PRODUCT_FIELDS} }`);
+
+export const PRODUCT_BY_SLUG_QUERY = createQuery(`*[_type == "product" && slug.current == $slug][0] { ${PRODUCT_FIELDS}, "relatedProducts": *[(_type == "product" && _id != ^._id && category._ref == ^.category._ref)] | order(featured desc, order asc) [0..4] { ${PRODUCT_FIELDS} } }`);
+
+// === CATEGORIES ===
+export const ALL_CATEGORIES_QUERY = createQuery(`*[_type == "productCategory"] | order(order asc) { _id, name, "slug": slug.current, description, image { ${IMAGE_FIELDS} }, order, featured, "productCount": count(*[_type == "product" && category._ref == ^._id]) }`);
+
+// === HERO SLIDES ===
+export const ALL_HERO_SLIDES_QUERY = createQuery(`*[_type == "heroSlide"] | order(order asc) { _id, title, subtitle, backgroundImage { ${IMAGE_FIELDS} }, ctaLabel, ctaLink, ctaType, order }`);
+
+// === TESTIMONIALS ===
+export const ALL_TESTIMONIALS_QUERY = createQuery(`*[_type == "testimonial"] | order(order asc) { _id, authorName, authorRole, company, quote, photo { ${IMAGE_FIELDS} }, rating, featured, order }`);
+
+export const FEATURED_TESTIMONIALS_QUERY = createQuery(`*[_type == "testimonial" && featured == true] | order(order asc) { _id, authorName, authorRole, company, quote, photo { ${IMAGE_FIELDS} }, rating, featured, order }[0..12]`);
+
+// === SITE SETTINGS ===
+export const SITE_SETTINGS_QUERY = createQuery(`*[_type == "siteSettings"][0] { _id, companyName, slogan, tagline, logo { ${IMAGE_FIELDS} }, logoWhite { ${IMAGE_FIELDS} }, ogImage { ${IMAGE_FIELDS} }, phone, whatsapp, email, instagramUrl, tiktokUrl, facebookUrl, seoTitle, seoDescription }`);
