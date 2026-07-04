@@ -68,7 +68,7 @@ export default defineConfig({
       resolve: {
         locations: {
           siteSettings: defineLocations({
-            type: "siteSettings",
+            select: {},
             resolve: () => ({
               locations: [
                 { title: "Inicio", href: "/" },
@@ -77,26 +77,32 @@ export default defineConfig({
             }),
           }),
           heroSlide: defineLocations({
-            type: "heroSlide",
+            select: {},
             resolve: () => ({
               locations: [{ title: "Hero", href: "/#inicio" }],
             }),
           }),
           testimonial: defineLocations({
-            type: "testimonial",
+            select: {},
             resolve: () => ({
               locations: [{ title: "Testimonios", href: "/#testimonios" }],
             }),
           }),
           product: defineLocations({
-            type: "product",
+            select: {
+              name: "name",
+              slug: "slug.current",
+            },
             resolve: (doc: any) => {
               if (!doc?.slug) return { message: "Producto sin slug", tone: "caution" as const };
               return { locations: [{ title: `Producto \u2014 ${doc.name || doc.slug}`, href: `/coleccion/${doc.slug}` }] };
             },
           }),
           productCategory: defineLocations({
-            type: "productCategory",
+            select: {
+              name: "name",
+              slug: "slug.current",
+            },
             resolve: (doc: any) => {
               if (!doc?.slug) return { locations: [{ title: "Colecci\u00F3n", href: "/coleccion" }] };
               return { locations: [{ title: `Categor\u00EDa \u2014 ${doc.name || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` }] };

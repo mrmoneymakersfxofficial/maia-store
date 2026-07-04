@@ -1,57 +1,46 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
+import { sanityFetch } from '@/sanity/live';
+import { ALL_PRODUCTS_QUERY, ALL_CATEGORIES_QUERY } from '@/lib/sanity.queries';
+import { products as storeProducts, categories as storeCategories } from '@/lib/store-data';
 import ColeccionClient from './ColeccionClient';
 
 export const metadata: Metadata = {
   title: 'Colección | Maia Store — Joyas Artesanales Peruanas',
-  description:
-    'Explora nuestra colección completa de joyas artesanales peruanas. Pulseras, collares, aretes y más — cada pieza tejida a mano con amor y dedicación.',
-  openGraph: {
-    title: 'Colección | Maia Store',
-    description:
-      'Explora nuestra colección completa de joyas artesanales peruanas. Pulseras, collares, aretes y más — cada pieza tejida a mano.',
-    type: 'website',
-    images: [
-      {
-        url: '/og-image-square.jpg',
-        width: 1200,
-        height: 1200,
-        alt: 'Maia Store — Colección de Joyas Artesanales',
-        type: 'image/jpeg',
-      },
-      {
-        url: '/og-image-square.webp',
-        width: 1200,
-        height: 1200,
-        alt: 'Maia Store — Colección de Joyas Artesanales',
-        type: 'image/webp',
-      },
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Maia Store — Colección de Joyas Artesanales',
-        type: 'image/jpeg',
-      },
-      {
-        url: '/og-image.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Maia Store — Colección de Joyas Artesanales',
-        type: 'image/webp',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/og-image-square.jpg', '/og-image-square.webp', '/og-image.jpg', '/og-image.webp'],
-  },
+  description: 'Explora nuestra colección completa de joyas artesanales peruanas. Pulseras, collares, aretes y más — cada pieza tejida a mano con amor y dedicación.',
+  openGraph: { title: 'Colección | Maia Store', description: 'Explora nuestra colección completa de joyas artesanales peruanas.', type: 'website', images: [{ url: '/og-image-square.jpg', width: 1200, height: 1200, alt: 'Maia Store — Colección de Joyas Artesanales', type: 'image/jpeg' }] },
 };
 
-export default function ColeccionPage() {
+export const revalidate = 60;
+
+export default async function ColeccionPage() {
+  const [sanityProducts, sanityCategories] = await Promise.all([
+    sanityFetch<any>({ query: ALL_PRODUCTS_QUERY }).then(r => r.data ?? []).catch(() => []),
+    sanityFetch<any>({ query: ALL_CATEGORIES_QUERY }).then(r => r.data ?? []).catch(() => []),
+  ]);
+
+  // Use Sanity data if available, else fall back to store-data
+  const hasSanityData = Array.isArray(sanityProducts) && sanityProducts.length > 0;
+  const allProducts = hasSanityData ? sanityProducts : storeProducts.map(p => ({
+    _id: `store-${p.id}`, slug: p.slug, name: p.name, price: p.price,
+    description: p.description, mainImage: p.image, secondaryImage: p.imageSecondary,
+    category: { name: p.categoryLabel, slug: p.category },
+    color: p.color?.name, features: p.features, sku: p.sku, rating: p.rating,
+    reviewCount: p.reviews, collection: p.collection, longDescription: p.longDescription,
+    inStock: true,
+    gallery: p.images.map(img => ({ url: img.original, alt: p.name })),
+  }));
+
+  const cats = hasSanityData && Array.isArray(sanityCategories) && sanityCategories.length > 0
+    ? [
+        { id: 'todos', label: 'Todos', slug: 'todos', count: sanityProducts.length },
+        ...sanityCategories.map((c: any) => ({ id: c.slug, label: c.name, slug: c.slug, count: c.count || 0 })),
+      ]
+    : storeCategories.map(c => ({ id: c.id, label: c.label, slug: c.id, count: c.count }));
+
   return (
     <Suspense fallback={<ColeccionSkeleton />}>
-      <ColeccionClient />
+      <ColeccionClient products={allProducts} categories={cats} useFallback={!hasSanityData} />
     </Suspense>
   );
 }
