@@ -6,8 +6,8 @@ import BottomAppBar from "@/components/maia/BottomAppBar";
 import CartDrawer from "@/components/maia/CartDrawer";
 import ScrollToTop from "@/components/maia/ScrollToTop";
 import ScrollProgress from "@/components/maia/ScrollProgress";
-import { VisualEditing } from "@/components/cms/VisualEditing";
-import { SanityLive } from "@/sanity/live";
+import { VisualEditing } from "@/components/VisualEditing";
+import { SanityLiveWithToken } from "@/components/SanityLiveWithToken";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://maia-store.vercel.app";
 
@@ -107,8 +107,7 @@ export default function StoreLayout({
       <CartDrawer />
       <ScrollToTop />
       <ScrollProgress />
-      {/* Sanity Visual Editing — only active in draft mode */}
-      <SanityLive />
+      <SanityLiveWithToken includeDrafts />
       <VisualEditing />
     </Providers>
   );

@@ -1,46 +1,21 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { MessageCircle, ShoppingBag, Heart, ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 import { useStore } from '@/lib/store-context';
-import { formatPrice, generateWhatsAppLink } from '@/lib/store-data';
-import { getImageUrl } from '@/lib/sanity.client';
+import { products, categories, getProductsByCategory, formatPrice, generateWhatsAppLink } from '@/lib/store-data';
 import GridToggle, { useGridView } from '@/components/maia/GridToggle';
-import type { SanityProduct, SanityCategory } from '@/lib/data';
 
-interface ColeccionClientProps {
-  allProducts: SanityProduct[];
-  categories: SanityCategory[];
-}
-
-export default function ColeccionClient({ allProducts, categories: sanityCategories }: ColeccionClientProps) {
+export default function ColeccionClient() {
   const searchParams = useSearchParams();
-  const activeCategorySlug = searchParams.get('categoria') || 'todos';
+  const activeCategory = searchParams.get('categoria') || 'todos';
   const { isFavorite, toggleFavorite, addToCart } = useStore();
   const { viewMode, setViewMode, isReady } = useGridView('single');
 
-  // Build category list: "todos" + Sanity categories
-  const categoryList = useMemo(() => {
-    const cats = [{ id: 'todos', label: 'Todos', slug: 'todos', count: allProducts.length }];
-    for (const c of sanityCategories) {
-      cats.push({
-        id: c.slug,
-        label: c.name,
-        slug: c.slug,
-        count: c.productCount || 0,
-      });
-    }
-    return cats;
-  }, [sanityCategories, allProducts.length]);
-
-  // Filter products by category
-  const filteredProducts = useMemo(() => {
-    if (activeCategorySlug === 'todos') return allProducts;
-    return allProducts.filter((p) => p.categorySlug === activeCategorySlug);
-  }, [allProducts, activeCategorySlug]);
+  const filteredProducts = getProductsByCategory(activeCategory);
 
   // Grid classes based on view mode
   const gridClass = viewMode === 'single'
@@ -50,8 +25,9 @@ export default function ColeccionClient({ allProducts, categories: sanityCategor
   const aspectClass = viewMode === 'single' ? 'aspect-[3/4]' : 'aspect-[3/4] sm:aspect-square';
 
   useEffect(() => {
+    // Scroll to top on category change
     window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [activeCategorySlug]);
+  }, [activeCategory]);
 
   return (
     <div className="relative pt-20 pb-20 sm:pb-24">
@@ -94,10 +70,10 @@ export default function ColeccionClient({ allProducts, categories: sanityCategor
           <Link href="/" className="hover:text-primary transition-colors">Inicio</Link>
           <span>/</span>
           <span className="text-foreground/60 font-medium">Coleccion</span>
-          {activeCategorySlug !== 'todos' && (
+          {activeCategory !== 'todos' && (
             <>
               <span>/</span>
-              <span className="text-primary font-medium capitalize">{activeCategorySlug}</span>
+              <span className="text-primary font-medium capitalize">{activeCategory}</span>
             </>
           )}
         </motion.nav>
@@ -110,12 +86,12 @@ export default function ColeccionClient({ allProducts, categories: sanityCategor
           className="flex flex-wrap items-center justify-center gap-2 mb-10"
         >
           <div className="flex flex-wrap items-center justify-center gap-2 flex-1">
-            {categoryList.map((cat) => (
+            {categories.map((cat) => (
               <Link
                 key={cat.id}
                 href={cat.id === 'todos' ? '/coleccion' : `/coleccion?categoria=${cat.id}`}
                 className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 tracking-wide ${
-                  activeCategorySlug === cat.id
+                  activeCategory === cat.id
                     ? 'bg-primary text-white shadow-lg shadow-turquoise-500/20'
                     : 'bg-zinc-100 text-foreground/50 hover:bg-zinc-200'
                 }`}
@@ -130,13 +106,9 @@ export default function ColeccionClient({ allProducts, categories: sanityCategor
 
         {/* Product Grid */}
         <div id="coleccion-productos" className={gridClass}>
-          {filteredProducts.map((product, i) => {
-            const mainImage = getImageUrl(product.mainImage, 600, 800) || '';
-            const secondaryImage = getImageUrl(product.secondaryImage, 600, 800) || '';
-            const categoryLabel = product.categoryName || 'Joyas';
-            return (
+            {filteredProducts.map((product, i) => (
               <motion.div
-                key={product._id}
+                key={product.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, margin: '-40px' }}
@@ -144,53 +116,63 @@ export default function ColeccionClient({ allProducts, categories: sanityCategor
                 className="product-card group cursor-pointer overflow-hidden"
               >
                 <Link href={`/coleccion/${product.slug}`}>
+                  {/* Image with dual hover effect */}
                   <div className={`relative ${aspectClass} rounded-sm sm:rounded-2xl overflow-hidden mb-2 sm:mb-2.5 bg-zinc-100`}>
-                    {mainImage && (
+                    {/* Main image */}
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:opacity-0 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    {/* Secondary image (revealed on hover) */}
+                    {product.imageSecondary && (
                       <img
-                        src={mainImage}
-                        alt={product.name}
-                        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:opacity-0 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                    )}
-                    {secondaryImage && (
-                      <img
-                        src={secondaryImage}
+                        src={product.imageSecondary}
                         alt={`${product.name} - vista alternativa`}
                         className="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-700 group-hover:opacity-100 group-hover:scale-100"
                         loading="lazy"
                       />
                     )}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    {/* Category badge */}
                     <div className="absolute top-2 left-2">
                       <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-[10px] font-semibold text-turquoise-700">
-                        {categoryLabel}
+                        {product.categoryLabel}
                       </span>
                     </div>
-                    <div className="absolute bottom-2 left-2 right-2 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <button
-                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(generateWhatsAppLink({ name: product.name, slug: product.slug, price: product.price, description: product.description || '' }), '_blank'); }}
-                        className="flex-1 flex items-center justify-center gap-1 bg-white/90 backdrop-blur-sm text-turquoise-600 py-2.5 rounded-xl text-xs font-semibold shadow-lg"
+
+                    {/* Quick actions */}
+                      <div
+                        className="absolute bottom-2 left-2 right-2 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       >
-                        <MessageCircle className="w-3.5 h-3.5" /> Pedir
-                      </button>
-                      <button
-                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleFavorite(product._id); }}
-                        className="w-10 h-10 flex items-center justify-center bg-white/90 backdrop-blur-sm rounded-xl shadow-lg"
-                      >
-                        <Heart
-                          className={`w-4 h-4 ${isFavorite(product._id) ? 'text-red-500 fill-red-500' : 'text-foreground/50'}`}
-                          fill={isFavorite(product._id) ? 'currentColor' : 'none'}
-                        />
-                      </button>
-                      <button
-                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); addToCart({ id: product._id, slug: product.slug, name: product.name, price: product.price, image: mainImage, categoryLabel, description: product.description || '' }); }}
-                        className="w-10 h-10 flex items-center justify-center bg-primary rounded-xl shadow-lg"
-                      >
-                        <ShoppingBag className="w-4 h-4 text-white" />
-                      </button>
-                    </div>
+                        <button
+                          onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(generateWhatsAppLink(product), '_blank'); }}
+                          className="flex-1 flex items-center justify-center gap-1 bg-white/90 backdrop-blur-sm text-turquoise-600 py-2.5 rounded-xl text-xs font-semibold shadow-lg"
+                        >
+                          <MessageCircle className="w-3.5 h-3.5" /> Pedir
+                        </button>
+                        <button
+                          onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleFavorite(product.id); }}
+                          className="w-10 h-10 flex items-center justify-center bg-white/90 backdrop-blur-sm rounded-xl shadow-lg"
+                        >
+                          <Heart
+                            className={`w-4 h-4 ${isFavorite(product.id) ? 'text-red-500 fill-red-500' : 'text-foreground/50'}`}
+                            fill={isFavorite(product.id) ? 'currentColor' : 'none'}
+                          />
+                        </button>
+                        <button
+                          onClick={(e) => { e.preventDefault(); e.stopPropagation(); addToCart(product); }}
+                          className="w-10 h-10 flex items-center justify-center bg-primary rounded-xl shadow-lg"
+                        >
+                          <ShoppingBag className="w-4 h-4 text-white" />
+                        </button>
+                      </div>
                   </div>
+
+                  {/* Info */}
                   <div className="px-0.5">
                     <h3 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors mb-0.5 truncate">
                       {product.name}
@@ -204,8 +186,7 @@ export default function ColeccionClient({ allProducts, categories: sanityCategor
                   </div>
                 </Link>
               </motion.div>
-            );
-          })}
+            ))}
         </div>
 
         {filteredProducts.length === 0 && (

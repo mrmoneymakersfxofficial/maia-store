@@ -1,6 +1,6 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
-import { presentationTool, defineDocuments, defineLocations } from "sanity/presentation";
+import { presentationTool, defineLocations } from "sanity/presentation";
 // Icons via emoji functions — avoids non-existent @sanity/icons exports
 import { schemaTypes } from "./sanity/schema";
 import { STUDIO_TITLE } from "./sanity/lib/constants";
@@ -63,40 +63,14 @@ export default defineConfig({
       },
     }),
     presentationTool({
-      name: "presentation",
-      title: "Vista Previa",
       previewUrl: {
         initial: siteUrl,
-        previewMode: {
-          enable: "/api/preview",
-        },
+        previewMode: { enable: "/api/draft-mode/enable" },
       },
       resolve: {
-        mainDocuments: defineDocuments([
-          {
-            route: "/",
-            type: "siteSettings",
-          },
-          {
-            route: "/",
-            type: "heroSlide",
-          },
-          {
-            route: "/",
-            type: "testimonial",
-          },
-          {
-            route: "/coleccion",
-            type: "productCategory",
-          },
-          {
-            route: "/coleccion/:slug",
-            type: "product",
-          },
-        ]),
         locations: {
           siteSettings: defineLocations({
-            select: { title: "companyName" },
+            type: "siteSettings",
             resolve: () => ({
               locations: [
                 { title: "Inicio", href: "/" },
@@ -105,52 +79,34 @@ export default defineConfig({
             }),
           }),
           heroSlide: defineLocations({
-            select: { title: "title" },
+            type: "heroSlide",
             resolve: () => ({
-              locations: [{ title: "Inicio — Hero", href: "/" }],
+              locations: [{ title: "Hero", href: "/#inicio" }],
             }),
           }),
           testimonial: defineLocations({
-            select: { authorName: "authorName" },
+            type: "testimonial",
             resolve: () => ({
-              locations: [{ title: "Inicio — Testimonios", href: "/" }],
+              locations: [{ title: "Testimonios", href: "/#testimonios" }],
             }),
-          }),
-          productCategory: defineLocations({
-            select: { name: "name", slug: "slug.current" },
-            resolve: (doc) => {
-              if (!doc?.slug) {
-                return { locations: [{ title: "Colección", href: "/coleccion" }] };
-              }
-              return {
-                locations: [
-                  { title: `Categoría — ${doc.name || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` },
-                ],
-              };
-            },
           }),
           product: defineLocations({
-            select: { name: "name", slug: "slug.current" },
+            type: "product",
             resolve: (doc) => {
-              if (!doc?.slug) {
-                return { message: "Este producto no tiene slug", tone: "caution" as const };
-              }
-              return {
-                locations: [
-                  { title: `Producto — ${doc.name || doc.slug}`, href: `/coleccion/${doc.slug}` },
-                ],
-              };
+              if (!doc?.slug) return { message: "Producto sin slug", tone: "caution" as const };
+              return { locations: [{ title: `Producto — ${doc.name || doc.slug}`, href: `/coleccion/${doc.slug}` }] };
             },
           }),
-          studioGuide: defineLocations({
-            select: { title: "title" },
-            resolve: () => ({
-              locations: [{ title: "CMS", href: "/admin" }],
-            }),
+          productCategory: defineLocations({
+            type: "productCategory",
+            resolve: (doc) => {
+              if (!doc?.slug) return { locations: [{ title: "Colección", href: "/coleccion" }] };
+              return { locations: [{ title: `Categoría — ${doc.name || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` }] };
+            },
           }),
         },
       },
-    }),
+    }),,
   ],
   schema: {
     types: schemaTypes,

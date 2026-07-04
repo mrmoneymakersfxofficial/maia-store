@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import ColeccionClient from './ColeccionClient';
-import { getAllProducts, getAllCategories } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Colección | Maia Store — Joyas Artesanales Peruanas',
@@ -13,10 +12,34 @@ export const metadata: Metadata = {
       'Explora nuestra colección completa de joyas artesanales peruanas. Pulseras, collares, aretes y más — cada pieza tejida a mano.',
     type: 'website',
     images: [
-      { url: '/og-image-square.jpg', width: 1200, height: 1200, alt: 'Maia Store — Colección de Joyas Artesanales', type: 'image/jpeg' },
-      { url: '/og-image-square.webp', width: 1200, height: 1200, alt: 'Maia Store — Colección de Joyas Artesanales', type: 'image/webp' },
-      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Maia Store — Colección de Joyas Artesanales', type: 'image/jpeg' },
-      { url: '/og-image.webp', width: 1200, height: 630, alt: 'Maia Store — Colección de Joyas Artesanales', type: 'image/webp' },
+      {
+        url: '/og-image-square.jpg',
+        width: 1200,
+        height: 1200,
+        alt: 'Maia Store — Colección de Joyas Artesanales',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/og-image-square.webp',
+        width: 1200,
+        height: 1200,
+        alt: 'Maia Store — Colección de Joyas Artesanales',
+        type: 'image/webp',
+      },
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Maia Store — Colección de Joyas Artesanales',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Maia Store — Colección de Joyas Artesanales',
+        type: 'image/webp',
+      },
     ],
   },
   twitter: {
@@ -25,15 +48,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function ColeccionPage() {
-  const [allProducts, categories] = await Promise.all([
-    getAllProducts(),
-    getAllCategories(),
-  ]);
-
+export default function ColeccionPage() {
   return (
     <Suspense fallback={<ColeccionSkeleton />}>
-      <ColeccionClient allProducts={allProducts} categories={categories} />
+      <ColeccionClient />
     </Suspense>
   );
 }
