@@ -1,4 +1,3 @@
-"use server";
 
 import { draftMode } from "next/headers";
 import { createClient } from "@sanity/client";
