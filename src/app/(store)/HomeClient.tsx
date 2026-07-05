@@ -85,12 +85,7 @@ const FALLBACK_HERO_SLIDES: SanityHeroSlide[] = FALLBACK_BG.map((bg, i) => ({
   order: i,
 }));
 
-// Keep old array for any legacy reference
-const _FALLBACK_HERO_SLIDES_ORIG
-  { _id: 'fallback-hero-0', bgImage: '/images/hero-craft.webp', mobileImage: '/images/hero-craft-mobile.webp', order: 0 },
-  { _id: 'fallback-hero-1', bgImage: '/images/hero-slide-1.webp', mobileImage: '/images/hero-slide-1-mobile.webp', order: 1 },
-  { _id: 'fallback-hero-2', bgImage: '/images/hero-slide-2.webp', mobileImage: '/images/hero-slide-2-mobile.webp', order: 2 },
-];
+
 
 export default function HomePage({ data }: { data: HomeData }) {
   const heroRef = useRef<HTMLDivElement>(null);
