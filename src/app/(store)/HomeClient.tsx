@@ -67,7 +67,26 @@ export interface HomeData {
 }
 
 // ─── Fallback hero slides (when Sanity has no heroSlides) ─────
-const FALLBACK_HERO_SLIDES: SanityHeroSlide[] = [
+const FALLBACK_BG = [
+  '/images/hero-craft.webp',
+  '/images/hero-slide-1.webp',
+  '/images/hero-slide-2.webp',
+];
+const FALLBACK_MOBILE = [
+  '/images/hero-craft-mobile.webp',
+  '/images/hero-slide-1-mobile.webp',
+  '/images/hero-slide-2-mobile.webp',
+];
+
+const FALLBACK_HERO_SLIDES: SanityHeroSlide[] = FALLBACK_BG.map((bg, i) => ({
+  _id: 'fallback-hero-' + i,
+  bgImage: bg,
+  mobileImage: FALLBACK_MOBILE[i],
+  order: i,
+}));
+
+// Keep old array for any legacy reference
+const _FALLBACK_HERO_SLIDES_ORIG
   { _id: 'fallback-hero-0', bgImage: '/images/hero-craft.webp', mobileImage: '/images/hero-craft-mobile.webp', order: 0 },
   { _id: 'fallback-hero-1', bgImage: '/images/hero-slide-1.webp', mobileImage: '/images/hero-slide-1-mobile.webp', order: 1 },
   { _id: 'fallback-hero-2', bgImage: '/images/hero-slide-2.webp', mobileImage: '/images/hero-slide-2-mobile.webp', order: 2 },
