@@ -82,7 +82,14 @@ export default function HomePage({ data }: { data: HomeData }) {
   const { isFavorite, toggleFavorite, addToCart } = useStore();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const heroSlides = data.heroSlides.length > 0 ? data.heroSlides : FALLBACK_HERO_SLIDES;
+  // Use Sanity slides if they exist; fill missing images from local fallbacks
+  const heroSlides = data.heroSlides.length > 0
+    ? data.heroSlides.map((slide, i) => ({
+        ...slide,
+        bgImage: slide.bgImage || FALLBACK_BG[i % FALLBACK_BG.length],
+        mobileImage: slide.mobileImage || FALLBACK_MOBILE[i % FALLBACK_MOBILE.length],
+      }))
+    : FALLBACK_HERO_SLIDES;
   const featured = data.featuredProducts;
   const testimonials = data.testimonials;
   const useFallback = data.useFallback;
