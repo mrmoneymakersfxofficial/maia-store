@@ -1,19 +1,30 @@
 "use client";
-
-import { VisualEditing as SanityVisualEditing } from "next-sanity/visual-editing";
+import { useEffect, useState } from "react";
+import { VisualEditing as SanityVE } from "next-sanity/visual-editing";
 
 /**
  * Renders the Sanity Visual Editing overlay.
  *
- * This component ONLY activates when Next.js draft mode is enabled
- * (i.e., when previewing from the Studio's Presentation Tool).
+ * DOUBLE GUARD:
+ *  1. iframe detection — only renders inside the Presentation Tool iframe
+ *  2. draftMode()     — next-sanity/visual-editing only activates with draft cookie
  *
- * In production (no draft mode cookie), it renders NOTHING.
- * This ensures the overlay NEVER appears on the live website.
- *
- * The "Edit" toggle in the Presentation Tool controls
- * whether the overlay is visible within the CMS preview.
+ * On the public website (no iframe, no draft cookie), this renders NOTHING.
  */
 export function VisualEditing() {
-  return <SanityVisualEditing />;
+  const [inIframe, setInIframe] = useState(false);
+
+  useEffect(() => {
+    try {
+      // window.top throws in cross-origin iframes — treat as iframe
+      setInIframe(window.self !== window.top);
+    } catch {
+      setInIframe(true);
+    }
+  }, []);
+
+  // NEVER render on the public site
+  if (!inIframe) return null;
+
+  return <SanityVE />;
 }
