@@ -68,9 +68,9 @@ export interface HomeData {
 
 // ─── Fallback hero slides (when Sanity has no heroSlides) ─────
 const FALLBACK_HERO_SLIDES: SanityHeroSlide[] = [
-  { _id: 'fallback-hero-0', bgImage: '/images/hero-craft.webp', order: 0 },
-  { _id: 'fallback-hero-1', bgImage: '/images/hero-slide-1.webp', order: 1 },
-  { _id: 'fallback-hero-2', bgImage: '/images/hero-slide-2.webp', order: 2 },
+  { _id: 'fallback-hero-0', bgImage: '/images/hero-craft.webp', mobileImage: '/images/hero-craft-mobile.webp', order: 0 },
+  { _id: 'fallback-hero-1', bgImage: '/images/hero-slide-1.webp', mobileImage: '/images/hero-slide-1-mobile.webp', order: 1 },
+  { _id: 'fallback-hero-2', bgImage: '/images/hero-slide-2.webp', mobileImage: '/images/hero-slide-2-mobile.webp', order: 2 },
 ];
 
 export default function HomePage({ data }: { data: HomeData }) {
