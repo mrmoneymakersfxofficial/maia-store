@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { sanityFetch } from "@/sanity/live";
-import { SITE_SETTINGS_QUERY } from "@/lib/sanity.queries";
 import { Providers } from "@/components/maia/Providers";
 import Navigation from "@/components/maia/Navigation";
-import Footer, { type SiteSettingsData } from "@/components/maia/Footer";
+import Footer from "@/components/maia/Footer";
 import BottomAppBar from "@/components/maia/BottomAppBar";
 import CartDrawer from "@/components/maia/CartDrawer";
 import ScrollToTop from "@/components/maia/ScrollToTop";
@@ -57,20 +55,11 @@ export default async function StoreLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Fetch site settings for Footer (editable from CMS)
-  let siteSettings: SiteSettingsData | null = null;
-  try {
-    const result: any = await sanityFetch({ query: SITE_SETTINGS_QUERY }).catch(() => null);
-    siteSettings = result?.data ?? null;
-  } catch {
-    // If Sanity is unavailable, Footer uses hardcoded defaults
-  }
-
   return (
     <Providers>
       <Navigation />
       <main className="flex-1">{children}</main>
-      <Footer siteSettings={siteSettings} />
+      <Footer />
       <BottomAppBar />
       <CartDrawer />
       <ScrollToTop />
