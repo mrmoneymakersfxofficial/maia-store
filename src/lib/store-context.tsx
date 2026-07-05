@@ -29,9 +29,9 @@ interface StoreContextValue {
   updateQuantity: (productId: number, quantity: number) => void;
 
   // Favorites
-  favorites: number[];
-  toggleFavorite: (productId: number) => void;
-  isFavorite: (productId: number) => boolean;
+  favorites: string[];
+  toggleFavorite: (productId: number | string) => void;
+  isFavorite: (productId: number | string) => boolean;
 }
 
 const StoreContext = createContext<StoreContextValue | null>(null);
@@ -61,13 +61,13 @@ function saveToStorage<T>(key: string, value: T): void {
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [favorites, setFavorites] = useState<number[]>([]);
+  const [favorites, setFavorites] = useState<string[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
   // Hydrate from localStorage after mount
   useEffect(() => {
     setCart(loadFromStorage<CartItem[]>('maia_cart', []));
-    setFavorites(loadFromStorage<number[]>('maia_favorites', []));
+    setFavorites(loadFromStorage<string[]>('maia_favorites', []));
     setHydrated(true);
   }, []);
 
@@ -130,16 +130,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   );
 
   // ─── Favorites Logic ────────────────────────────────────
-  const toggleFavorite = useCallback((productId: number) => {
+  const toggleFavorite = useCallback((productId: number | string) => {
+    const id = String(productId);
     setFavorites((prev) =>
-      prev.includes(productId)
-        ? prev.filter((id) => id !== productId)
-        : [...prev, productId]
+      prev.includes(id)
+        ? prev.filter((fid) => fid !== id)
+        : [...prev, id]
     );
   }, []);
 
   const isFavorite = useCallback(
-    (productId: number) => favorites.includes(productId),
+    (productId: number | string) => favorites.includes(String(productId)),
     [favorites]
   );
 
