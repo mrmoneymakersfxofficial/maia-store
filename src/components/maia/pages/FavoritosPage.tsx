@@ -10,7 +10,7 @@ export default function FavoritosPage() {
   const { navigate } = useRouter();
   const { favorites, toggleFavorite, addToCart } = useStore();
 
-  const favoriteProducts = products.filter((p) => favorites.includes(p.id));
+  const favoriteProducts = products.filter((p) => favorites.includes(String(p.id)));
 
   return (
     <div id="favoritos-contenido" className="relative pt-20 pb-32 sm:pb-24 px-4 min-h-screen scroll-mt-16">
@@ -90,7 +90,7 @@ export default function FavoritosPage() {
                         <ShoppingBag className="w-4 h-4" />
                       </motion.button>
                       <motion.button
-                        onClick={() => toggleFavorite(product.id)}
+                        onClick={() => toggleFavorite(String(product.id))}
                         className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-red-500 hover:bg-red-100 transition-colors"
                         whileTap={{ scale: 0.9 }}
                       >
