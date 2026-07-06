@@ -10,15 +10,9 @@ import { useToast } from '@/lib/toast-context';
 import { formatPrice, generateWhatsAppLink } from '@/lib/store-data';
 import { shareProduct } from '@/lib/share';
 import { ve } from '@/lib/ve';
+import { getSwatchColor } from '@/lib/colors';
 import Lightbox from '@/components/maia/Lightbox';
 import type { ProductData } from './page';
-
-const COLOR_SWATCHES: Record<string, string> = {
-  'Crema': '#F5F0E1', 'Rosado': '#F4B8C1', 'Verde Botella': '#2E5E3D',
-  'Fucsia': '#C2185B', 'Morado': '#7B1FA2', 'Turquesa': '#00ACC1',
-  'Rosa Pastel': '#F8BBD0', 'Verde Agua': '#80CBC4', 'Jaspe Imperial': '#8D6E63',
-  'Rodocrosita': '#E57373', 'Simple': '#BDBDBD',
-};
 
 interface Props {
   product: ProductData;
@@ -166,7 +160,12 @@ export default function ProductDetailClient({ product: initialProduct, allProduc
               </div>
 
               <h1 {...ve(displayProduct._id, 'product', 'name')} className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">{displayProduct.name}</h1>
-              <p {...ve(displayProduct._id, 'product', 'price')} className="text-2xl font-bold text-primary mb-4">{formatPrice(displayProduct.price)}</p>
+              <div className="flex items-center gap-3 mb-4">
+                <p {...ve(displayProduct._id, 'product', 'price')} className="text-2xl font-bold text-primary">{formatPrice(displayProduct.price)}</p>
+                {displayProduct.compareAtPrice && displayProduct.compareAtPrice > displayProduct.price && (
+                  <p className="text-lg text-foreground/30 line-through">{formatPrice(displayProduct.compareAtPrice)}</p>
+                )}
+              </div>
               <p {...ve(displayProduct._id, 'product', 'longDescription')} className="text-sm text-foreground/60 leading-relaxed">{displayProduct.longDescription || displayProduct.description}</p>
             </div>
 
@@ -176,7 +175,7 @@ export default function ProductDetailClient({ product: initialProduct, allProduc
                 <div className="flex items-center gap-2 flex-wrap">
                   {variants.map((variant) => {
                     const isActive = variant._id === displayProduct._id;
-                    const swatchColor = COLOR_SWATCHES[variant.color.name] || '#ccc';
+                    const swatchColor = getSwatchColor(variant.color?.name);
                     return (
                       <motion.button key={variant._id} onClick={() => switchVariant(variant)} className={`relative w-10 h-10 rounded-full border-2 transition-all duration-200 flex items-center justify-center ${isActive ? 'border-primary ring-2 ring-primary/20 scale-110' : 'border-zinc-200 hover:border-primary/50 hover:scale-105'}`} whileTap={{ scale: 0.92 }} title={variant.color.name}>
                         <span className="w-7 h-7 rounded-full block" style={{ backgroundColor: swatchColor }} />

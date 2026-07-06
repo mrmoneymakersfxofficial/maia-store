@@ -307,7 +307,12 @@ export default function HomePage({ data }: { data: HomeData }) {
                     </h3>
                     <p {...ve(product._id, 'product', 'description')} className="text-xs text-foreground/40 mb-2 line-clamp-1">{product.description}</p>
                     <div className="flex items-center justify-between">
-                      <span {...ve(product._id, 'product', 'price')} className="text-lg font-bold text-primary">{formatPrice(product.price)}</span>
+                      <div className="flex items-center gap-2">
+                        <span {...ve(product._id, 'product', 'price')} className="text-lg font-bold text-primary">{formatPrice(product.price)}</span>
+                        {product.compareAtPrice && product.compareAtPrice > product.price && (
+                          <span className="text-sm text-foreground/30 line-through">{formatPrice(product.compareAtPrice)}</span>
+                        )}
+                      </div>
                       <span className="text-xs font-medium text-turquoise-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-0.5">
                         Ver mas <ArrowDown className="w-3 h-3 rotate-[-90deg]" />
                       </span>

@@ -121,7 +121,12 @@ export default function ColeccionClient({ products, categories, useFallback }: C
                 <div className="px-0.5">
                   <h3 {...ve(product._id, 'product', 'name')} className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors mb-0.5 truncate">{product.name}</h3>
                   <div className="flex items-center justify-between">
-                    <span {...ve(product._id, 'product', 'price')} className="text-base font-bold text-primary">{formatPrice(product.price)}</span>
+                    <div className="flex items-center gap-2">
+                      <span {...ve(product._id, 'product', 'price')} className="text-base font-bold text-primary">{formatPrice(product.price)}</span>
+                      {product.compareAtPrice && product.compareAtPrice > product.price && (
+                        <span className="text-xs text-foreground/30 line-through">{formatPrice(product.compareAtPrice)}</span>
+                      )}
+                    </div>
                     <span className="text-[11px] font-medium text-turquoise-600 inline-flex items-center gap-0.5">Ver <ArrowDown className="w-3 h-3 rotate-[-90deg]" /></span>
                   </div>
                 </div>
