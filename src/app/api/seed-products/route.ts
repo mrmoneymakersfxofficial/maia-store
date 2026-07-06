@@ -21,6 +21,7 @@ const CATEGORIES = [
   { id: "pulseras", name: "Pulseras", slug: "pulseras", desc: "Pulseras artesanales tejidas a mano", order: 3 },
   { id: "juegos", name: "Juegos Completos", slug: "juegos", desc: "Juegos completos de joyería artesanal", order: 4 },
   { id: "anillos", name: "Anillos", slug: "anillos", desc: "Anillos artesanales tejidos a mano", order: 5 },
+  { id: "dijes", name: "Dijes", slug: "dijes", desc: "Dijes y colgantes artesanales", order: 6 },
 ];
 
 // ─── Productos (importados de store-data.ts) ─────────────────
