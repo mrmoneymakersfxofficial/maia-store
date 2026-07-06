@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { Instagram, Music, Phone, Mail, MapPin } from 'lucide-react';
+import { ve } from '@/lib/ve';
 
 const socialLinks = [
   {
@@ -88,6 +89,7 @@ export default function ContactSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6"
+              {...ve('contactPage', 'contactPage', 'subtitle')}
             >
               Lo que Dicen{' '}
               <span className="text-gradient-turquoise">Nuestras Clientas</span>
@@ -146,10 +148,10 @@ export default function ContactSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-turquoise-800/90 to-turquoise-600/80" />
           </div>
           <div className="relative z-10 px-6 sm:px-12 py-16 sm:py-20 text-center">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4" {...ve('contactPage', 'contactPage', 'ctaTitle')}>
               ¿Lista para Brillar?
             </h3>
-            <p className="text-lg text-turquoise-100/90 max-w-xl mx-auto mb-8">
+            <p className="text-lg text-turquoise-100/90 max-w-xl mx-auto mb-8" {...ve('contactPage', 'contactPage', 'ctaDescription')}>
               Encuentra la joya perfecta que hable de ti. Contáctanos hoy y recibe
               asesoría personalizada para tu pieza ideal.
             </p>

@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { ve } from '@/lib/ve';
 import Link from 'next/link';
 import {
   MessageCircle,
@@ -30,13 +31,13 @@ export default function ComprarClient() {
       {/* Hero */}
       <div id="comprar-metodos" className="bg-primary py-12 sm:py-16 px-4 mb-10 scroll-mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-200 mb-3 block">
+          <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-200 mb-3 block" {...ve('howToBuyPage', 'howToBuyPage', 'title')}>
             Métodos de Pago
           </motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.05 }} className="text-3xl sm:text-4xl font-bold text-white mb-3">
+          <motion.h1 initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.05 }} className="text-3xl sm:text-4xl font-bold text-white mb-3" {...ve('howToBuyPage', 'howToBuyPage', 'subtitle')}>
             Cómo <span className="text-turquoise-200">Comprar</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 }} className="text-sm text-turquoise-100/80 max-w-lg mx-auto">
+          <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 }} className="text-sm text-turquoise-100/80 max-w-lg mx-auto" {...ve('howToBuyPage', 'howToBuyPage', 'shippingInfo')}>
             Elige el método de pago que más te convenga. Todos nuestros procesos son seguros, rápidos y confiables.
           </motion.p>
         </div>

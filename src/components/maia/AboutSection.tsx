@@ -6,35 +6,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { Heart, Gem, HandHeart, Star } from 'lucide-react';
+import { ve } from '@/lib/ve';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const features = [
-  {
-    icon: HandHeart,
-    title: '100% Artesanal',
-    description:
-      'Cada joya es tejida a mano por artesanas peruanas con técnicas ancestrales transmitidas de generación en generación, garantizando autenticidad y exclusividad en cada puntada.',
-  },
-  {
-    icon: Gem,
-    title: 'Materiales Premium',
-    description:
-      'Utilizamos hilos de alta resistencia, cuentas de cristal y acabados en oro y plata que aseguran durabilidad y un brillo incomparable que perdura en el tiempo.',
-  },
-  {
-    icon: Heart,
-    title: 'Hecho con Amor',
-    description:
-      'Más que joyas, creamos piezas que llevan la energía y el cariño de nuestras artesanas. Cada diseño es único, pensado para resaltar tu personalidad y estilo.',
-  },
-  {
-    icon: Star,
-    title: 'Diseños Exclusivos',
-    description:
-      'Nuestras colecciones son limitadas y renovadas constantemente. No encontrarás dos piezas idénticas, lo que convierte cada joya en una verdadera obra de arte portátil.',
-  },
-];
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -77,6 +51,7 @@ export default function AboutSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="inline-block text-sm font-semibold tracking-widest uppercase text-turquoise-600 mb-4"
+            {...ve('aboutPage', 'aboutPage', 'title')}
           >
             Nuestra Historia
           </motion.span>
@@ -85,6 +60,7 @@ export default function AboutSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6"
+            {...ve('aboutPage', 'aboutPage', 'subtitle')}
           >
             Artesanía que{' '}
             <span className="text-gradient-turquoise">Transforma</span>
@@ -104,6 +80,7 @@ export default function AboutSection() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
+                {...ve('aboutPage', 'aboutPage', 'mainImage')}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-turquoise-900/20 to-transparent" />
             </div>
@@ -116,8 +93,8 @@ export default function AboutSection() {
               className="absolute -bottom-6 -right-6 sm:right-6 bg-white rounded-2xl p-5 shadow-xl shadow-turquoise-500/10 border border-turquoise-100"
             >
               <div className="text-center">
-                <p className="text-3xl font-bold text-primary">5+</p>
-                <p className="text-sm text-foreground/60 font-medium">Años de<br />Experiencia</p>
+                <p className="text-3xl font-bold text-primary" {...ve('aboutPage', 'aboutPage', 'yearsExperience')}>5+</p>
+                <p className="text-sm text-foreground/60 font-medium" {...ve('aboutPage', 'aboutPage', 'experienceLabel')}>Años de<br />Experiencia</p>
               </div>
             </motion.div>
           </div>
@@ -129,6 +106,7 @@ export default function AboutSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg sm:text-xl text-foreground/70 leading-relaxed"
+              {...ve('aboutPage', 'aboutPage', 'storyParagraphs')}
             >
               En <strong className="text-foreground">Maia Store</strong>, cada joya que creamos
               es el resultado de horas de trabajo minucioso y pasión por el arte textil. Nacimos
@@ -140,6 +118,7 @@ export default function AboutSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg sm:text-xl text-foreground/70 leading-relaxed"
+              {...ve('aboutPage', 'aboutPage', 'storyParagraphs')}
             >
               Nuestras artesanas combinan técnicas ancestrales con diseños modernos, utilizando
               materiales de primera calidad para crear piezas que no solo adornan, sino que
@@ -151,6 +130,7 @@ export default function AboutSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg sm:text-xl text-foreground/70 leading-relaxed"
+              {...ve('aboutPage', 'aboutPage', 'storyParagraphs')}
             >
               Creemos que la verdadera lujo está en la autenticidad, en saber que cada pieza que
               llevas fue creada con dedicación exclusivamente para ti.

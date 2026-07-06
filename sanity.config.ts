@@ -49,6 +49,26 @@ export default defineConfig({
               ...S.documentTypeListItems().filter((item) => item.getId() === "product"),
             ]),
           ),
+          S.listItem().title("P\u00E1ginas").icon(() => "\u{1F4C4}").id("pages-group").child(
+            S.list().title("P\u00E1ginas").items([
+              S.listItem().title("Nosotros").icon(() => "\u{1F469}\u200D\u{1F3A8}").id("about-page-editor").child(
+                S.document().schemaType("aboutPage").documentId("aboutPage").title("Contenido de Nosotros"),
+              ),
+              S.listItem().title("Contacto").icon(() => "\u{1F4EC}").id("contact-page-editor").child(
+                S.document().schemaType("contactPage").documentId("contactPage").title("Contenido de Contacto"),
+              ),
+              S.listItem().title("C\u00F3mo Comprar").icon(() => "\u{1F6CD}\uFE0F").id("how-to-buy-editor").child(
+                S.document().schemaType("howToBuyPage").documentId("howToBuyPage").title("Contenido de C\u00F3mo Comprar"),
+              ),
+            ]),
+          ),
+          S.listItem().title("Apariencia").icon(() => "\u{1F3A8}").id("appearance-group").child(
+            S.list().title("Apariencia").items([
+              S.listItem().title("Footer (Pie de P\u00E1gina)").icon(() => "\u{1F4CB}").id("footer-settings-editor").child(
+                S.document().schemaType("footerSettings").documentId("footerSettings").title("Configuraci\u00F3n del Footer"),
+              ),
+            ]),
+          ),
           S.listItem().title("Configuraci\u00F3n").icon(() => "\u2699\uFE0F").id("settings-group").child(
             S.document().schemaType("siteSettings").documentId("siteSettings").title("Configuraci\u00F3n del Sitio"),
           ),
@@ -107,6 +127,33 @@ export default defineConfig({
               if (!doc?.slug) return { locations: [{ title: "Colecci\u00F3n", href: "/coleccion" }] };
               return { locations: [{ title: `Categor\u00EDa \u2014 ${doc.name || doc.slug}`, href: `/coleccion?categoria=${doc.slug}` }] };
             },
+          }),
+          aboutPage: defineLocations({
+            select: {},
+            resolve: () => ({
+              locations: [{ title: "Nosotros", href: "/nosotros" }],
+            }),
+          }),
+          contactPage: defineLocations({
+            select: {},
+            resolve: () => ({
+              locations: [
+                { title: "Contacto", href: "/contacto" },
+                { title: "Inicio - Testimonios", href: "/#testimonios" },
+              ],
+            }),
+          }),
+          howToBuyPage: defineLocations({
+            select: {},
+            resolve: () => ({
+              locations: [{ title: "C\u00F3mo Comprar", href: "/comprar" }],
+            }),
+          }),
+          footerSettings: defineLocations({
+            select: {},
+            resolve: () => ({
+              locations: [{ title: "Inicio", href: "/" }],
+            }),
           }),
         },
       },

@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { ve } from '@/lib/ve';
 
 // ═══════════════════════════════════════════════════════════════
 // TRUST BAND — Banda de confianza CRO (2x2 mobile)
@@ -179,7 +180,7 @@ function FooterContent() {
               <span className="text-2xl font-extrabold text-white group-hover:text-warm-400 transition-colors duration-300">MAIA</span>
               <span className="text-2xl font-extralight tracking-[0.2em] text-warm-400 ml-1.5 group-hover:text-warm-300 transition-colors duration-300">STORE</span>
             </Link>
-            <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs" {...ve('footerSettings', 'footerSettings', 'brandDescription')}>
               Joyeria artesanal peruana creada para contar historias unicas. Cada pieza lleva el alma de nuestras artesanas.
             </p>
             {/* Social Icons */}
@@ -285,7 +286,7 @@ function FooterContent() {
         {/* Bottom credits bar */}
         <div className="pt-6 border-t border-white/5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[11px] text-white/25 text-center sm:text-left">
+            <p className="text-[11px] text-white/25 text-center sm:text-left" {...ve('footerSettings', 'footerSettings', 'copyright')}>
               &copy; {currentYear} Maia Store. Todos los derechos reservados.
             </p>
             {/* HARDCODED FastPagePro Credit (NEVER in CMS) */}

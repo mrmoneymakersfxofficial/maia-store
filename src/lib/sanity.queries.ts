@@ -89,6 +89,44 @@ export const PRODUCTS_BY_CATEGORY_QUERY = `
 }`;
 
 // ═══════════════════════════════════════════════════════════════
+// PAGE QUERIES (CMS Panel)
+// ═══════════════════════════════════════════════════════════════
+
+export const ABOUT_PAGE_QUERY = `
+*[_type == "aboutPage"][0] {
+  _id, title, subtitle,
+  "mainImage": mainImage.asset->url,
+  storyParagraphs,
+  features[] { icon, title, description },
+  yearsExperience, experienceLabel
+}`;
+
+export const CONTACT_PAGE_QUERY = `
+*[_type == "contactPage"][0] {
+  _id, title, subtitle,
+  contactInfo[] { label, value, icon, url },
+  ctaTitle, ctaDescription,
+  "ctaImage": ctaImage.asset->url,
+  ctaButtons[] { label, url, type }
+}`;
+
+export const HOW_TO_BUY_PAGE_QUERY = `
+*[_type == "howToBuyPage"][0] {
+  _id, title, subtitle,
+  steps[] { stepNumber, icon, title, description },
+  paymentMethods[] { name, description, icon },
+  shippingInfo, whatsappNumber, whatsappMessage
+}`;
+
+export const FOOTER_SETTINGS_QUERY = `
+*[_type == "footerSettings"][0] {
+  _id, copyright, brandDescription,
+  socialLinks[] { platform, label, handle, url },
+  quickLinks[] { label, href },
+  newsletterText, showTrustBadges
+}`;
+
+// ═══════════════════════════════════════════════════════════════
 // LEGACY QUERIES (kept for reference)
 // ═══════════════════════════════════════════════════════════════
 

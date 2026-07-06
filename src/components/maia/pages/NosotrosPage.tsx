@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { Heart, Gem, HandHeart, Star } from 'lucide-react';
+import { ve } from '@/lib/ve';
 
 const features = [
   { icon: HandHeart, title: '100% Artesanal', description: 'Cada joya es tejida a mano por artesanas peruanas con técnicas ancestrales transmitidas de generación en generación, garantizando autenticidad y exclusividad en cada puntada. El proceso artesanal asegura que ninguna dos piezas sean exactamente iguales, dándote una joya verdaderamente única.' },
@@ -22,10 +23,10 @@ export default function NosotrosPage() {
       <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div className="text-center mb-12 pt-4">
-          <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block">
+          <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block" {...ve('aboutPage', 'aboutPage', 'title')}>
             Nuestra Historia
           </motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.05 }} className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <motion.h1 initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.05 }} className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4" {...ve('aboutPage', 'aboutPage', 'subtitle')}>
             Artesanía que <span className="text-gradient-turquoise">Transforma</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 }} className="text-sm text-foreground/40 max-w-lg mx-auto">
@@ -38,22 +39,22 @@ export default function NosotrosPage() {
         <div id="nosotros-historia" className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
           <div ref={imageRef} className="relative">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-              <Image src="/images/hero-craft.jpg" alt="Artesana tejiendo joyas a mano en Perú" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority />
+              <Image src="/images/hero-craft.jpg" alt="Artesana tejiendo joyas a mano en Perú" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority {...ve('aboutPage', 'aboutPage', 'mainImage')} />
             </div>
             <motion.div initial={{ opacity: 0, x: -20 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="absolute -bottom-4 -right-4 sm:right-4 bg-white rounded-xl p-4 shadow-xl border border-zinc-100/60">
-              <p className="text-2xl font-bold text-primary">5+</p>
-              <p className="text-[10px] text-foreground/50 font-medium">Años de Experiencia</p>
+              <p className="text-2xl font-bold text-primary" {...ve('aboutPage', 'aboutPage', 'yearsExperience')}>5+</p>
+              <p className="text-[10px] text-foreground/50 font-medium" {...ve('aboutPage', 'aboutPage', 'experienceLabel')}>Años de Experiencia</p>
             </motion.div>
           </div>
 
           <div className="space-y-5">
-            <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 }} className="text-sm text-foreground/60 leading-relaxed">
+            <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 }} className="text-sm text-foreground/60 leading-relaxed" {...ve('aboutPage', 'aboutPage', 'storyParagraphs')}>
               En <strong className="text-foreground">Maia Store</strong>, cada joya que creamos es el resultado de horas de trabajo minucioso y pasión por el arte textil. Nacimos con la misión de llevar la belleza de las técnicas artesanales peruanas al mundo de la joyería contemporánea. Lo que comenzó como un pequeño taller familiar en Lima se ha convertido en una marca que llega a todo el Perú.
             </motion.p>
-            <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 }} className="text-sm text-foreground/60 leading-relaxed">
+            <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 }} className="text-sm text-foreground/60 leading-relaxed" {...ve('aboutPage', 'aboutPage', 'storyParagraphs')}>
               Nuestras artesanas combinan técnicas ancestrales con diseños modernos, utilizando materiales de primera calidad para crear piezas que no solo adornan, sino que cuentan historias. Cada colección está inspirada en la rica cultura peruana: desde los textiles precolombinos hasta los paisajes de la costa, sierra y selva.
             </motion.p>
-            <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.25 }} className="text-sm text-foreground/60 leading-relaxed">
+            <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.25 }} className="text-sm text-foreground/60 leading-relaxed" {...ve('aboutPage', 'aboutPage', 'storyParagraphs')}>
               Creemos que el verdadero lujo está en la autenticidad, en saber que cada pieza que llevas fue creada con dedicación exclusivamente para ti. Trabajamos con comunidades artesanales de diferentes regiones del Perú, garantizando comercio justo y empoderando a las mujeres que mantienen viva esta tradición milenaria.
             </motion.p>
           </div>

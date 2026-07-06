@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Instagram, Phone, ChevronRight, MapPin } from 'lucide-react';
+import { ve } from '@/lib/ve';
 
 // TikTok SVG icon (Lucide doesn't have TikTok)
 function TikTokIcon({ className }: { className?: string }) {
@@ -26,15 +27,12 @@ export default function ContactoClient() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         {/* Page Header */}
         <div className="text-center mb-10 pt-4">
-          <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block">
+          <motion.span initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-xs font-semibold tracking-[0.2em] uppercase text-turquoise-600 mb-3 block" {...ve('contactPage', 'contactPage', 'title')}>
             Contactanos
           </motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.05 }} className="text-3xl sm:text-4xl font-bold text-foreground mb-3">
+          <motion.h1 initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.05 }} className="text-3xl sm:text-4xl font-bold text-foreground mb-3" {...ve('contactPage', 'contactPage', 'subtitle')}>
             Estamos Aqui <span className="text-gradient-turquoise">Para Ti</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 }} className="text-sm text-foreground/40 max-w-lg mx-auto">
-            Tienes alguna pregunta o necesitas asesoria personalizada? No dudes en escribirnos.
-          </motion.p>
           <div className="section-divider mx-auto mt-5" />
         </div>
 
@@ -115,8 +113,8 @@ export default function ContactoClient() {
             <div className="absolute inset-0 bg-gradient-to-r from-turquoise-900/90 to-turquoise-700/80" />
           </div>
           <div className="relative z-10 px-6 sm:px-12 py-14 sm:py-16 text-center">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Lista para Brillar?</h3>
-            <p className="text-sm text-turquoise-100/90 max-w-md mx-auto mb-6">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3" {...ve('contactPage', 'contactPage', 'ctaTitle')}>Lista para Brillar?</h3>
+            <p className="text-sm text-turquoise-100/90 max-w-md mx-auto mb-6" {...ve('contactPage', 'contactPage', 'ctaDescription')}>
               Encuentra la joya perfecta que hable de ti. Contactanos hoy y recibe asesoria personalizada.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
