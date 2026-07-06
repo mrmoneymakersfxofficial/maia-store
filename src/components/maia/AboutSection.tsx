@@ -10,6 +10,13 @@ import { ve } from '@/lib/ve';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const features = [
+  { icon: HandHeart, title: '100% Artesanal', description: 'Cada joya es tejida a mano por artesanas peruanas con técnicas ancestrales transmitidas de generación en generación, garantizando autenticidad y exclusividad en cada puntada.' },
+  { icon: Gem, title: 'Materiales Premium', description: 'Utilizamos hilos de alta resistencia, cuentas de cristal y acabados en oro y plata que aseguran durabilidad y un brillo incomparable que perdura en el tiempo.' },
+  { icon: Heart, title: 'Hecho con Amor', description: 'Más que joyas, creamos piezas que llevan la energía y el cariño de nuestras artesanas. Cada diseño es único, pensado para resaltar tu personalidad y estilo.' },
+  { icon: Star, title: 'Diseños Exclusivos', description: 'Nuestras colecciones son limitadas y renovadas constantemente. No encontrarás dos piezas idénticas, lo que convierte cada joya en una verdadera obra de arte portátil.' },
+];
+
 export default function AboutSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
