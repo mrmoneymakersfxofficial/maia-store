@@ -80,11 +80,23 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "mainImageUrl",
+      title: "URL Imagen Principal (fallback)",
+      type: "url",
+      description: "URL directa para cuando no hay asset subido a Sanity",
+    }),
+    defineField({
       name: "secondaryImage",
       title: "Imagen Secundaria (hover)",
       type: "image",
       options: { hotspot: true },
       description: "Se muestra al pasar el ratón sobre la tarjeta",
+    }),
+    defineField({
+      name: "secondaryImageUrl",
+      title: "URL Imagen Secundaria (fallback)",
+      type: "url",
+      description: "URL directa para cuando no hay asset subido a Sanity",
     }),
     defineField({
       name: "gallery",
@@ -96,6 +108,7 @@ export default defineType({
           fields: [
             { name: "image", title: "Imagen", type: "image", options: { hotspot: true } },
             { name: "alt", title: "Texto Alternativo", type: "string" },
+            { name: "url", title: "URL directa (fallback)", type: "url" },
           ],
           preview: { select: { media: "image", title: "alt" } },
         },

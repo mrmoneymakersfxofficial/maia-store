@@ -12,9 +12,9 @@ export const ALL_PRODUCTS_QUERY = `
   features, color, size, materials,
   rating, reviewCount, inStock, featured, order,
   collection,
-  "mainImage": mainImage.asset->url,
-  "secondaryImage": secondaryImage.asset->url,
-  gallery[] { "url": image.asset->url, alt },
+  "mainImage": coalesce(mainImage.asset->url, mainImageUrl),
+  "secondaryImage": coalesce(secondaryImage.asset->url, secondaryImageUrl),
+  gallery[] { "url": coalesce(image.asset->url, url), alt },
   "category": category->{ _id, name, "slug": slug.current },
   seoTitle, seoDescription
 }`;
@@ -25,9 +25,9 @@ export const PRODUCT_BY_SLUG_QUERY = `*[_type == "product" && slug.current == $s
   features, color, size, materials,
   rating, reviewCount, inStock, featured, order,
   collection,
-  "mainImage": mainImage.asset->url,
-  "secondaryImage": secondaryImage.asset->url,
-  gallery[] { "url": image.asset->url, alt },
+  "mainImage": coalesce(mainImage.asset->url, mainImageUrl),
+  "secondaryImage": coalesce(secondaryImage.asset->url, secondaryImageUrl),
+  gallery[] { "url": coalesce(image.asset->url, url), alt },
   "category": category->{ _id, name, "slug": slug.current },
   seoTitle, seoDescription
 }`;
@@ -75,15 +75,15 @@ export const SITE_SETTINGS_QUERY = `
 }`;
 
 export const PRODUCTS_BY_CATEGORY_QUERY = `
-*[_type == "product" && $category == "todos" || category->slug.current == $category] | order(order asc) {
+*[_type == "product" && ($category == "todos" || category->slug.current == $category)] | order(order asc) {
   _id, "slug": slug.current, sku, name,
   price, compareAtPrice, description, longDescription,
   features, color, size, materials,
   rating, reviewCount, inStock, featured, order,
   collection,
-  "mainImage": mainImage.asset->url,
-  "secondaryImage": secondaryImage.asset->url,
-  gallery[] { "url": image.asset->url, alt },
+  "mainImage": coalesce(mainImage.asset->url, mainImageUrl),
+  "secondaryImage": coalesce(secondaryImage.asset->url, secondaryImageUrl),
+  gallery[] { "url": coalesce(image.asset->url, url), alt },
   "category": category->{ _id, name, "slug": slug.current },
   seoTitle, seoDescription
 }`;
